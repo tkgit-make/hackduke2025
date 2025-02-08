@@ -1,4 +1,5 @@
 .header-container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,7 +9,16 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-sizing: border-box;
   }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: #f9f9f9; /* Change this to your desired background color */
+  }
+  
   
   .logo {
     font-size: 24px;
