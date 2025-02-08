@@ -1,79 +1,100 @@
+/* Header Container */
 .header-container {
-    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
     background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-sizing: border-box;
-    overflow-x: hidden;
-
   }
   
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    background-color: #f9f9f9; /* Change this to your desired background color */
-    overflow-x: hidden;
-
+  /* Top Section: Logo, Search, and Buttons */
+  .top-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
   }
-  
   
   .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #00bfa6;
+    color: #00e0b6;
+    padding-left: 80px;
   }
   
   .search-bar-container {
     flex: 1;
-    margin: 0 20px;
+    display: flex;
+    justify-content: center;
   }
   
   .search-bar {
     width: 100%;
-    padding: 8px 12px;
+    max-width: 400px;
+    padding: 8px 16px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .nav-links {
+  .action-buttons {
     display: flex;
-    gap: 20px;
+    gap: 10px;
+  }
+  
+  .login-button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #999;
+    cursor: pointer;
+  }
+  
+  .launch-button {
+    color:#000000;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 8px 16px;
+    background: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .launch-button:hover {
+    background-color: #f2f2f2;
+  }
+  
+  /* Bottom Navigation: Discover, Feed, Portfolio */
+  .bottom-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
   }
   
   .nav-link {
     font-size: 16px;
-    color: #333;
+    font-weight: 500;
+    color: #666;
     text-decoration: none;
+    padding: 5px 0;
   }
   
   .nav-link.active {
+    color: black;
     font-weight: bold;
-    border-bottom: 2px solid #00bfa6;
+    border-bottom: 2px solid black;
   }
   
-  .header-actions .login-button,
-  .header-actions .launch-button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .login-button {
-    background-color: transparent;
+  .nav-link:hover {
     color: #333;
-    border: 1px solid #ccc;
-  }
-  
-  .launch-button {
-    background-color: #00bfa6;
-    color: white;
   }
   
