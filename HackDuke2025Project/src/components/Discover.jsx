@@ -4,8 +4,7 @@ import "./Discover.css";
 
 const Discover = () => {
   const cards = Array(6).fill({
-    title: "Cubiko",
-    company: "Genmitsu",
+    company: "Cubiko",
     price: "$100",
     raised: "$20K",
     goal: "$50K",
@@ -15,7 +14,7 @@ const Discover = () => {
   return (
     <div className="discover-page">
       <div className="discover-content">
-        <h2 className="section-title">Near_Funded</h2>
+        <h2 style = {{color: '#00F6D5', textAlign: 'left'}}className="section-title">Near_Funded</h2>
         <div className="card-grid">
           {cards.map((card, index) => (
             <Card

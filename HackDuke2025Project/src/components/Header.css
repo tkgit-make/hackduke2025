@@ -10,6 +10,8 @@
     top: 0;
     z-index: 1000;
     box-sizing: border-box;
+    overflow-x: hidden;
+
   }
   
   body {
@@ -17,6 +19,8 @@
     padding: 0;
     width: 100vw;
     background-color: #f9f9f9; /* Change this to your desired background color */
+    overflow-x: hidden;
+
   }
   
   

@@ -2,12 +2,11 @@
 import "./Card.css";
 import PropTypes from 'prop-types';
 
-const Card = ({ image, title, company, price, raised, goal }) => {
+const Card = ({ image, company, price, raised, goal }) => {
   return (
     <div className="card-container">
-      <img src={image} alt={title} className="card-image" />
+      <img src={image} alt={company} className="card-image" />
       <div className="card-content">
-        <h3 className="card-title">{title}</h3>
         <p className="card-company">{company}</p>
         <p className="card-price">Price: {price}</p>
         <div className="card-progress">
