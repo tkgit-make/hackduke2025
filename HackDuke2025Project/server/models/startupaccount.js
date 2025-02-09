@@ -51,6 +51,16 @@ const startUpSchema = new Schema({
         required : true,
     },
 
+    sharesAvailable: {
+        type: Number,
+        required: true,
+    },
+
+    totalSharesOffered: {
+        type: Number,
+        required: true,
+    },
+
     logo: {
         type: String,
         required: true, // Making it required since startups should have a logo

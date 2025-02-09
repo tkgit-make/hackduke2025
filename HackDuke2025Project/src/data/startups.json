@@ -9,6 +9,9 @@
       "fundingGoal": 2000000,
       "fundingRaised": 850000,
       "equity": 8,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.008,
+      "pricePerShare": 2000,
       "location": "San Francisco, CA",
       "stage": "Seed",
       "posts": [
@@ -37,6 +40,9 @@
       "fundingGoal": 1500000,
       "fundingRaised": 600000,
       "equity": 10,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.01,
+      "pricePerShare": 1500,
       "location": "Boston, MA",
       "stage": "Series A",
       "posts": [
@@ -72,6 +78,9 @@
       "fundingGoal": 3000000,
       "fundingRaised": 1200000,
       "equity": 12,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.012,
+      "pricePerShare": 3000,
       "location": "Miami, FL",
       "stage": "Seed",
       "posts": [
@@ -100,6 +109,9 @@
       "fundingGoal": 4000000,
       "fundingRaised": 2500000,
       "equity": 15,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.015,
+      "pricePerShare": 4000,
       "location": "Seattle, WA",
       "stage": "Series A",
       "posts": [
@@ -128,6 +140,9 @@
       "fundingGoal": 1000000,
       "fundingRaised": 400000,
       "equity": 7,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.007,
+      "pricePerShare": 1000,
       "location": "Austin, TX",
       "stage": "Pre-seed",
       "posts": [
@@ -156,6 +171,9 @@
       "fundingGoal": 2500000,
       "fundingRaised": 1800000,
       "equity": 9,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.009,
+      "pricePerShare": 2500,
       "location": "Los Angeles, CA",
       "stage": "Seed",
       "posts": [
@@ -184,6 +202,9 @@
       "fundingGoal": 3500000,
       "fundingRaised": 2000000,
       "equity": 11,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.011,
+      "pricePerShare": 3500,
       "location": "Chicago, IL",
       "stage": "Series A",
       "posts": [
@@ -212,6 +233,9 @@
       "fundingGoal": 1800000,
       "fundingRaised": 900000,
       "equity": 8,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.008,
+      "pricePerShare": 1800,
       "location": "New York, NY",
       "stage": "Seed",
       "posts": [
@@ -240,6 +264,9 @@
       "fundingGoal": 2200000,
       "fundingRaised": 1100000,
       "equity": 10,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.01,
+      "pricePerShare": 2200,
       "location": "Portland, OR",
       "stage": "Seed",
       "posts": [
@@ -268,6 +295,9 @@
       "fundingGoal": 5000000,
       "fundingRaised": 3500000,
       "equity": 14,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.014,
+      "pricePerShare": 5000,
       "location": "Washington, DC",
       "stage": "Series A",
       "posts": [
@@ -296,6 +326,9 @@
       "fundingGoal": 1200000,
       "fundingRaised": 500000,
       "equity": 6,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.006,
+      "pricePerShare": 1200,
       "location": "Denver, CO",
       "stage": "Pre-seed"
     },
@@ -308,6 +341,9 @@
       "fundingGoal": 4500000,
       "fundingRaised": 2800000,
       "equity": 13,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.013,
+      "pricePerShare": 4500,
       "location": "San Jose, CA",
       "stage": "Series A"
     },
@@ -320,6 +356,9 @@
       "fundingGoal": 1600000,
       "fundingRaised": 800000,
       "equity": 9,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.009,
+      "pricePerShare": 1600,
       "location": "Nashville, TN",
       "stage": "Seed"
     },
@@ -332,6 +371,9 @@
       "fundingGoal": 2800000,
       "fundingRaised": 1500000,
       "equity": 11,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.011,
+      "pricePerShare": 2800,
       "location": "Minneapolis, MN",
       "stage": "Seed"
     },
@@ -344,6 +386,9 @@
       "fundingGoal": 900000,
       "fundingRaised": 300000,
       "equity": 7,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.007,
+      "pricePerShare": 900,
       "location": "San Diego, CA",
       "stage": "Pre-seed"
     },
@@ -356,6 +401,9 @@
       "fundingGoal": 3200000,
       "fundingRaised": 1900000,
       "equity": 12,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.012,
+      "pricePerShare": 3200,
       "location": "Raleigh, NC",
       "stage": "Series A"
     },
@@ -368,6 +416,9 @@
       "fundingGoal": 1400000,
       "fundingRaised": 700000,
       "equity": 8,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.008,
+      "pricePerShare": 1400,
       "location": "Dallas, TX",
       "stage": "Seed"
     },
@@ -380,6 +431,9 @@
       "fundingGoal": 2600000,
       "fundingRaised": 1300000,
       "equity": 10,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.01,
+      "pricePerShare": 2600,
       "location": "Brooklyn, NY",
       "stage": "Seed"
     },
@@ -392,6 +446,9 @@
       "fundingGoal": 1900000,
       "fundingRaised": 950000,
       "equity": 9,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.009,
+      "pricePerShare": 1900,
       "location": "Atlanta, GA",
       "stage": "Seed"
     },
@@ -404,6 +461,9 @@
       "fundingGoal": 2400000,
       "fundingRaised": 1600000,
       "equity": 11,
+      "sharesAvailable": 1000,
+      "equityPerShare": 0.011,
+      "pricePerShare": 2400,
       "location": "Berkeley, CA",
       "stage": "Series A"
     }

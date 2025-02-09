@@ -34,11 +34,8 @@
 }
 
 /* Make sure our styles take precedence */
-.launch-container .progress-bar {
+.launch-container .form-progress {
   background: transparent !important;
-}
-
-.progress-bar-container {
 }
 
 /* First, create a base line */

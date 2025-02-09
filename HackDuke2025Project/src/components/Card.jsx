@@ -25,8 +25,8 @@ const Card = ({ image, company, price, raised, goal }) => {
     
     // Navigate after animation completes
     setTimeout(() => {
-      navigate(`/company/${company.toLowerCase()}`);
-    }, 500); // Match this with animation duration
+      navigate(`/company/${company}`);
+    }, 500);
   };
 
   return (

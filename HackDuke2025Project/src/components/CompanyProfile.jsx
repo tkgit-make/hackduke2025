@@ -1,49 +1,32 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './CompanyProfile.css';
 import { IoArrowBack } from "react-icons/io5";
 import companyImage from '../assets/images/company-placeholder.png';
 import postImage from '../assets/images/post-placeholder.png';
+import sampleStartupsData from '../data/sample_startups.json';
 
 const CompanyProfile = () => {
   const navigate = useNavigate();
+  const { companyName } = useParams();
   
-  const companyData = {
-    name: "Cubiko",
-    raised: 10000,
-    goal: 50000,
-    sharesAvailable: 200,
-    totalShares: 500,
-    equityPerShare: 0.02,
-    pricePerShare: 100,
-    targetValuation: 10000000, // $10M target valuation
-    bannerImage: companyImage,
-    posts: [
-      {
-        id: 1,
-        content: "Exciting news! We've just reached our first milestone!",
-        timestamp: "2h ago",
-        likes: 156,
-        comments: 23,
-        image: postImage
-      },
-      {
-        id: 2,
-        content: "Thank you to all our early investors for believing in our vision!",
-        timestamp: "1d ago",
-        likes: 234,
-        comments: 45,
-        image: postImage
-      }
-    ]
-  };
+  // Find the matching company data from sample data
+  const companyData = sampleStartupsData.startups.find(
+    startup => startup.startUpName === companyName
+  );
 
-  const progressPercentage = (companyData.raised / companyData.goal) * 100;
+  // If company not found, navigate back to discover page
+  if (!companyData) {
+    navigate('/');
+    return null;
+  }
+
+  const progressPercentage = (companyData.totalRaised / companyData.targetGoal) * 100;
 
   // Calculate current valuation
-  const currentValuation = (companyData.totalShares * companyData.pricePerShare) / (companyData.equityPerShare / 100);
+  const currentValuation = (companyData.targetGoal / (companyData.equityPerShare * companyData.totalSharesOffered / 100)) * 100;
   
   // Calculate potential return per share
-  const potentialReturnPerShare = (companyData.targetValuation * (companyData.equityPerShare / 100)) / companyData.totalShares;
+  const potentialReturnPerShare = (currentValuation * (companyData.equityPerShare / 100)) / companyData.totalSharesOffered;
 
   return (
     <div className="company-profile">
@@ -54,30 +37,28 @@ const CompanyProfile = () => {
           </button>
           <div className="company-banner">
             <img 
-              src={companyData.bannerImage || postImage} 
-              alt={companyData.name}
+              src={companyData.image || companyImage} 
+              alt={companyData.startUpName}
               onError={(e) => {
-                e.target.src = postImage;
+                e.target.src = companyImage;
               }}
             />
             <div className="banner-overlay">
-              <h1 className="company-title">{companyData.name}</h1>
+              <h1 className="company-title">{companyData.startUpName}</h1>
             </div>
           </div>
         </div>
 
         <div className="profile-content">
           <div className="feed-section">
-            {companyData.posts.map((post) => (
+            {companyData.postsData?.map((post) => (
               <div key={post.id} className="post">
                 <div className="post-image">
-                  <img src={post.image} alt="" className="post-img" />
+                  <img src={postImage} alt="" className="post-img" />
                 </div>
-                <p className="post-text">{post.content}</p>
+                <p className="post-text">{post.caption}</p>
                 <div className="post-meta">
-                  <span>{post.timestamp}</span>
-                  <span>❤️ {post.likes}</span>
-                  <span>💬 {post.comments}</span>
+                  <span>❤️ {post.likesData}</span>
                 </div>
               </div>
             ))}
@@ -97,8 +78,8 @@ const CompanyProfile = () => {
                     />
                   </div>
                   <div className="progress-labels">
-                    <span className="raised-amount">${companyData.raised / 1000}K</span>
-                    <span className="goal-amount">${companyData.goal / 1000}K</span>
+                    <span className="raised-amount">${companyData.totalRaised.toLocaleString()}</span>
+                    <span className="goal-amount">${companyData.targetGoal.toLocaleString()}</span>
                   </div>
                 </div>
                 <button className="invest-button">Invest Now</button>
@@ -107,7 +88,7 @@ const CompanyProfile = () => {
 
             <div className="investment-stats">
               <div className="stat-item">
-                <div className="stat-value">{companyData.sharesAvailable}/{companyData.totalShares}</div>
+                <div className="stat-value">{companyData.sharesAvailable}</div>
                 <div className="stat-label">Shares Available</div>
               </div>
               <div className="stat-item">
@@ -132,9 +113,6 @@ const CompanyProfile = () => {
                 <div className="valuation-label">Potential Return per Share</div>
                 <div className="valuation-value">
                   ${potentialReturnPerShare.toFixed(2)}
-                  <span className="return-note">
-                    at ${(companyData.targetValuation / 1000000)}M valuation
-                  </span>
                 </div>
               </div>
             </div>
