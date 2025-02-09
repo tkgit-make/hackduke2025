@@ -1,6 +1,4 @@
 import express from "express";
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
 
 // This will help us connect to the database
 import db from "../db/connection.js";
@@ -14,7 +12,7 @@ import { ObjectId } from "mongodb";
 const router = express.Router();
 
 // Import the correct startup model
-import startup from "../models/startupaccount.js";
+import startup from "../models/startupaccount.js"
 
 // This section will help you get a list of all the startups.
 router.get("/", async (req, res) => {
@@ -37,11 +35,17 @@ router.get("/", async (req, res) => {
 // This section will help you create a new startup.
 router.post("/create", async (req, res) => {
   try {
-    const newStartup = new startup(req.body);  // Use correct model `startup`
+    // Check if startup with same ID already exists
+    const existingStartup = await startup.findOne({ startupID: req.body.startupID });
+    if (existingStartup) {
+      return res.status(400).json({ error: "A startup with this ID already exists" });
+    }
+
+    const newStartup = new startup(req.body);
     await newStartup.save();
-    res.status(201).json(newStartup);  // Return the created record
+    res.status(201).json(newStartup);
   } catch (error) {
-    console.error("Error in POST /startups:", error);  // Log the error details
+    console.error("Error in POST /startups:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 });
@@ -96,5 +100,12 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
+
+
+
+
+
+
 
 export default router;

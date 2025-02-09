@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import postSchema from '../models/post.js'
 
 const Schema = mongoose.Schema
 
@@ -41,7 +42,11 @@ const startUpSchema = new Schema({
     image : {
         type : String,
         required : false, 
-    }
+    },
+
+    postsData : [postSchema], 
+
+    tagsData : [{body : String}], 
 }, {timestamps: true})
 
 const startUp = mongoose.model('startup', startUpSchema); 
