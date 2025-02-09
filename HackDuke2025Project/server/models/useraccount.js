@@ -41,8 +41,30 @@ const userAccountSchema = new Schema({
     userCashAvailable : {
         type : Number, 
         required : true 
+    },
+
+    walletBalance: {
+        type: Number,
+        default: 0,
+        required: true
     }   
 }, {timestamps: true})
+
+// Method to add funds to the wallet
+userAccountSchema.methods.addFunds = function(amount) {
+    this.walletBalance += amount;
+    return this.save();
+};
+
+// Method to deduct funds from the wallet
+userAccountSchema.methods.deductFunds = function(amount) {
+    if (this.walletBalance >= amount) {
+        this.walletBalance -= amount;
+        return this.save();
+    } else {
+        throw new Error('Insufficient funds in wallet');
+    }
+};
 
 const uA = mongoose.model('userAccount', userAccountSchema); 
 const invest = mongoose.model('investment', investmentSchema); 
