@@ -10,7 +10,8 @@ const Signup = ({ isOpen, onClose, onSwitch }) => {
     password: '',
     confirmPassword: '',
     investorType: 'individual', // or 'institutional'
-    investmentPreferences: []
+    investmentPreferences: [],
+    userCashAvailable: 0
   });
   const [error, setError] = useState('');
 
@@ -22,55 +23,52 @@ const Signup = ({ isOpen, onClose, onSwitch }) => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-
-    // Get current users from localStorage or use default
-    const storedUsers = JSON.parse(localStorage.getItem('allUsers')) || defaultUsers.users;
-
+  
     // Validate passwords match
     if (formData.password !== formData.confirmPassword) {
       setError("Passwords don't match!");
       return;
     }
-
-    // Check if email already exists
-    if (storedUsers.some(user => user.email === formData.email)) {
-      setError('An account with this email already exists');
-      return;
-    }
-
-    // Create new user
+  
+    // Create user account object to send to the backend
     const newUser = {
-      id: storedUsers.length + 1,
-      firstName: formData.firstName,
-      lastName: formData.lastName,
+      userName: `${formData.firstName} ${formData.lastName}`,
       email: formData.email,
       password: formData.password,
       investorType: formData.investorType,
-      investmentPreferences: [],
-      dateJoined: new Date().toISOString().split('T')[0]
+      investorPreferences: [],
+      userCashAvailable: 0
     };
-
-    // Add user to stored users
-    const updatedUsers = [...storedUsers, newUser];
-    localStorage.setItem('allUsers', JSON.stringify(updatedUsers));
-
-    // Log in the new user
-    localStorage.setItem('currentUser', JSON.stringify({
-      id: newUser.id,
-      firstName: newUser.firstName,
-      lastName: newUser.lastName,
-      email: newUser.email,
-      investorType: newUser.investorType
-    }));
-
-    console.log('Account created and logged in:', newUser);
-    onClose();
-    window.location.reload();
+  
+    try {
+      const response = await fetch('http://localhost:5050/api/useraccounts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newUser),
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to create account');
+      }
+  
+      const createdUser = await response.json();
+      console.log('Account created:', createdUser);
+  
+      // Close the modal and reload the page
+      onClose();
+      window.location.reload();
+  
+    } catch (err) {
+      setError(err.message);
+    }
   };
-
+  
   return (
     <div className={`modal ${isOpen ? 'show' : ''}`}>
       <div className="modal-content signup">

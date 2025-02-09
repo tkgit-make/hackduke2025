@@ -31,16 +31,31 @@ const userAccountSchema = new Schema({
         required : true
     },
 
+    email : {
+        type : String, 
+        required : true
+    },
+
     password : {
         type : String, 
         required : true
+    },
+
+    investorType : {
+        type : String, 
+        required : true
+    },
+
+    investorPreferences : {
+        type : [{body : String}], 
+        required : false
     },
 
     userInvestments : [investmentSchema],
 
     userCashAvailable : {
         type : Number, 
-        required : true 
+        required : false 
     }   
 }, {timestamps: true})
 
