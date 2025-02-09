@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './InvestmentPaymentDialog.css'; // Create a CSS file for styling
 import { IoArrowBack } from "react-icons/io5"; // Import back arrow icon
+import { useUser } from '../context/UserContext'; // Import the useUser hook
 
-const InvestmentPaymentDialog = ({ onClose, totalPrice, totalEquity, walletBalance }) => {
+const InvestmentPaymentDialog = ({ onClose, totalPrice, totalEquity }) => {
+  const { walletBalance, deductFunds } = useUser(); // Access wallet balance and deduct function
   const [paymentMethod, setPaymentMethod] = useState('wallet'); // Default to wallet payment
   const [cardInfo, setCardInfo] = useState({
     cardNumber: '',
@@ -16,12 +18,11 @@ const InvestmentPaymentDialog = ({ onClose, totalPrice, totalEquity, walletBalan
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle payment logic here (e.g., API call to process payment)
+    // Handle payment logic here
     if (paymentMethod === 'wallet') {
-      // Check if wallet balance is sufficient
       if (walletBalance >= totalPrice) {
+        deductFunds(totalPrice); // Deduct from wallet
         console.log(`Paying $${totalPrice} using wallet.`);
-        // Proceed with wallet payment logic
       } else {
         alert('Insufficient wallet balance.');
       }
@@ -29,8 +30,7 @@ const InvestmentPaymentDialog = ({ onClose, totalPrice, totalEquity, walletBalan
       console.log(`Paying $${totalPrice} using credit card.`);
       // Proceed with credit card payment logic
     }
-    // Close the dialog after processing
-    onClose(); // This will close both dialogs
+    onClose(); // Close the dialog after processing
   };
 
   return (
@@ -90,6 +90,7 @@ const InvestmentPaymentDialog = ({ onClose, totalPrice, totalEquity, walletBalan
           <div className="payment-details">
             <p>Total Price: ${totalPrice.toFixed(2)}</p>
             <p>Total Equity: ${totalEquity.toFixed(2)}</p>
+            <p>Wallet Balance: ${walletBalance.toLocaleString()}</p>
           </div>
           <button type="submit" className="submit-button">Confirm Payment</button>
         </form>

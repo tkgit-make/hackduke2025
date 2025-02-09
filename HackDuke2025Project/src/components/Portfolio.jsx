@@ -16,6 +16,7 @@ import {
 } from 'chart.js';
 import axios from 'axios'; // Import axios for API calls
 import WalletDialog from './WalletDialog'; // Import the dialog component
+import { useUser } from '../context/UserContext'; // Import the useUser hook
 
 // Register ChartJS components
 ChartJS.register(
@@ -31,7 +32,7 @@ ChartJS.register(
 
 const Portfolio = () => {
   const [timeRange, setTimeRange] = useState('1M'); // 1W, 1M, 3M, 1Y, ALL
-  const [walletBalance, setWalletBalance] = useState(0);
+  const { walletBalance, addFunds, deductFunds } = useUser();
   const [dialogOpen, setDialogOpen] = useState(false);
   const userId = 'USER_ID_HERE'; // Replace with actual user ID logic
 
@@ -48,14 +49,14 @@ const Portfolio = () => {
     const fetchWalletBalance = async () => {
       try {
         const response = await axios.get(`/api/useraccounts/${userId}/wallet`);
-        setWalletBalance(response.data.walletBalance);
+        addFunds(response.data.walletBalance);
       } catch (error) {
         console.error('Error fetching wallet balance:', error);
       }
     };
 
     fetchWalletBalance();
-  }, [userId]);
+  }, [userId, addFunds]);
 
   // Chart data
   const portfolioGrowthData = {

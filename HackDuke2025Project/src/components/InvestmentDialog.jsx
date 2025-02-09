@@ -54,7 +54,6 @@ const InvestmentDialog = ({ onClose, sharePrice, equityPerShare, walletBalance }
           onClose={handlePaymentClose}
           totalPrice={totalPrice}
           totalEquity={totalEquity}
-          walletBalance={walletBalance}
         />
       )}
     </div>
