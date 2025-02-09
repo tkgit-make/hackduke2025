@@ -7,11 +7,25 @@ import Feed from "./components/Feed.jsx";
 import CompanyProfile from "./components/CompanyProfile.jsx";
 import Launch from './pages/Launch';
 import { CategoryProvider } from './context/CategoryContext';
+import { useState, useEffect } from 'react';
+import LoadingScreen from './components/LoadingScreen';
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time (replace with actual loading logic)
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <CategoryProvider>
       <Router>
+        {isLoading && <LoadingScreen />}
         <Header />
         <div className="p-4">
           <Routes>
