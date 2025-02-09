@@ -12,7 +12,8 @@
   transition: transform 0.2s;
   box-sizing: border-box;
   margin: 15px; /* Even spacing between cards */
-
+  position: relative;
+  z-index: 1;
 }
   
   .card-container:hover {
@@ -80,3 +81,59 @@
     top: -5px;
     right: 0;
   }
+
+/* Update the expand animation */
+.card-container.expanding {
+  position: fixed;
+  top: var(--card-top);
+  left: var(--card-left);
+  width: var(--card-width);
+  height: var(--card-height);
+  margin: 0;
+  animation: expand 0.5s ease-out forwards;
+  z-index: 998; /* Reduced to be below header */
+}
+
+@keyframes expand {
+  0% {
+    top: var(--card-top);
+    left: var(--card-left);
+    width: var(--card-width);
+    height: var(--card-height);
+    border-radius: 8px;
+  }
+  100% {
+    top: 120px; /* Increased to account for full header height */
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 120px); /* Adjusted to match new top value */
+    border-radius: 0;
+  }
+}
+
+/* Update the body overlay to also respect header */
+body::after {
+  content: '';
+  position: fixed;
+  top: 120px; /* Match the new top value */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0);
+  pointer-events: none;
+  transition: background 0.5s;
+  z-index: 997; /* Keep below the expanding card */
+}
+
+body.expanding::after {
+  background: rgba(255, 255, 255, 1);
+  pointer-events: auto;
+}
+
+/* Add styles to handle content during expansion */
+.expanding .card-content,
+.expanding .card-company,
+.expanding .card-image {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
