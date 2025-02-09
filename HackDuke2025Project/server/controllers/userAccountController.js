@@ -75,36 +75,33 @@ export const updateUserAccount = async (req, res) => {
     }
 }
 
-export const getWalletBalance = async (req, res) => {
-    const { id } = req.params;
+// Check Account credentials for login without password hashing
+export const checkAccount = async (req, res) => {
+    const { email, password } = req.body;
 
     try {
-        const account = await uA.findById(id);
-        if (!account) {
-            return res.status(404).json({ error: 'Account not found' });
-        }
-        res.status(200).json({ walletBalance: account.walletBalance });
-    } catch (error) {
-        res.status(500).json({ error: 'Error retrieving wallet balance', details: error.message });
-    }
-};
+        // Find the user by email
+        const account = await uA.findOne({ email });
 
-export const updateWalletBalance = async (req, res) => {
-    const { id } = req.params;
-    const { amount } = req.body; // Expecting amount to be sent in the request body
-
-    try {
-        const account = await uA.findById(id);
         if (!account) {
             return res.status(404).json({ error: 'Account not found' });
         }
 
-        // Update the wallet balance
-        account.walletBalance += amount; // Add the amount to the existing balance
-        await account.save(); // Save the updated account
+        // Compare the entered password with the stored plain text password
+        if (account.password !== password) {
+            return res.status(401).json({ error: 'Invalid password' });
+        }
 
-        res.status(200).json({ walletBalance: account.walletBalance });
+        // If password matches, return the account details (excluding the password)
+        res.status(200).json({
+            id: account._id,
+            userName: account.userName,
+            email: account.email,
+            investorType: account.investorType,
+            userCashAvailable: account.userCashAvailable,
+            // Include other necessary fields if needed
+        });
     } catch (error) {
-        res.status(500).json({ error: 'Error updating wallet balance', details: error.message });
+        res.status(500).json({ error: 'Error checking account', details: error.message });
     }
-};
+}

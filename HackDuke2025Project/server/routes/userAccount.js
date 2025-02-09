@@ -6,7 +6,7 @@ import {
   getAccount,
   deleteUserAccount,
   updateUserAccount,
-  updateWalletBalance
+  checkAccount
 } from '../controllers/userAccountController.js'
 
 // This will help us connect to the database
@@ -36,7 +36,6 @@ router.patch("/:id", updateUserAccount);
 // This section will help you delete a record
 router.delete("/:id", deleteUserAccount);
 
-// This section will help you update the wallet balance
-router.patch("/:id/wallet", updateWalletBalance);
+router.post("/login", checkAccount)
 
 export default router;
