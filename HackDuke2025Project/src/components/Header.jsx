@@ -6,6 +6,7 @@ import Signup from './Signup';
 import "./Header.css";
 import startupsData from '../data/startups.json';
 import companyImage from '../assets/images/company-placeholder.png';
+import { useCategory } from '../context/CategoryContext';
 
 const Header = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -15,6 +16,7 @@ const Header = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
+  const { setSelectedCategory } = useCategory();
 
   useEffect(() => {
     const user = localStorage.getItem('currentUser');
@@ -110,7 +112,7 @@ const Header = () => {
   const handleSuggestionClick = (suggestion) => {
     if (suggestion.type === 'category') {
       navigate('/');
-      // Add any category filtering logic here
+      setSelectedCategory(suggestion.text);
     } else {
       navigate(`/company/${suggestion.text}`);
     }

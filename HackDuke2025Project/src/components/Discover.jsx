@@ -3,10 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import startupsData from '../data/startups.json';
 import './Discover.css';
 import postPlaceholder from '../assets/images/post-placeholder.png';
+import { useCategory } from '../context/CategoryContext';
 
 const Discover = () => {
   const navigate = useNavigate();
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
+  const { selectedCategory, setSelectedCategory } = useCategory();
   const [selectedStage, setSelectedStage] = useState('All');
 
   // Get unique industries from data
@@ -14,7 +15,7 @@ const Discover = () => {
   const stages = ['All', 'Pre-seed', 'Seed', 'Series A'];
 
   const filteredStartups = startupsData.startups.filter(startup => {
-    const industryMatch = selectedIndustry === 'All' || startup.industry === selectedIndustry;
+    const industryMatch = !selectedCategory || startup.industry === selectedCategory;
     const stageMatch = selectedStage === 'All' || startup.stage === selectedStage;
     return industryMatch && stageMatch;
   });
@@ -40,13 +41,16 @@ const Discover = () => {
     <div className="discover-container">
       <div className="filters">
         <div className="filter-group">
-          <label>Industry:</label>
+          <label>Industry</label>
           <select 
-            value={selectedIndustry} 
-            onChange={(e) => setSelectedIndustry(e.target.value)}
+            value={selectedCategory || ''}
+            onChange={(e) => setSelectedCategory(e.target.value || null)}
           >
+            <option value="">All Industries</option>
             {industries.map(industry => (
-              <option key={industry} value={industry}>{industry}</option>
+              <option key={industry} value={industry}>
+                {industry}
+              </option>
             ))}
           </select>
         </div>
