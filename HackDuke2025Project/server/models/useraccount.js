@@ -6,6 +6,7 @@ const investmentSchema = new Schema({
     startupID : {
         type : Number,
         required : true, 
+        unique : true
     },
 
     totalPayment : {

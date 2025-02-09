@@ -7,6 +7,7 @@ const startUpSchema = new Schema({
     startupID : {
         type : Number,
         required : true, 
+        unique : true
     },
 
     startUpName : {
@@ -14,9 +15,20 @@ const startUpSchema = new Schema({
         required : true, 
     },
 
-    description : {
-        type : String,
-        required : true, 
+    shortDescription: {
+        type: String,
+        required: true,
+        maxLength: 150 // Limit for preview/cards
+    },
+
+    fullDescription: {
+        type: String,
+        required: true
+    },
+
+    homeLocation: {
+        type: String,
+        required: true,
     },
 
     targetGoal : {
@@ -39,17 +51,35 @@ const startUpSchema = new Schema({
         required : true,
     },
 
-    image : {
-        type : String,
-        required : false, 
+    logo: {
+        type: String,
+        required: true, // Making it required since startups should have a logo
+    },
+
+    image: {
+        type: String,
+        required: false, // Keeping this as optional for banner/additional images
     },
 
     postsData : [postSchema], 
 
     tagsData : [{body : String}], 
+
+    industry: {
+        type: String,
+        required: true,
+        enum: ['CleanTech', 'FinTech', 'HealthTech', 'EdTech', 'AI/ML', 
+               'Robotics', 'E-commerce', 'SaaS', 'Biotech', 'Other']
+    },
+
+    stage: {
+        type: String,
+        required: true,
+        enum: ['Pre-Seed', 'Seed', 'Series A', 'Angel']
+    },
 }, {timestamps: true})
 
-const startUp = mongoose.model('startup', startUpSchema); 
+const startUp = mongoose.model('Startup', startUpSchema, 'startups'); 
 
 export default startUp; 
 

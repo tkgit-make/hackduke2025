@@ -1,12 +1,17 @@
 {
   "startupID": 1001,
   "startUpName": "EcoTech Solutions",
-  "description": "Developing sustainable energy solutions for residential communities through innovative solar and wind technology integration. Our patented micro-grid system enables neighborhoods to share and optimize renewable energy usage.",
+  "shortDescription": "Developing sustainable energy solutions for residential communities through innovative solar and wind technology.",
+  "fullDescription": "Developing sustainable energy solutions for residential communities through innovative solar and wind technology integration. Our patented micro-grid system enables neighborhoods to share and optimize renewable energy usage. We focus on creating scalable, efficient solutions that make renewable energy accessible to entire communities while reducing overall energy costs and environmental impact.",
+  "homeLocation": "Durham, NC",
+  "industry": "CleanTech",
+  "stage": "Seed",
   "targetGoal": 2000000,
   "totalRaised": 750000,
   "pricePerShare": 100,
   "equityPerShare": 0.005,
-  "image": "https://example.com/ecotech-logo.png",
+  "logo": "/images/logos/ecotech-logo.png",
+  "image": "https://example.com/ecotech-banner.png",
   "postsData": [
     {
       "id": 1001,
