@@ -74,3 +74,34 @@ export const updateUserAccount = async (req, res) => {
         res.status(500).json({ error: 'Error updating account', details: error.message })
     }
 }
+
+// Check Account credentials for login without password hashing
+export const checkAccount = async (req, res) => {
+    const { email, password } = req.body;
+
+    try {
+        // Find the user by email
+        const account = await uA.findOne({ email });
+
+        if (!account) {
+            return res.status(404).json({ error: 'Account not found' });
+        }
+
+        // Compare the entered password with the stored plain text password
+        if (account.password !== password) {
+            return res.status(401).json({ error: 'Invalid password' });
+        }
+
+        // If password matches, return the account details (excluding the password)
+        res.status(200).json({
+            id: account._id,
+            userName: account.userName,
+            email: account.email,
+            investorType: account.investorType,
+            userCashAvailable: account.userCashAvailable,
+            // Include other necessary fields if needed
+        });
+    } catch (error) {
+        res.status(500).json({ error: 'Error checking account', details: error.message });
+    }
+}

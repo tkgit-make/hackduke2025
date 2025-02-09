@@ -13,7 +13,7 @@ const Login = ({ isOpen, onClose, onSwitch }) => {
 
     try {
       // Send login data (email and password) to the backend to validate user credentials
-      const response = await fetch('http://localhost:5050/api/userAccounts/', {  // Adjusted the URL to a login endpoint
+      const response = await fetch('http://localhost:5050/api/userAccounts/login', {  // Adjusted the URL to a login endpoint
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

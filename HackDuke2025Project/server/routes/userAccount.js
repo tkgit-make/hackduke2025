@@ -5,7 +5,8 @@ import {
   getAccounts,
   getAccount,
   deleteUserAccount,
-  updateUserAccount
+  updateUserAccount,
+  checkAccount
 } from '../controllers/userAccountController.js'
 
 // This will help us connect to the database
@@ -34,5 +35,7 @@ router.patch("/:id", updateUserAccount);
 
 // This section will help you delete a record
 router.delete("/:id", deleteUserAccount);
+
+router.post("/login", checkAccount)
 
 export default router;
