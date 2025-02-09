@@ -13,7 +13,7 @@
   padding: 30px;
 }
 
-.progress-bar {
+.form-progress {
   display: flex;
   justify-content: space-between;
   margin: 0 0 40px;
@@ -29,7 +29,6 @@
 .progress-bar,
 .progress > .progress-bar,
 .progress-bar > .progress {
-  background-color: transparent !important;
   background-image: none !important;
   box-shadow: none !important;
 }
@@ -40,11 +39,10 @@
 }
 
 .progress-bar-container {
-  background-color: transparent;
 }
 
 /* First, create a base line */
-.progress-bar::before {
+.form-progress::before {
   content: '';
   position: absolute;
   top: 20px;
@@ -56,7 +54,7 @@
 }
 
 /* Add colored line for completed steps */
-.progress-bar::after {
+.form-progress::after {
   content: '';
   position: absolute;
   top: 20px;
@@ -68,7 +66,7 @@
   width: calc((100% - 120px) * var(--progress-percentage, 0));
 }
 
-.progress-step {
+.form-progress-step {
   position: relative;
   z-index: 2;
   display: flex;
@@ -81,8 +79,8 @@
   margin-bottom: 40px;
 }
 
-.progress-step:first-child,
-.progress-step:last-child {
+.form-progress-step:first-child,
+.form-progress-step:last-child {
   margin: 0;
 }
 
@@ -118,41 +116,41 @@
   hyphens: auto;
 }
 
-.progress-step.active .step-number {
+.form-progress-step.active .step-number {
   border-color: #00D1B2;
   color: #00D1B2;
   background: white;
   transform: scale(1.1);
 }
 
-.progress-step.completed .step-number {
+.form-progress-step.completed .step-number {
   border-color: #00D1B2;
   color: #00D1B2;
   background: white;
 }
 
-.progress-step.completed::after {
+.form-progress-step.completed::after {
   display: none;
 }
 
-.progress-step.active .step-title {
+.form-progress-step.active .step-title {
   color: #00D1B2;
   font-weight: 600;
 }
 
-.progress-step:hover .step-number {
+.form-progress-step:hover .step-number {
   transform: scale(1.1);
   border-color: #00D1B2;
 }
 
-.progress-step .step-number {
+.form-progress-step .step-number {
   background: white;
   z-index: 2;
   position: relative;
 }
 
 @media (max-width: 768px) {
-  .progress-bar {
+  .form-progress {
     margin: 0 20px 30px;
     overflow-x: auto;
     padding-bottom: 10px;
@@ -325,11 +323,11 @@ input[type="file"]::file-selector-button:hover {
   min-width: 0;
 }
 
-.progress-bar[data-progress="0"] { --progress-percentage: 0; }
-.progress-bar[data-progress="1"] { --progress-percentage: 0.142857; }
-.progress-bar[data-progress="2"] { --progress-percentage: 0.285714; }
-.progress-bar[data-progress="3"] { --progress-percentage: 0.428571; }
-.progress-bar[data-progress="4"] { --progress-percentage: 0.571429; }
-.progress-bar[data-progress="5"] { --progress-percentage: 0.714286; }
-.progress-bar[data-progress="6"] { --progress-percentage: 0.857143; }
-.progress-bar[data-progress="7"] { --progress-percentage: 1; } 
+.form-progress[data-progress="0"] { --progress-percentage: 0; }
+.form-progress[data-progress="1"] { --progress-percentage: 0.142857; }
+.form-progress[data-progress="2"] { --progress-percentage: 0.285714; }
+.form-progress[data-progress="3"] { --progress-percentage: 0.428571; }
+.form-progress[data-progress="4"] { --progress-percentage: 0.571429; }
+.form-progress[data-progress="5"] { --progress-percentage: 0.714286; }
+.form-progress[data-progress="6"] { --progress-percentage: 0.857143; }
+.form-progress[data-progress="7"] { --progress-percentage: 1; } 
