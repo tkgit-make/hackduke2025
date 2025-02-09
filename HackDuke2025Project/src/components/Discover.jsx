@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import startupsData from '../data/startups.json';
 import './Discover.css';
 import postPlaceholder from '../assets/images/post-placeholder.png';
 import { useCategory } from '../context/CategoryContext';
@@ -9,12 +8,31 @@ const Discover = () => {
   const navigate = useNavigate();
   const { selectedCategory, setSelectedCategory } = useCategory();
   const [selectedStage, setSelectedStage] = useState('All');
+  const [startupsData, setStartupsData] = useState([]);
+  const [industries, setIndustries] = useState(['All']);
 
-  // Get unique industries from data
-  const industries = ['All', ...new Set(startupsData.startups.map(startup => startup.industry))];
   const stages = ['All', 'Pre-seed', 'Seed', 'Series A'];
 
-  const filteredStartups = startupsData.startups.filter(startup => {
+  useEffect(() => {
+    const fetchStartups = async () => {
+      try {
+        const response = await fetch('http://localhost:5050/api/startups');
+        if (!response.ok) {
+          throw new Error('Failed to fetch startups');
+        }
+        const data = await response.json();
+        setStartupsData(data);
+        const uniqueIndustries = ['All', ...new Set(data.map(startup => startup.industry))];
+        setIndustries(uniqueIndustries);
+      } catch (err) {
+        console.error('Error fetching startups:', err);
+      }
+    };
+
+    fetchStartups();
+  }, []);
+
+  const filteredStartups = startupsData.filter(startup => {
     const industryMatch = !selectedCategory || startup.industry === selectedCategory;
     const stageMatch = selectedStage === 'All' || startup.stage === selectedStage;
     return industryMatch && stageMatch;
@@ -74,21 +92,21 @@ const Discover = () => {
       <div className="startups-grid">
         {filteredStartups.map(startup => (
           <div 
-            key={startup.id} 
+            key={startup._id}
             className="startup-card"
-            onClick={() => handleStartupClick(startup.name)}
+            onClick={() => handleStartupClick(startup.startUpName)}
           >
             <div className="image-container">
               <img 
                 src={startup.logo || postPlaceholder} 
-                alt={startup.name} 
+                alt={startup.startUpName} 
                 className="startup-logo"
                 onError={(e) => {
                   e.target.src = postPlaceholder;
                 }}
               />
               <div className="image-overlay">
-                <h3>{startup.name}</h3>
+                <h3>{startup.startUpName}</h3>
               </div>
             </div>
             <div className="startup-info">
@@ -97,20 +115,20 @@ const Discover = () => {
                 <span className="tag industry">{startup.industry}</span>
                 <span className="tag stage">{startup.stage}</span>
               </div>
-              <div className="location">{startup.location}</div>
+              <div className="location">{startup.homeLocation}</div>
               <div className="funding-info">
                 <div className="funding-progress">
                   <div 
                     className="progress-bar"
-                    style={{ width: `${calculateProgress(startup.fundingRaised, startup.fundingGoal)}%` }}
+                    style={{ width: `${calculateProgress(startup.totalRaised, startup.targetGoal)}%` }}
                   ></div>
                 </div>
                 <div className="funding-details">
-                  <span>{formatCurrency(startup.fundingRaised)} raised</span>
-                  <span>{startup.equity}% equity</span>
+                  <span>{formatCurrency(startup.totalRaised)} raised</span>
+                  <span>{startup.equityPerShare}% equity</span>
                 </div>
                 <div className="funding-goal">
-                  Goal: {formatCurrency(startup.fundingGoal)}
+                  Goal: {formatCurrency(startup.targetGoal)}
                 </div>
               </div>
             </div>
