@@ -1,44 +1,50 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Login.css';
-import defaultUsers from '../data/users.json';
 
 const Login = ({ isOpen, onClose, onSwitch }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
 
-    // Get current users from localStorage or use default
-    const storedUsers = JSON.parse(localStorage.getItem('allUsers')) || defaultUsers.users;
+    try {
+      // Send login data (email and password) to the backend to validate user credentials
+      const response = await fetch('http://localhost:5050/api/userAccounts/', {  // Adjusted the URL to a login endpoint
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
 
-    // Check if user exists
-    const user = storedUsers.find(u => u.email === email);
-    
-    if (!user) {
-      setError('No account found with this email');
-      return;
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.message || 'An error occurred during login');
+        return;
+      }
+
+      // Assuming the backend sends the user details after successful login, no need for another API call
+      const { id, userName, email: userEmail, investorType } = data;
+
+      // Store user details in localStorage for future requests
+      localStorage.setItem('currentUser', JSON.stringify({
+        id,
+        userName,
+        email: userEmail,
+        investorType,
+      }));
+
+      // Close modal and reload page after successful login
+      onClose();
+      window.location.reload();  // This can be optimized or changed if not needed
+    } catch (err) {
+      setError('An error occurred. Please try again later.');
     }
-
-    if (user.password !== password) {
-      setError('Incorrect password');
-      return;
-    }
-
-    // Successful login
-    localStorage.setItem('currentUser', JSON.stringify({
-      id: user.id,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      email: user.email,
-      investorType: user.investorType
-    }));
-    
-    onClose();
-    window.location.reload();
   };
 
   return (
@@ -79,7 +85,7 @@ const Login = ({ isOpen, onClose, onSwitch }) => {
 Login.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-  onSwitch: PropTypes.func.isRequired
+  onSwitch: PropTypes.func.isRequired,
 };
 
 export default Login;

@@ -28,7 +28,7 @@ const investmentSchema = new Schema({
 const userAccountSchema = new Schema({
     userName : {
         type : String, 
-        required : true
+        required : false
     },
 
     email : {
@@ -39,6 +39,16 @@ const userAccountSchema = new Schema({
     password : {
         type : String, 
         required : true
+    },
+
+    investorType : {
+        type : String, 
+        required : false
+    },
+
+    investorPreferences : {
+        type : [{body : String}], 
+        required : false
     },
 
     userInvestments : [investmentSchema],
