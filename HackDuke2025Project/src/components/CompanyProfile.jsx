@@ -3,14 +3,14 @@ import './CompanyProfile.css';
 import { IoArrowBack } from "react-icons/io5";
 import companyImage from '../assets/images/company-placeholder.png';
 import postImage from '../assets/images/post-placeholder.png';
-import sampleStartups from '../data/sample_startups.json';
+import sampleStartupsData from '../data/sample_startups.json';
 
 const CompanyProfile = () => {
   const navigate = useNavigate();
   const { companyName } = useParams();
   
   // Find the matching company data from sample data
-  const companyData = sampleStartups.startups.find(
+  const companyData = sampleStartupsData.startups.find(
     startup => startup.startUpName === companyName
   );
 
@@ -22,19 +22,11 @@ const CompanyProfile = () => {
 
   const progressPercentage = (companyData.totalRaised / companyData.targetGoal) * 100;
 
-  // Calculate number of shares
-  // First, calculate total equity the company wants to sell based on target goal and price per share
-  const totalEquityWanted = (companyData.targetGoal / companyData.pricePerShare) * companyData.equityPerShare;
-  // Then calculate number of shares by dividing total equity by equity per share
-  const totalShares = Math.floor(totalEquityWanted / companyData.equityPerShare);
-  
   // Calculate current valuation
-  // If company is selling totalEquityWanted% for targetGoal dollars
-  const currentValuation = (companyData.targetGoal / totalEquityWanted) * 100;
+  const currentValuation = (companyData.targetGoal / (companyData.equityPerShare * companyData.totalSharesOffered / 100)) * 100;
   
   // Calculate potential return per share
-  // Each share represents equityPerShare% of the company
-  const potentialReturnPerShare = (currentValuation * (companyData.equityPerShare / 100));
+  const potentialReturnPerShare = (currentValuation * (companyData.equityPerShare / 100)) / companyData.totalSharesOffered;
 
   return (
     <div className="company-profile">
@@ -96,7 +88,7 @@ const CompanyProfile = () => {
 
             <div className="investment-stats">
               <div className="stat-item">
-                <div className="stat-value">{totalShares}</div>
+                <div className="stat-value">{companyData.sharesAvailable}</div>
                 <div className="stat-label">Shares Available</div>
               </div>
               <div className="stat-item">
@@ -123,21 +115,6 @@ const CompanyProfile = () => {
                   ${potentialReturnPerShare.toFixed(2)}
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="funding-stats">
-            <div className="stat">
-              <h4>Shares Available</h4>
-              <p>{companyData.sharesAvailable} of {companyData.totalShares}</p>
-            </div>
-            <div className="stat">
-              <h4>Price per Share</h4>
-              <p>${companyData.pricePerShare}</p>
-            </div>
-            <div className="stat">
-              <h4>Equity per Share</h4>
-              <p>{companyData.equityPerShare}%</p>
             </div>
           </div>
         </div>
