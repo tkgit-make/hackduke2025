@@ -1,0 +1,92 @@
+.discover-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 60px;
+}
+
+.header-left h1 {
+  margin: 0;
+}
+
+.active-campaigns {
+  margin-bottom: 24px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.active-campaigns h2 {
+  margin: 0 0 16px 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.campaign-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.urgent-campaign {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #fff4f4;
+  border-radius: 6px;
+  border: 1px solid #ffcdd2;
+}
+
+.urgent-badge {
+  padding: 2px 8px;
+  background: #ff5252;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.countdown-display {
+  color: #333;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+}
+
+.sort-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.sort-controls button {
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid #00e0b6;
+  color: #00e0b6;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sort-controls button:hover {
+  background-color: #00e0b6;
+  color: white;
+}
+
+.sort-controls button:active {
+  background-color: #00c9a3;
+} 

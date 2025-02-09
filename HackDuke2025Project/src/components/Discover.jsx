@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import './Discover.css';
 import postPlaceholder from '../assets/images/post-placeholder.png';
 import { useCategory } from '../context/CategoryContext';
+import DigitalClock from './DigitalClock';
+import Card from './Card';
 
 const Discover = () => {
   const navigate = useNavigate();
@@ -110,6 +112,12 @@ const Discover = () => {
               </div>
             </div>
             <div className="startup-info">
+              <div className="startup-clock">
+                <DigitalClock 
+                  small 
+                  endDate={startup.endDate}
+                />
+              </div>
               <p className="description">{startup.shortDescription}</p>
               <div className="tags">
                 <span className="tag industry">{startup.industry}</span>
@@ -125,7 +133,7 @@ const Discover = () => {
                 </div>
                 <div className="funding-details">
                   <span>{formatCurrency(startup.totalRaised)} raised</span>
-                  <span>{startup.equityPerShare}% equity</span>
+                  <span>{startup.equityPerShare}% equity per share</span>
                 </div>
                 <div className="funding-goal">
                   Goal: {formatCurrency(startup.targetGoal)}

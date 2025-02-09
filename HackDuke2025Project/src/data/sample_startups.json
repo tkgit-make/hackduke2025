@@ -4,7 +4,7 @@
       "startupID": 1001,
       "startUpName": "EcoTech Solutions",
       "shortDescription": "Developing sustainable energy solutions for residential communities through innovative solar and wind technology.",
-      "fullDescription": "Developing sustainable energy solutions for residential communities through innovative solar and wind technology integration. Our patented micro-grid system enables neighborhoods to share and optimize renewable energy usage. We focus on creating scalable, efficient solutions that make renewable energy accessible to entire communities while reducing overall energy costs and environmental impact.",
+      "fullDescription": "Developing sustainable energy solutions for residential communities through innovative solar and wind technology integration. Our patented micro-grid system enables neighborhoods to share and optimize renewable energy usage.",
       "homeLocation": "Durham, NC",
       "industry": "CleanTech",
       "stage": "Seed",
@@ -14,27 +14,136 @@
       "equityPerShare": 0.005,
       "sharesAvailable": 15000,
       "totalSharesOffered": 20000,
-      "logo": "/images/logos/ecotech-logo.png",
-      "image": "/images/banners/ecotech-banner.png",
+      "minInvestment": 1000,
+      "maxInvestment": 100000,
+      "logo": "/assets/images/startups/ecotech/logo.png",
+      "image": "/assets/images/startups/ecotech/banner.png",
+      "foundedDate": "2022-06-15",
+      "campaignDuration": 21,
+      "startDate": "2025-01-19T19:00:00",
+      "endDate": "2025-02-09T19:00:00",
+      "useOfFunds": "The funds will be used to scale our manufacturing capabilities, expand our engineering team, and deploy pilot projects in three new communities.",
+      "marketSize": 85000000000,
+      "targetMarket": "Residential communities and housing developers in the United States looking to implement sustainable energy solutions.",
+      "competitiveAdvantage": "Proprietary micro-grid technology with 40% better energy distribution efficiency than competitors.",
+      "currentRevenue": 450000,
+      "revenueModel": "Hardware sales and recurring maintenance subscriptions",
+      "customerBase": "12 residential communities across North Carolina",
+      "metrics": {
+        "mrr": 45000,
+        "growth": 25,
+        "users": 1200,
+        "retention": 95
+      },
+      "teamMembers": [
+        {
+          "name": "Sarah Chen",
+          "role": "CEO & Co-founder",
+          "bio": "Former Tesla Energy executive with 10+ years in renewable energy. PhD in Electrical Engineering from Stanford.",
+          "linkedin": "https://linkedin.com/in/sarahchen"
+        },
+        {
+          "name": "Michael Rodriguez",
+          "role": "CTO & Co-founder",
+          "bio": "Previously led grid optimization at GE Renewable Energy. MS in Computer Science from MIT.",
+          "linkedin": "https://linkedin.com/in/mrodriguez"
+        }
+      ],
+      "previousRounds": [
+        {
+          "round": "Pre-Seed",
+          "amount": 500000,
+          "date": "2023-01-15",
+          "investors": "TechStars, Angel Investor Group"
+        }
+      ],
+      "milestones": [
+        {
+          "title": "Manufacturing Facility Setup",
+          "description": "Establish our first manufacturing facility in Durham",
+          "date": "2024-05-15",
+          "fundingRequired": 800000
+        },
+        {
+          "title": "Team Expansion",
+          "description": "Hire key engineering and sales positions",
+          "date": "2024-08-01",
+          "fundingRequired": 400000
+        }
+      ],
+      "website": "https://ecotechsolutions.com",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/company/ecotechsolutions",
+        "twitter": "https://twitter.com/ecotechsol",
+        "facebook": "https://facebook.com/ecotechsolutions"
+      },
       "postsData": [
         {
           "id": 1001,
           "caption": "Our micro-grid system successfully deployed in Durham's Green Valley community!",
           "likesData": 156,
-          "photos": [{"photoLocation": "/images/posts/microgrid-installation.jpg"}]
+          "photos": [{"photoLocation": "/assets/images/startups/ecotech/post1.jpg"}]
         }
       ],
       "tagsData": [
         {"body": "CleanEnergy"},
         {"body": "Sustainability"},
         {"body": "RenewableEnergy"}
-      ]
+      ],
+      "fundingRounds": [
+        {
+          "preMoneyValuation": 8000000,
+          "fundingGoal": 2000000,
+          "currentFunding": 750000,
+          "roundType": "Seed",
+          "amountRaised": 750000,
+          "date": "2023-09-15",
+          "keyInvestors": [
+            "Breakthrough Energy Ventures",
+            "Kleiner Perkins",
+            "Y Combinator"
+          ]
+        },
+        {
+          "preMoneyValuation": 4000000,
+          "fundingGoal": 1000000,
+          "currentFunding": 1000000,
+          "roundType": "Pre-Seed",
+          "amountRaised": 1000000,
+          "date": "2022-08-01",
+          "keyInvestors": [
+            "TechStars",
+            "Angel Investor Group"
+          ]
+        }
+      ],
+      "pitchDeck": "/documents/pitch-decks/ecotech-pitch.pdf",
+      "financialProjections": "/documents/financials/ecotech-projections.xlsx",
+      "companyRegistration": "NC-2022-0615-LLC",
+      "taxId": "82-1234567",
+      "legalStructure": "LLC",
+      "intellectualProperty": "2 pending patents for micro-grid optimization technology, registered trademark for EcoTech™",
+      "regulatoryInfo": "FERC Small Power Producer Certification, NC Utilities Commission Approval",
+      "legalInfo": {
+        "companyRegistration": "NC-2022-0615-LLC",
+        "taxId": "82-1234567",
+        "legalStructure": "LLC",
+        "intellectualProperty": "2 pending patents for micro-grid optimization technology, registered trademark for EcoTech™",
+        "regulatoryInfo": "FERC Small Power Producer Certification, NC Utilities Commission Approval"
+      },
+      "techStack": {
+        "frontend": ["React", "TypeScript", "Material-UI"],
+        "backend": ["Node.js", "Python", "TensorFlow"],
+        "infrastructure": ["AWS", "Docker", "Kubernetes"],
+        "databases": ["MongoDB", "TimescaleDB"],
+        "security": ["SSL/TLS", "OAuth 2.0", "AES-256"]
+      }
     },
     {
       "startupID": 1002,
       "startUpName": "HealthAI Labs",
       "shortDescription": "Revolutionizing early disease detection through AI-powered medical imaging analysis.",
-      "fullDescription": "HealthAI Labs is pioneering the future of medical diagnostics using advanced artificial intelligence. Our platform analyzes medical images to detect diseases at early stages with unprecedented accuracy. We're working with leading hospitals to improve patient outcomes and reduce healthcare costs through early intervention.",
+      "fullDescription": "HealthAI Labs is pioneering the future of medical diagnostics using advanced artificial intelligence. Our platform analyzes medical images to detect diseases at early stages with unprecedented accuracy.",
       "homeLocation": "Boston, MA",
       "industry": "HealthTech",
       "stage": "Series A",
@@ -44,27 +153,121 @@
       "equityPerShare": 0.002,
       "sharesAvailable": 11600,
       "totalSharesOffered": 20000,
-      "logo": "/images/logos/healthai-logo.png",
-      "image": "/images/banners/healthai-banner.png",
+      "minInvestment": 2500,
+      "maxInvestment": 250000,
+      "logo": "/assets/images/startups/healthai/logo.png",
+      "image": "/assets/images/startups/healthai/banner.png",
+      "foundedDate": "2021-03-22",
+      "campaignDuration": 18,
+      "startDate": "2025-01-23T19:00:00",
+      "endDate": "2025-02-10T19:00:00",
+      "useOfFunds": "Funds will be used to expand our AI model training capabilities, obtain FDA clearance for additional diagnostic applications, and scale our hospital partnerships program.",
+      "marketSize": 45000000000,
+      "targetMarket": "Healthcare providers, hospitals, and diagnostic imaging centers in North America and Europe.",
+      "competitiveAdvantage": "93% accuracy in early detection, compared to industry average of 76%. FDA-cleared for three diagnostic applications.",
+      "currentRevenue": 850000,
+      "revenueModel": "SaaS subscription model with per-scan pricing",
+      "customerBase": "28 hospitals and imaging centers across the US",
+      "metrics": {
+        "mrr": 85000,
+        "growth": 40,
+        "users": 450,
+        "retention": 98
+      },
+      "teamMembers": [
+        {
+          "name": "Dr. Emily Watson",
+          "role": "CEO & Co-founder",
+          "bio": "Board-certified radiologist with expertise in AI. Previously Research Lead at IBM Watson Health.",
+          "linkedin": "https://linkedin.com/in/emilywatson"
+        },
+        {
+          "name": "James Liu",
+          "role": "CTO & Co-founder",
+          "bio": "Former AI Research Scientist at Google Health. PhD in Computer Science from Berkeley.",
+          "linkedin": "https://linkedin.com/in/jamesliu"
+        }
+      ],
+      "previousRounds": [
+        {
+          "round": "Seed",
+          "amount": 3000000,
+          "date": "2023-03-10",
+          "investors": "Y Combinator, Khosla Ventures"
+        },
+        {
+          "round": "Pre-Seed",
+          "amount": 750000,
+          "date": "2022-01-15",
+          "investors": "Harvard Innovation Labs, Angel Investors"
+        }
+      ],
+      "milestones": [
+        {
+          "title": "FDA Clearance Expansion",
+          "description": "Obtain FDA clearance for cardiac and neurological applications",
+          "date": "2024-08-15",
+          "fundingRequired": 2000000
+        },
+        {
+          "title": "European Market Entry",
+          "description": "Establish European headquarters and obtain CE marking",
+          "date": "2024-10-01",
+          "fundingRequired": 1500000
+        },
+        {
+          "title": "AI Model Enhancement",
+          "description": "Expand training dataset and improve detection accuracy",
+          "date": "2025-01-15",
+          "fundingRequired": 1000000
+        }
+      ],
+      "website": "https://healthailabs.com",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/company/healthailabs",
+        "twitter": "https://twitter.com/healthailabs",
+        "facebook": "https://facebook.com/healthailabs"
+      },
       "postsData": [
         {
           "id": 1002,
           "caption": "Proud to announce our partnership with Massachusetts General Hospital!",
           "likesData": 324,
-          "photos": [{"photoLocation": "/images/posts/hospital-partnership.jpg"}]
+          "photos": [{"photoLocation": "/assets/images/startups/healthai/post1.jpg"}]
         }
       ],
       "tagsData": [
         {"body": "Healthcare"},
         {"body": "AI"},
         {"body": "Innovation"}
-      ]
+      ],
+      "companyRegistration": "MA-2021-0322-C",
+      "taxId": "83-2345678",
+      "legalStructure": "C-Corporation",
+      "intellectualProperty": "3 granted patents for AI diagnostic algorithms, FDA Class II clearance",
+      "regulatoryInfo": "HIPAA compliant, SOC 2 Type II certified, FDA registered facility",
+      "legalInfo": {
+        "companyRegistration": "MA-2021-0322-C",
+        "taxId": "83-2345678",
+        "legalStructure": "C-Corporation",
+        "intellectualProperty": "3 granted patents for AI diagnostic algorithms, FDA Class II clearance",
+        "regulatoryInfo": "HIPAA compliant, SOC 2 Type II certified, FDA registered facility"
+      },
+      "techStack": {
+        "frontend": ["Vue.js", "JavaScript", "TailwindCSS"],
+        "backend": ["Python", "PyTorch", "FastAPI"],
+        "infrastructure": ["GCP", "Kubernetes", "Terraform"],
+        "databases": ["PostgreSQL", "Redis"],
+        "security": ["HIPAA-compliant encryption", "Zero Trust Architecture"]
+      },
+      "pitchDeck": "/documents/pitch-decks/healthai-pitch.pdf",
+      "financialProjections": "/documents/financials/healthai-projections.xlsx"
     },
     {
       "startupID": 1003,
       "startUpName": "EduPlay",
       "shortDescription": "Making early childhood education engaging and accessible through interactive AR experiences.",
-      "fullDescription": "EduPlay is transforming early childhood education with augmented reality technology. Our platform creates immersive learning experiences that make education fun and accessible for children aged 3-8. We combine proven educational methodologies with cutting-edge AR to create an engaging learning environment.",
+      "fullDescription": "EduPlay is transforming early childhood education with augmented reality technology. Our platform creates immersive learning experiences that make education fun and accessible for children aged 3-8.",
       "homeLocation": "Austin, TX",
       "industry": "EdTech",
       "stage": "Pre-Seed",
@@ -74,14 +277,96 @@
       "equityPerShare": 0.01,
       "sharesAvailable": 7500,
       "totalSharesOffered": 10000,
-      "logo": "/images/logos/eduplay-logo.png",
-      "image": "/images/banners/eduplay-banner.png",
+      "minInvestment": 500,
+      "maxInvestment": 50000,
+      "logo": "/assets/images/startups/eduplay/logo.png",
+      "image": "/assets/images/startups/eduplay/banner.png",
+      "foundedDate": "2023-09-01",
+      "campaignDuration": 15,
+      "startDate": "2025-01-26T19:00:00",
+      "endDate": "2025-02-09T19:00:00",
+      "useOfFunds": "Funds will be used to expand our AR content library, enhance platform features, and launch partnerships with early learning centers.",
+      "marketSize": 12000000000,
+      "targetMarket": "Early childhood education centers, parents of children aged 3-8, and elementary schools in the United States.",
+      "competitiveAdvantage": "Proprietary AR technology with 98% engagement rate and proven learning outcomes.",
+      "currentRevenue": 75000,
+      "revenueModel": "B2B subscriptions and B2C premium content",
+      "customerBase": "15 learning centers and 2,000 direct users",
+      "metrics": {
+        "mrr": 15000,
+        "growth": 35,
+        "users": 2000,
+        "retention": 92
+      },
+      "teamMembers": [
+        {
+          "name": "Lisa Park",
+          "role": "CEO & Co-founder",
+          "bio": "Former Head of Product at Khan Academy Kids. M.Ed. in Early Childhood Education from Harvard.",
+          "linkedin": "https://linkedin.com/in/lisapark"
+        },
+        {
+          "name": "Alex Rivera",
+          "role": "CTO & Co-founder",
+          "bio": "AR/VR developer with experience at Roblox Education. MS in Computer Science from UT Austin.",
+          "linkedin": "https://linkedin.com/in/alexrivera"
+        }
+      ],
+      "previousRounds": [
+        {
+          "round": "Angel",
+          "amount": 125000,
+          "date": "2023-10-15",
+          "investors": "Austin EdTech Angels, Individual Investors"
+        }
+      ],
+      "milestones": [
+        {
+          "title": "Content Library Expansion",
+          "description": "Develop 50 new interactive AR learning modules",
+          "date": "2024-05-15",
+          "fundingRequired": 200000
+        },
+        {
+          "title": "Platform Enhancement",
+          "description": "Launch parent dashboard and progress tracking",
+          "date": "2024-08-01",
+          "fundingRequired": 150000
+        }
+      ],
+      "website": "https://eduplay.tech",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/company/eduplay",
+        "twitter": "https://twitter.com/eduplaytech",
+        "facebook": "https://facebook.com/eduplaytech"
+      },
+      "companyRegistration": "TX-2023-0901-LLC",
+      "taxId": "84-3456789",
+      "legalStructure": "LLC",
+      "intellectualProperty": "Patent-pending AR learning algorithms, registered trademark for EduPlay™",
+      "regulatoryInfo": "COPPA compliant, FERPA certified",
+      "legalInfo": {
+        "companyRegistration": "TX-2023-0901-LLC",
+        "taxId": "84-3456789",
+        "legalStructure": "LLC",
+        "intellectualProperty": "Patent-pending AR learning algorithms, registered trademark for EduPlay™",
+        "regulatoryInfo": "COPPA compliant, FERPA certified"
+      },
+      "techStack": {
+        "frontend": ["Unity", "React Native", "ARKit/ARCore"],
+        "backend": ["Node.js", "Python", "TensorFlow"],
+        "infrastructure": ["AWS", "CloudFront", "ECS"],
+        "databases": ["MongoDB", "Redis"],
+        "security": ["End-to-end encryption", "COPPA-compliant data handling"]
+      },
+      "pitchDeck": "/documents/pitch-decks/eduplay-pitch.pdf",
+      "financialProjections": "/documents/financials/eduplay-projections.xlsx",
       "postsData": [
         {
           "id": 1003,
           "caption": "Beta testing our new AR alphabet learning module with amazing results!",
           "likesData": 89,
-          "photos": [{"photoLocation": "/images/posts/ar-testing.jpg"}]
+          "photos": [{"photoLocation": "/assets/images/startups/eduplay/post1.jpg"}]
         }
       ],
       "tagsData": [
@@ -94,7 +379,7 @@
       "startupID": 1004,
       "startUpName": "SecureChain",
       "shortDescription": "Building next-generation blockchain security solutions for enterprise applications.",
-      "fullDescription": "SecureChain provides enterprise-grade blockchain security solutions that protect digital assets and smart contracts. Our platform offers real-time threat detection, automated auditing, and advanced encryption protocols to ensure the highest level of security for blockchain applications.",
+      "fullDescription": "SecureChain provides enterprise-grade blockchain security solutions that protect digital assets and smart contracts. Our platform offers real-time threat detection, automated auditing, and advanced encryption protocols.",
       "homeLocation": "San Francisco, CA",
       "industry": "FinTech",
       "stage": "Angel",
@@ -104,14 +389,96 @@
       "equityPerShare": 0.004,
       "sharesAvailable": 4700,
       "totalSharesOffered": 10000,
-      "logo": "/images/logos/securechain-logo.png",
-      "image": "/images/banners/securechain-banner.png",
+      "minInvestment": 1500,
+      "maxInvestment": 150000,
+      "logo": "/assets/images/startups/securechain/logo.png",
+      "image": "/assets/images/startups/securechain/banner.png",
+      "foundedDate": "2022-07-10",
+      "campaignDuration": 21,
+      "startDate": "2025-01-20T19:00:00",
+      "endDate": "2025-02-10T19:00:00",
+      "useOfFunds": "Expand security auditing capabilities, enhance threat detection systems, and scale enterprise client support team.",
+      "marketSize": 32000000000,
+      "targetMarket": "Enterprise blockchain platforms, DeFi protocols, and cryptocurrency exchanges.",
+      "competitiveAdvantage": "Patent-pending threat detection system with 99.99% accuracy and sub-second response time.",
+      "currentRevenue": 650000,
+      "revenueModel": "Enterprise licensing and security audit fees",
+      "customerBase": "23 enterprise clients including 3 major cryptocurrency exchanges",
+      "metrics": {
+        "mrr": 65000,
+        "growth": 45,
+        "users": 23,
+        "retention": 100
+      },
+      "teamMembers": [
+        {
+          "name": "David Zhang",
+          "role": "CEO & Co-founder",
+          "bio": "Former Head of Security at Coinbase. MS in Computer Science from Stanford.",
+          "linkedin": "https://linkedin.com/in/davidzhang"
+        },
+        {
+          "name": "Maria Santos",
+          "role": "CTO & Co-founder",
+          "bio": "Blockchain security researcher with 8 years at Ethereum Foundation.",
+          "linkedin": "https://linkedin.com/in/mariasantos"
+        }
+      ],
+      "previousRounds": [
+        {
+          "round": "Angel",
+          "amount": 800000,
+          "date": "2023-06-15",
+          "investors": "Blockchain Capital, Individual Crypto Investors"
+        }
+      ],
+      "milestones": [
+        {
+          "title": "Enterprise Suite Launch",
+          "description": "Release comprehensive security suite for enterprise clients",
+          "date": "2024-05-15",
+          "fundingRequired": 600000
+        },
+        {
+          "title": "International Expansion",
+          "description": "Establish presence in Asian markets",
+          "date": "2024-08-01",
+          "fundingRequired": 400000
+        }
+      ],
+      "website": "https://securechain.io",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/company/securechain",
+        "twitter": "https://twitter.com/securechain",
+        "facebook": "https://facebook.com/securechain"
+      },
+      "companyRegistration": "DE-2022-0710-C",
+      "taxId": "85-4567890",
+      "legalStructure": "C-Corporation",
+      "intellectualProperty": "5 pending patents for blockchain security protocols, registered trademark for SecureChain™",
+      "regulatoryInfo": "SOC 2 Type II certified, ISO 27001 compliant",
+      "legalInfo": {
+        "companyRegistration": "DE-2022-0710-C",
+        "taxId": "85-4567890",
+        "legalStructure": "C-Corporation",
+        "intellectualProperty": "5 pending patents for blockchain security protocols, registered trademark for SecureChain™",
+        "regulatoryInfo": "SOC 2 Type II certified, ISO 27001 compliant"
+      },
+      "techStack": {
+        "frontend": ["React", "Web3.js", "TypeScript"],
+        "backend": ["Rust", "Solidity", "Go"],
+        "infrastructure": ["AWS", "Kubernetes", "Terraform"],
+        "databases": ["PostgreSQL", "Ethereum nodes"],
+        "security": ["Hardware Security Modules", "Multi-sig wallets"]
+      },
+      "pitchDeck": "/documents/pitch-decks/securechain-pitch.pdf",
+      "financialProjections": "/documents/financials/securechain-projections.xlsx",
       "postsData": [
         {
           "id": 1004,
           "caption": "Launching our enterprise security suite next month!",
           "likesData": 245,
-          "photos": [{"photoLocation": "/images/posts/security-launch.jpg"}]
+          "photos": [{"photoLocation": "/assets/images/startups/securechain/post1.jpg"}]
         }
       ],
       "tagsData": [
@@ -134,14 +501,96 @@
       "equityPerShare": 0.003,
       "sharesAvailable": 10300,
       "totalSharesOffered": 17150,
-      "logo": "/images/logos/roboassist-logo.png",
-      "image": "/images/banners/roboassist-banner.png",
+      "logo": "/assets/images/startups/roboassist/logo.png",
+      "image": "/assets/images/startups/roboassist/banner.png",
+      "foundedDate": "2022-04-18",
+      "minInvestment": 2000,
+      "maxInvestment": 200000,
+      "campaignDuration": 14,
+      "startDate": "2025-01-27T19:00:00",
+      "endDate": "2025-02-10T19:00:00",
+      "useOfFunds": "Scale production of care robots, enhance AI capabilities, and expand to 50 new facilities across the West Coast.",
+      "marketSize": 25000000000,
+      "targetMarket": "Senior care facilities, hospitals, and rehabilitation centers in North America.",
+      "competitiveAdvantage": "Proprietary human-robot interaction system with 95% patient satisfaction rate.",
+      "currentRevenue": 550000,
+      "revenueModel": "Robot leasing and maintenance subscriptions",
+      "customerBase": "8 care facilities with 32 deployed robots",
+      "metrics": {
+        "mrr": 55000,
+        "growth": 30,
+        "users": 32,
+        "retention": 100
+      },
+      "teamMembers": [
+        {
+          "name": "Dr. Robert Chen",
+          "role": "CEO & Co-founder",
+          "bio": "Former Lead Roboticist at Boston Dynamics. PhD in Robotics from MIT.",
+          "linkedin": "https://linkedin.com/in/robertchen"
+        },
+        {
+          "name": "Dr. Amanda Lee",
+          "role": "CTO & Co-founder",
+          "bio": "Healthcare robotics expert. Previously at Intuitive Surgical.",
+          "linkedin": "https://linkedin.com/in/amandalee"
+        }
+      ],
+      "previousRounds": [
+        {
+          "round": "Seed",
+          "amount": 1200000,
+          "date": "2023-05-20",
+          "investors": "Healthcare Robotics Fund, Seattle Angels"
+        }
+      ],
+      "milestones": [
+        {
+          "title": "Production Scaling",
+          "description": "Establish automated assembly line for robot production",
+          "date": "2024-08-15",
+          "fundingRequired": 1200000
+        },
+        {
+          "title": "AI Enhancement",
+          "description": "Launch advanced patient interaction features",
+          "date": "2024-10-01",
+          "fundingRequired": 800000
+        }
+      ],
+      "website": "https://roboassist.ai",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/company/roboassist",
+        "twitter": "https://twitter.com/roboassist",
+        "facebook": "https://facebook.com/roboassist"
+      },
+      "companyRegistration": "WA-2022-0418-C",
+      "taxId": "86-5678901",
+      "legalStructure": "C-Corporation",
+      "intellectualProperty": "3 granted patents for robotic assistance systems, FDA Class II clearance pending",
+      "regulatoryInfo": "ISO 13485 certified, HIPAA compliant",
+      "legalInfo": {
+        "companyRegistration": "WA-2022-0418-C",
+        "taxId": "86-5678901",
+        "legalStructure": "C-Corporation",
+        "intellectualProperty": "3 granted patents for robotic assistance systems, FDA Class II clearance pending",
+        "regulatoryInfo": "ISO 13485 certified, HIPAA compliant"
+      },
+      "techStack": {
+        "frontend": ["Qt", "ROS", "Python"],
+        "backend": ["C++", "Python", "TensorFlow"],
+        "infrastructure": ["AWS RoboMaker", "Kubernetes"],
+        "databases": ["TimescaleDB", "Redis"],
+        "security": ["Secure Boot", "Encrypted Communications"]
+      },
+      "pitchDeck": "/documents/pitch-decks/roboassist-pitch.pdf",
+      "financialProjections": "/documents/financials/roboassist-projections.xlsx",
       "postsData": [
         {
           "id": 1005,
           "caption": "First successful pilot program completed at Seattle Senior Care Center!",
           "likesData": 178,
-          "photos": [{"photoLocation": "/images/posts/robot-pilot.jpg"}]
+          "photos": [{"photoLocation": "/assets/images/startups/roboassist/post1.jpg"}]
         }
       ],
       "tagsData": [
@@ -164,14 +613,96 @@
       "equityPerShare": 0.008,
       "sharesAvailable": 7300,
       "totalSharesOffered": 10000,
-      "logo": "/images/logos/agrosmart-logo.png",
-      "image": "/images/banners/agrosmart-banner.png",
+      "logo": "/assets/images/startups/agrosmart/logo.png",
+      "image": "/assets/images/startups/agrosmart/banner.png",
+      "foundedDate": "2023-05-05",
+      "minInvestment": 750,
+      "maxInvestment": 75000,
+      "campaignDuration": 15,
+      "startDate": "2025-01-19T19:00:00",
+      "endDate": "2025-02-09T19:00:00",
+      "useOfFunds": "Expand sensor network production, enhance AI algorithms, and scale to new agricultural regions.",
+      "marketSize": 15000000000,
+      "targetMarket": "Commercial farms and agricultural cooperatives in the Western United States.",
+      "competitiveAdvantage": "AI-driven predictions with 92% accuracy and 40% water savings.",
+      "currentRevenue": 200000,
+      "revenueModel": "Hardware sales and SaaS subscriptions",
+      "customerBase": "25 farms covering 15,000 acres",
+      "metrics": {
+        "mrr": 20000,
+        "growth": 40,
+        "users": 25,
+        "retention": 96
+      },
+      "teamMembers": [
+        {
+          "name": "Thomas Miller",
+          "role": "CEO & Co-founder",
+          "bio": "Agricultural engineer with 10 years in precision farming. UC Davis graduate.",
+          "linkedin": "https://linkedin.com/in/thomasmiller"
+        },
+        {
+          "name": "Dr. Sofia Patel",
+          "role": "CTO & Co-founder",
+          "bio": "AI researcher specializing in agricultural applications. PhD from Stanford.",
+          "linkedin": "https://linkedin.com/in/sofiapatel"
+        }
+      ],
+      "previousRounds": [
+        {
+          "round": "Pre-Seed",
+          "amount": 200000,
+          "date": "2023-08-10",
+          "investors": "AgTech Ventures, California FarmTech Angels"
+        }
+      ],
+      "milestones": [
+        {
+          "title": "Sensor Network Expansion",
+          "description": "Deploy to 50 additional farms",
+          "date": "2024-08-15",
+          "fundingRequired": 300000
+        },
+        {
+          "title": "AI Model Enhancement",
+          "description": "Add crop disease prediction capabilities",
+          "date": "2024-10-01",
+          "fundingRequired": 200000
+        }
+      ],
+      "website": "https://agrosmart.tech",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/company/agrosmart",
+        "twitter": "https://twitter.com/agrosmart",
+        "facebook": "https://facebook.com/agrosmart"
+      },
+      "companyRegistration": "CA-2023-0505-LLC",
+      "taxId": "87-6789012",
+      "legalStructure": "LLC",
+      "intellectualProperty": "2 provisional patents for soil analysis algorithms",
+      "regulatoryInfo": "EPA registered, California Agricultural Standards compliant",
+      "legalInfo": {
+        "companyRegistration": "CA-2023-0505-LLC",
+        "taxId": "87-6789012",
+        "legalStructure": "LLC",
+        "intellectualProperty": "2 provisional patents for soil analysis algorithms",
+        "regulatoryInfo": "EPA registered, California Agricultural Standards compliant"
+      },
+      "techStack": {
+        "frontend": ["React", "D3.js", "Leaflet"],
+        "backend": ["Python", "FastAPI", "TensorFlow"],
+        "infrastructure": ["AWS IoT", "Kubernetes"],
+        "databases": ["InfluxDB", "PostgreSQL"],
+        "security": ["Device authentication", "TLS 1.3"]
+      },
+      "pitchDeck": "/documents/pitch-decks/agrosmart-pitch.pdf",
+      "financialProjections": "/documents/financials/agrosmart-projections.xlsx",
       "postsData": [
         {
           "id": 1006,
           "caption": "New AI model showing 40% improvement in water usage efficiency!",
           "likesData": 134,
-          "photos": [{"photoLocation": "/images/posts/farm-analytics.jpg"}]
+          "photos": [{"photoLocation": "/assets/images/startups/agrosmart/post1.jpg"}]
         }
       ],
       "tagsData": [
@@ -194,14 +725,96 @@
       "equityPerShare": 0.006,
       "sharesAvailable": 7500,
       "totalSharesOffered": 12500,
-      "logo": "/images/logos/cyberlearn-logo.png",
-      "image": "/images/banners/cyberlearn-banner.png",
+      "logo": "/assets/images/startups/cyberlearn/logo.png",
+      "image": "/assets/images/startups/cyberlearn/banner.png",
+      "foundedDate": "2021-12-03",
+      "minInvestment": 1000,
+      "maxInvestment": 100000,
+      "campaignDuration": 18,
+      "startDate": "2025-01-23T19:00:00",
+      "endDate": "2025-02-10T19:00:00",
+      "useOfFunds": "Expand course content, enhance AI learning algorithms, and scale enterprise sales team.",
+      "marketSize": 28000000000,
+      "targetMarket": "Enterprise IT departments, cybersecurity professionals, and organizations requiring security training.",
+      "competitiveAdvantage": "Adaptive learning reduces training time by 60% with 95% certification success rate.",
+      "currentRevenue": 400000,
+      "revenueModel": "B2B enterprise subscriptions and certification programs",
+      "customerBase": "500 corporate clients with 15,000 active users",
+      "metrics": {
+        "mrr": 40000,
+        "growth": 50,
+        "users": 15000,
+        "retention": 94
+      },
+      "teamMembers": [
+        {
+          "name": "Kevin Patel",
+          "role": "CEO & Co-founder",
+          "bio": "Former CISO at Microsoft. MS in Information Security from Georgia Tech.",
+          "linkedin": "https://linkedin.com/in/kevinpatel"
+        },
+        {
+          "name": "Dr. Rachel Wong",
+          "role": "CTO & Co-founder",
+          "bio": "AI/ML expert in adaptive learning. PhD from Carnegie Mellon.",
+          "linkedin": "https://linkedin.com/in/rachelwong"
+        }
+      ],
+      "previousRounds": [
+        {
+          "round": "Angel",
+          "amount": 400000,
+          "date": "2023-04-15",
+          "investors": "Atlanta Tech Angels, Cyber Security Fund"
+        }
+      ],
+      "milestones": [
+        {
+          "title": "Enterprise Platform Launch",
+          "description": "Release customizable enterprise training platform",
+          "date": "2024-08-01",
+          "fundingRequired": 400000
+        },
+        {
+          "title": "Content Expansion",
+          "description": "Develop advanced threat hunting modules",
+          "date": "2024-10-15",
+          "fundingRequired": 300000
+        }
+      ],
+      "website": "https://cyberlearn.io",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/company/cyberlearn",
+        "twitter": "https://twitter.com/cyberlearn",
+        "facebook": "https://facebook.com/cyberlearn"
+      },
+      "companyRegistration": "GA-2021-1203-LLC",
+      "taxId": "88-7890123",
+      "legalStructure": "LLC",
+      "intellectualProperty": "Proprietary adaptive learning algorithms, registered trademark for CyberLearn™",
+      "regulatoryInfo": "SOC 2 Type II certified, NIST CSF compliant",
+      "legalInfo": {
+        "companyRegistration": "GA-2021-1203-LLC",
+        "taxId": "88-7890123",
+        "legalStructure": "LLC",
+        "intellectualProperty": "Proprietary adaptive learning algorithms, registered trademark for CyberLearn™",
+        "regulatoryInfo": "SOC 2 Type II certified, NIST CSF compliant"
+      },
+      "techStack": {
+        "frontend": ["React", "Next.js", "TailwindCSS"],
+        "backend": ["Python", "Django", "Scikit-learn"],
+        "infrastructure": ["AWS", "Docker", "Jenkins"],
+        "databases": ["PostgreSQL", "Elasticsearch"],
+        "security": ["Zero Trust Architecture", "SSO integration"]
+      },
+      "pitchDeck": "/documents/pitch-decks/cyberlearn-pitch.pdf",
+      "financialProjections": "/documents/financials/cyberlearn-projections.xlsx",
       "postsData": [
         {
           "id": 1007,
           "caption": "500th corporate client onboarded this week!",
           "likesData": 267,
-          "photos": [{"photoLocation": "/images/posts/training-milestone.jpg"}]
+          "photos": [{"photoLocation": "/assets/images/startups/cyberlearn/post1.jpg"}]
         }
       ],
       "tagsData": [
@@ -224,14 +837,96 @@
       "equityPerShare": 0.0025,
       "sharesAvailable": 11000,
       "totalSharesOffered": 20000,
-      "logo": "/images/logos/biovitals-logo.png",
-      "image": "/images/banners/biovitals-banner.png",
+      "logo": "/assets/images/startups/biovitals/logo.png",
+      "image": "/assets/images/startups/biovitals/banner.png",
+      "foundedDate": "2022-01-15",
+      "minInvestment": 2500,
+      "maxInvestment": 250000,
+      "campaignDuration": 15,
+      "startDate": "2025-01-26T19:00:00",
+      "endDate": "2025-02-09T19:00:00",
+      "useOfFunds": "Scale device production, obtain additional FDA clearances, and expand into European markets.",
+      "marketSize": 52000000000,
+      "targetMarket": "Healthcare providers and patients with chronic conditions in North America and Europe.",
+      "competitiveAdvantage": "Only FDA-cleared device for continuous glucose and blood pressure monitoring in one wearable.",
+      "currentRevenue": 1800000,
+      "revenueModel": "Device sales and recurring monitoring subscriptions",
+      "customerBase": "12 hospital networks and 5,000 patients",
+      "metrics": {
+        "mrr": 150000,
+        "growth": 35,
+        "users": 5000,
+        "retention": 98
+      },
+      "teamMembers": [
+        {
+          "name": "Dr. Michael Chen",
+          "role": "CEO & Co-founder",
+          "bio": "Cardiologist and medical device inventor. Previously at Mayo Clinic.",
+          "linkedin": "https://linkedin.com/in/michaelchen"
+        },
+        {
+          "name": "Sarah Kim",
+          "role": "CTO & Co-founder",
+          "bio": "Biomedical engineer with 12 years at Medtronic. PhD from Johns Hopkins.",
+          "linkedin": "https://linkedin.com/in/sarahkim"
+        }
+      ],
+      "previousRounds": [
+        {
+          "round": "Seed",
+          "amount": 1800000,
+          "date": "2023-02-10",
+          "investors": "Healthcare Ventures, Medical Device Fund"
+        }
+      ],
+      "milestones": [
+        {
+          "title": "FDA Expansion",
+          "description": "Obtain clearance for additional biomarkers",
+          "date": "2024-08-15",
+          "fundingRequired": 1500000
+        },
+        {
+          "title": "Production Scaling",
+          "description": "Establish automated manufacturing facility",
+          "date": "2024-10-01",
+          "fundingRequired": 2000000
+        }
+      ],
+      "website": "https://biovitals.health",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/company/biovitals",
+        "twitter": "https://twitter.com/biovitals",
+        "facebook": "https://facebook.com/biovitals"
+      },
+      "companyRegistration": "MN-2022-0115-C",
+      "taxId": "89-8901234",
+      "legalStructure": "C-Corporation",
+      "intellectualProperty": "4 granted patents for biomarker monitoring, FDA Class II clearance",
+      "regulatoryInfo": "FDA registered facility, ISO 13485 certified, HIPAA compliant",
+      "legalInfo": {
+        "companyRegistration": "MN-2022-0115-C",
+        "taxId": "89-8901234",
+        "legalStructure": "C-Corporation",
+        "intellectualProperty": "4 granted patents for biomarker monitoring, FDA Class II clearance",
+        "regulatoryInfo": "FDA registered facility, ISO 13485 certified, HIPAA compliant"
+      },
+      "techStack": {
+        "frontend": ["Flutter", "React Native", "SwiftUI"],
+        "backend": ["Python", "FastAPI", "TensorFlow"],
+        "infrastructure": ["GCP", "Kubernetes", "Terraform"],
+        "databases": ["FHIR-compliant database", "InfluxDB"],
+        "security": ["HIPAA-compliant encryption", "Secure Element"]
+      },
+      "pitchDeck": "/documents/pitch-decks/biovitals-pitch.pdf",
+      "financialProjections": "/documents/financials/biovitals-projections.xlsx",
       "postsData": [
         {
           "id": 1008,
           "caption": "FDA approval received for our diabetes monitoring device!",
           "likesData": 423,
-          "photos": [{"photoLocation": "/images/posts/fda-approval.jpg"}]
+          "photos": [{"photoLocation": "/assets/images/startups/biovitals/post1.jpg"}]
         }
       ],
       "tagsData": [
@@ -254,19 +949,101 @@
       "equityPerShare": 0.007,
       "sharesAvailable": 8300,
       "totalSharesOffered": 13300,
-      "logo": "/images/logos/localchain-logo.png",
-      "image": "/images/banners/localchain-banner.png",
+      "logo": "/assets/images/startups/localchain/logo.png",
+      "image": "/assets/images/startups/localchain/banner.png",
+      "foundedDate": "2022-09-10",
+      "minInvestment": 1200,
+      "maxInvestment": 120000,
+      "campaignDuration": 21,
+      "startDate": "2025-01-20T19:00:00",
+      "endDate": "2025-02-10T19:00:00",
+      "useOfFunds": "Expand to new metropolitan areas, enhance blockchain traceability features, and develop mobile app for restaurants.",
+      "marketSize": 18000000000,
+      "targetMarket": "Local restaurants, farmers markets, and sustainable food suppliers in major US metropolitan areas.",
+      "competitiveAdvantage": "First blockchain-based platform with real-time price discovery and automated settlement.",
+      "currentRevenue": 450000,
+      "revenueModel": "Transaction fees and SaaS subscriptions",
+      "customerBase": "120 restaurants and 45 local farms",
+      "metrics": {
+        "mrr": 45000,
+        "growth": 60,
+        "users": 165,
+        "retention": 97
+      },
+      "teamMembers": [
+        {
+          "name": "Emma Chen",
+          "role": "CEO & Co-founder",
+          "bio": "Former VP of Operations at Whole Foods Market. MBA from Berkeley.",
+          "linkedin": "https://linkedin.com/in/emmachen"
+        },
+        {
+          "name": "Marcus Johnson",
+          "role": "CTO & Co-founder",
+          "bio": "Blockchain developer with experience at ConsenSys. MS in Computer Science from UW.",
+          "linkedin": "https://linkedin.com/in/marcusjohnson"
+        }
+      ],
+      "previousRounds": [
+        {
+          "round": "Seed",
+          "amount": 450000,
+          "date": "2023-07-20",
+          "investors": "Portland Food Innovation Fund, Local Angels"
+        }
+      ],
+      "milestones": [
+        {
+          "title": "Market Expansion",
+          "description": "Launch in Seattle and San Francisco markets",
+          "date": "2024-08-01",
+          "fundingRequired": 500000
+        },
+        {
+          "title": "Mobile App Development",
+          "description": "Release restaurant management mobile app",
+          "date": "2024-10-15",
+          "fundingRequired": 300000
+        }
+      ],
+      "website": "https://localchain.io",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/company/localchain",
+        "twitter": "https://twitter.com/localchain",
+        "facebook": "https://facebook.com/localchain"
+      },
+      "companyRegistration": "OR-2022-0910-LLC",
+      "taxId": "90-9012345",
+      "legalStructure": "LLC",
+      "intellectualProperty": "Patent-pending supply chain verification system",
+      "regulatoryInfo": "FDA Food Facility Registration, FSMA compliant",
+      "legalInfo": {
+        "companyRegistration": "OR-2022-0910-LLC",
+        "taxId": "90-9012345",
+        "legalStructure": "LLC",
+        "intellectualProperty": "Patent-pending supply chain verification system",
+        "regulatoryInfo": "FDA Food Facility Registration, FSMA compliant"
+      },
+      "techStack": {
+        "frontend": ["React", "Web3.js", "Material-UI"],
+        "backend": ["Node.js", "Solidity", "Express"],
+        "infrastructure": ["AWS", "Hyperledger Fabric"],
+        "databases": ["MongoDB", "IPFS"],
+        "security": ["Smart contract auditing", "Multi-sig wallets"]
+      },
+      "pitchDeck": "/documents/pitch-decks/localchain-pitch.pdf",
+      "financialProjections": "/documents/financials/localchain-projections.xlsx",
       "postsData": [
         {
           "id": 1009,
-          "caption": "Now serving 100+ restaurants in the Portland metro area!",
+          "caption": "Just onboarded our 100th restaurant partner in Portland!",
           "likesData": 198,
-          "photos": [{"photoLocation": "/images/posts/restaurant-network.jpg"}]
+          "photos": [{"photoLocation": "/assets/images/startups/localchain/post1.jpg"}]
         }
       ],
       "tagsData": [
         {"body": "Blockchain"},
-        {"body": "LocalFood"},
+        {"body": "FoodTech"},
         {"body": "Sustainability"}
       ]
     },
@@ -284,19 +1061,101 @@
       "equityPerShare": 0.009,
       "sharesAvailable": 10800,
       "totalSharesOffered": 13300,
-      "logo": "/images/logos/dronemap-logo.png",
-      "image": "/images/banners/dronemap-banner.png",
+      "logo": "/assets/images/startups/dronemap/logo.png",
+      "image": "/assets/images/startups/dronemap/banner.png",
+      "foundedDate": "2023-02-14",
+      "minInvestment": 800,
+      "maxInvestment": 80000,
+      "campaignDuration": 14,
+      "startDate": "2025-01-27T19:00:00",
+      "endDate": "2025-02-10T19:00:00",
+      "useOfFunds": "Expand drone fleet, enhance 3D mapping capabilities, and develop predictive safety analytics.",
+      "marketSize": 22000000000,
+      "targetMarket": "Construction companies, civil engineering firms, and infrastructure developers.",
+      "competitiveAdvantage": "Proprietary AI reduces mapping time by 60% with 99.9% accuracy.",
+      "currentRevenue": 150000,
+      "revenueModel": "Hardware sales and recurring mapping services",
+      "customerBase": "15 construction firms with 25 active project sites",
+      "metrics": {
+        "mrr": 15000,
+        "growth": 45,
+        "users": 25,
+        "retention": 100
+      },
+      "teamMembers": [
+        {
+          "name": "Alex Torres",
+          "role": "CEO & Co-founder",
+          "bio": "Former Project Manager at Bechtel. MS in Civil Engineering from Colorado School of Mines.",
+          "linkedin": "https://linkedin.com/in/alextorres"
+        },
+        {
+          "name": "Dr. Lisa Wang",
+          "role": "CTO & Co-founder",
+          "bio": "Computer vision expert. PhD in Robotics from Carnegie Mellon.",
+          "linkedin": "https://linkedin.com/in/lisawang"
+        }
+      ],
+      "previousRounds": [
+        {
+          "round": "Pre-Seed",
+          "amount": 150000,
+          "date": "2023-09-15",
+          "investors": "Construction Tech Fund, Denver Angels"
+        }
+      ],
+      "milestones": [
+        {
+          "title": "AI Enhancement",
+          "description": "Launch predictive safety analytics system",
+          "date": "2024-08-15",
+          "fundingRequired": 300000
+        },
+        {
+          "title": "Fleet Expansion",
+          "description": "Add specialized drones for indoor mapping",
+          "date": "2024-10-01",
+          "fundingRequired": 250000
+        }
+      ],
+      "website": "https://dronemap.tech",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/company/dronemap",
+        "twitter": "https://twitter.com/dronemap",
+        "facebook": "https://facebook.com/dronemap"
+      },
+      "companyRegistration": "CO-2023-0214-LLC",
+      "taxId": "91-0123456",
+      "legalStructure": "LLC",
+      "intellectualProperty": "2 provisional patents for 3D mapping algorithms",
+      "regulatoryInfo": "FAA Part 107 certified, OSHA compliant",
+      "legalInfo": {
+        "companyRegistration": "CO-2023-0214-LLC",
+        "taxId": "91-0123456",
+        "legalStructure": "LLC",
+        "intellectualProperty": "2 provisional patents for 3D mapping algorithms",
+        "regulatoryInfo": "FAA Part 107 certified, OSHA compliant"
+      },
+      "techStack": {
+        "frontend": ["React", "Three.js", "MapboxGL"],
+        "backend": ["Python", "FastAPI", "OpenCV"],
+        "infrastructure": ["AWS", "Kubernetes"],
+        "databases": ["PostgreSQL", "MongoDB"],
+        "security": ["Encrypted data transmission", "Secure drone communications"]
+      },
+      "pitchDeck": "/documents/pitch-decks/dronemap-pitch.pdf",
+      "financialProjections": "/documents/financials/dronemap-projections.xlsx",
       "postsData": [
         {
           "id": 1010,
-          "caption": "New AI feature reduces mapping time by 60%!",
-          "likesData": 145,
-          "photos": [{"photoLocation": "/images/posts/drone-mapping.jpg"}]
+          "caption": "Our drones just completed mapping of Denver's largest construction project!",
+          "likesData": 156,
+          "photos": [{"photoLocation": "/assets/images/startups/dronemap/post1.jpg"}]
         }
       ],
       "tagsData": [
-        {"body": "Drones"},
         {"body": "Construction"},
+        {"body": "Drones"},
         {"body": "AI"}
       ]
     },
@@ -314,20 +1173,102 @@
       "equityPerShare": 0.006,
       "sharesAvailable": 10000,
       "totalSharesOffered": 15000,
-      "logo": "/images/logos/agrosense-logo.png",
-      "image": "/images/banners/agrosense-banner.png",
+      "logo": "/assets/images/startups/agrosense/logo.png",
+      "image": "/assets/images/startups/agrosense/banner.png",
+      "foundedDate": "2022-11-30",
+      "minInvestment": 1500,
+      "maxInvestment": 150000,
+      "campaignDuration": 15,
+      "startDate": "2025-01-19T19:00:00",
+      "endDate": "2025-02-09T19:00:00",
+      "useOfFunds": "Scale sensor production, enhance predictive analytics, and expand to new agricultural regions.",
+      "marketSize": 35000000000,
+      "targetMarket": "Large-scale farms and agricultural cooperatives in North America.",
+      "competitiveAdvantage": "Most comprehensive soil analysis with 95% yield prediction accuracy.",
+      "currentRevenue": 600000,
+      "revenueModel": "Hardware sales and analytics subscriptions",
+      "customerBase": "35 large farms covering 50,000 acres",
+      "metrics": {
+        "mrr": 50000,
+        "growth": 40,
+        "users": 35,
+        "retention": 100
+      },
+      "teamMembers": [
+        {
+          "name": "John Martinez",
+          "role": "CEO & Co-founder",
+          "bio": "Agricultural technology expert with 15 years experience. MS in Agriculture from UC Davis.",
+          "linkedin": "https://linkedin.com/in/johnmartinez"
+        },
+        {
+          "name": "Dr. Amy Zhang",
+          "role": "CTO & Co-founder",
+          "bio": "IoT systems architect. PhD in Electrical Engineering from Stanford.",
+          "linkedin": "https://linkedin.com/in/amyzhang"
+        }
+      ],
+      "previousRounds": [
+        {
+          "round": "Seed",
+          "amount": 600000,
+          "date": "2023-06-10",
+          "investors": "AgTech Capital, California Farm Fund"
+        }
+      ],
+      "milestones": [
+        {
+          "title": "Coverage Expansion",
+          "description": "Deploy sensors to cover 100,000 additional acres",
+          "date": "2024-08-01",
+          "fundingRequired": 800000
+        },
+        {
+          "title": "Analytics Platform",
+          "description": "Launch advanced crop yield prediction system",
+          "date": "2024-10-15",
+          "fundingRequired": 500000
+        }
+      ],
+      "website": "https://agrosense.ag",
+      "socialMedia": {
+        "linkedin": "https://linkedin.com/company/agrosense",
+        "twitter": "https://twitter.com/agrosense",
+        "facebook": "https://facebook.com/agrosense"
+      },
+      "companyRegistration": "CA-2022-1130-C",
+      "taxId": "92-1234567",
+      "legalStructure": "C-Corporation",
+      "intellectualProperty": "3 patents pending for IoT sensor technology",
+      "regulatoryInfo": "EPA registered, California Agricultural Standards compliant",
+      "legalInfo": {
+        "companyRegistration": "CA-2022-1130-C",
+        "taxId": "92-1234567",
+        "legalStructure": "C-Corporation",
+        "intellectualProperty": "3 patents pending for IoT sensor technology",
+        "regulatoryInfo": "EPA registered, California Agricultural Standards compliant"
+      },
+      "techStack": {
+        "frontend": ["Vue.js", "D3.js", "Mapbox"],
+        "backend": ["Python", "Django", "TensorFlow"],
+        "infrastructure": ["Azure IoT", "Kubernetes"],
+        "databases": ["TimescaleDB", "Redis"],
+        "security": ["IoT device security", "End-to-end encryption"]
+      },
+      "pitchDeck": "/documents/pitch-decks/agrosense-pitch.pdf",
+      "financialProjections": "/documents/financials/agrosense-projections.xlsx",
       "postsData": [
         {
           "id": 1011,
-          "caption": "Just deployed our 1000th sensor network! Helping California farmers save 30% on water usage.",
-          "likesData": 278,
-          "photos": [{"photoLocation": "/images/posts/sensor-deployment.jpg"}]
+          "caption": "Celebrating 50,000 acres under AgroSense management!",
+          "likesData": 289,
+          "photos": [{"photoLocation": "/assets/images/startups/agrosense/post1.jpg"}]
         }
       ],
       "tagsData": [
-        {"body": "AgTech"},
+        {"body": "Agriculture"},
         {"body": "IoT"},
-        {"body": "Sustainability"}
+        {"body": "AI"}
       ]
     }
   ]

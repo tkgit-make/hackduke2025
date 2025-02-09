@@ -1,14 +1,37 @@
-import { useState } from "react";
+import { useState, useEffect } from 'react';
 import "./Card.css";
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import DigitalClock from './DigitalClock';
 
-const Card = ({ image, company, price, raised, goal }) => {
+const Card = ({ image, company, price, raised, goal, countdown }) => {
   const navigate = useNavigate();
   const [isExpanding, setIsExpanding] = useState(false);
+  const [timeLeft, setTimeLeft] = useState('');
   const raisedAmount = parseFloat(raised.replace("$", "").replace("K", "000"));
   const goalAmount = parseFloat(goal.replace("$", "").replace("K", "000"));
   const progressValue = (raisedAmount / goalAmount) * 100; 
+
+  const calculateTimeLeft = () => {
+    if (!countdown || !countdown.time) return '';
+
+    return countdown.time;
+  };
+
+  useEffect(() => {
+    const updateTimeLeft = () => {
+      setTimeLeft(calculateTimeLeft());
+    };
+
+    // Initial calculation
+    updateTimeLeft();
+
+    // Update every minute
+    const timer = setInterval(updateTimeLeft, 60000);
+
+    return () => clearInterval(timer);
+  }, [countdown]);
 
   const handleClick = () => {
     // Get the clicked card's position and dimensions
@@ -47,6 +70,14 @@ const Card = ({ image, company, price, raised, goal }) => {
           </div>
           <span>{goal}</span>
         </div>
+        {countdown && (
+          <div className="milestone-countdown">
+            <div className="countdown-time">{countdown.time}</div>
+            {countdown.title && (
+              <div className="countdown-title">until {countdown.title}</div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -58,6 +89,10 @@ Card.propTypes = {
   price: PropTypes.string.isRequired,
   raised: PropTypes.string.isRequired,
   goal: PropTypes.string.isRequired,
+  countdown: PropTypes.shape({
+    time: PropTypes.string.isRequired,
+    title: PropTypes.string
+  })
 };
 
 export default Card;

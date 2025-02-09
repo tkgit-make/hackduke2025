@@ -1,0 +1,54 @@
+.digital-clock {
+  background: #00e0b6;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+}
+
+.digital-clock.small {
+  padding: 8px 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #00e0b6, #00c9a3);
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.digital-clock.small:hover {
+  transform: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.time-display {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.small .time-display {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.date-display {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+.small .date-display {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  text-align: right;
+  white-space: nowrap;
+} 

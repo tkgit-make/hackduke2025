@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 400px; /* Adjust this value to make the cards longer */
+  height: 450px; /* Increased height to fit countdown */
   width: 400px;
   padding-top: 20px;
   background-color: #fff;
@@ -33,6 +33,7 @@
     color: #000000;
     flex-direction: column;
     justify-content: space-between;
+    gap: 12px; /* Consistent spacing between elements */
   }
 
   .card-company {
@@ -54,6 +55,7 @@
     align-items: center;
     gap: 10px;
     font-size: 14px;
+    margin-bottom: 8px;
   }
   
   .progress-bar-container {
@@ -136,4 +138,27 @@ body.expanding::after {
 .expanding .card-image {
   opacity: 0;
   transition: opacity 0.2s;
+}
+
+.milestone-countdown {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.countdown-time {
+  color: #00e0b6;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.countdown-title {
+  color: #666;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
