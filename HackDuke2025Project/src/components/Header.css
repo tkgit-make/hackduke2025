@@ -6,8 +6,10 @@
     width: 100%;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
 }
   
@@ -97,4 +99,9 @@
   
 .nav-link:hover {
     color: #333;
+}
+
+/* Update the body padding to match header height */
+body {
+    padding-top: 100px;  /* Adjusted to match total header height */
 }
