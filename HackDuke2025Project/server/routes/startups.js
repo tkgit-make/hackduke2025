@@ -12,21 +12,19 @@ import { ObjectId } from "mongodb";
 const router = express.Router();
 
 // Import the correct startup model
-import startup from "../models/startupaccount.js"
+import startUp from "../models/startupaccount.js";
 
 // This section will help you get a list of all the startups.
 router.get("/", async (req, res) => {
   try {
-    const allStartups = await startup.find({});  // Use the correct model `startup`
-
+    const allStartups = await startUp.find({}).lean();
+    
     if (allStartups.length === 0) {
       return res.status(404).json({ error: "No startups found" });
     }
     
-    res.status(200).json(allStartups);  // Return the list of all startups
-
+    res.status(200).json(allStartups);
   } catch (error) {
-    console.error("Error in GET /startups:", error);  // Log the error details
     res.status(500).json({ error: "Internal server error" });
   }
 });
@@ -36,12 +34,12 @@ router.get("/", async (req, res) => {
 router.post("/create", async (req, res) => {
   try {
     // Check if startup with same ID already exists
-    const existingStartup = await startup.findOne({ startupID: req.body.startupID });
+    const existingStartup = await startUp.findOne({ startupID: req.body.startupID });
     if (existingStartup) {
       return res.status(400).json({ error: "A startup with this ID already exists" });
     }
 
-    const newStartup = new startup(req.body);
+    const newStartup = new startUp(req.body);
     await newStartup.save();
     res.status(201).json(newStartup);
   } catch (error) {
@@ -54,7 +52,7 @@ router.post("/create", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const singleStartUp = await startup.findById(id);  // Use correct model `startup`
+    const singleStartUp = await startUp.findById(id);  // Use correct model `startUp`
     
     if (!singleStartUp) {
       return res.status(404).json({ error: "Startup not found" });
@@ -71,7 +69,7 @@ router.get("/:id", async (req, res) => {
 router.patch("/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const updatedStartup = await startup.findByIdAndUpdate(id, req.body, { new: true });  // Use correct model `startup`
+    const updatedStartup = await startUp.findByIdAndUpdate(id, req.body, { new: true });  // Use correct model `startUp`
     
     if (!updatedStartup) {
       return res.status(404).json({ error: "Startup not found" });
@@ -88,7 +86,7 @@ router.patch("/:id", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const deletedStartup = await startup.findByIdAndDelete(id);  // Use correct model `startup`
+    const deletedStartup = await startUp.findByIdAndDelete(id);  // Use correct model `startUp`
     
     if (!deletedStartup) {
       return res.status(404).json({ error: "Startup not found" });
@@ -100,12 +98,5 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
-
-
-
-
-
-
-
 
 export default router;
