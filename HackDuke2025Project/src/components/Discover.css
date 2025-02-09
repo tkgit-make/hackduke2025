@@ -37,3 +37,267 @@
   overflow-x: hidden;
 
 }
+
+.discover-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Filters styling */
+.filters {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;  /* This will push sections apart */
+  align-items: center;
+  gap: 20px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 300px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #333;
+  min-width: 70px;
+}
+
+.filter-group select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  font-size: 14px;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #00D1B2;
+  box-shadow: 0 0 0 2px rgba(0, 209, 178, 0.1);
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 0;
+}
+
+.filter-section h3 {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0;  /* Remove bottom margin */
+  min-width: 70px;  /* Match the industry label width */
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: white;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+  background: #f5f5f5;
+  border-color: #00D1B2;
+  color: #00D1B2;
+}
+
+.filter-button.active {
+  background: #00D1B2;
+  border-color: #00D1B2;
+  color: white;
+}
+
+/* Startups grid styling */
+.startups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.startup-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.startup-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.startup-logo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+}
+
+.image-overlay h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.startup-info {
+  padding: 20px;
+}
+
+.startup-info h3 {
+  display: none;
+}
+
+.description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  height: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.tag.industry {
+  background: #E3F2FD;
+  color: #1976D2;
+}
+
+.tag.stage {
+  background: #E8F5E9;
+  color: #388E3C;
+}
+
+.location {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+/* Funding information styling */
+.funding-info {
+  margin-top: 15px;
+}
+
+.funding-progress {
+  height: 6px;
+  background: #eee;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.funding-progress .progress-bar {
+  height: 100%;
+  background: #00D1B2;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.funding-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.funding-goal {
+  font-size: 13px;
+  color: #999;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group {
+    min-width: unset;  /* Remove min-width on mobile */
+  }
+
+  .filter-group, 
+  .filter-section {
+    width: 100%;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .filter-group select {
+    width: 100%;
+  }
+
+  .filter-buttons {
+    gap: 8px;
+  }
+
+  .filter-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .startups-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}

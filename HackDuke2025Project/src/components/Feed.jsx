@@ -1,40 +1,46 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import startupData from '../data/startups.json';
 import './Feed.css';
 import companyImage from '../assets/images/company-placeholder.png';
 import postImage from '../assets/images/post-placeholder.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 
 const Feed = () => {
-  const [posts, setPosts] = useState([]);
-  const [selectedCompany, setSelectedCompany] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [followingCompanies, setFollowingCompanies] = useState([]);
-  const [selectedSection, setSelectedSection] = useState(null);
+  // Create posts from startup data
+  const [posts] = useState(startupData.startups.flatMap(startup => 
+    (startup.posts || []).map(post => ({
+      id: post.id,
+      companyName: startup.name,
+      logo: startup.logo,
+      industry: startup.industry,
+      image: post.image,
+      content: post.content,
+      likes: post.likes,
+      comments: post.comments,
+      timestamp: post.timestamp
+    }))
+  ));
 
-  useEffect(() => {
-    const allPosts = startupData.startups.flatMap(startup => 
-      startup.posts.map(post => ({
-        ...post,
-        companyName: startup.companyName,
-        logo: startup.logo,
-        industry: startup.industry
-      }))
-    );
-    
-    let filteredPosts = allPosts;
-    
-    if (selectedCompany) {
-      filteredPosts = filteredPosts.filter(post => post.companyName === selectedCompany);
-    }
-    
-    if (selectedCategory) {
-      filteredPosts = filteredPosts.filter(post => post.industry === selectedCategory);
-    }
-    
-    setPosts(filteredPosts);
-  }, [selectedCompany, selectedCategory]);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCompany, setSelectedCompany] = useState(null);
+  const [selectedSection, setSelectedSection] = useState(null);
+  const [followingCompanies, setFollowingCompanies] = useState([]);
+  const [likedPosts, setLikedPosts] = useState([]);
+  const [postLikes, setPostLikes] = useState({});
 
   const categories = Array.from(new Set(startupData.startups.map(s => s.industry)));
+
+  const filteredPosts = posts.filter(post => {
+    if (selectedCompany) {
+      return post.companyName === selectedCompany;
+    }
+    if (selectedCategory) {
+      return post.industry === selectedCategory;
+    }
+    return true;
+  });
 
   const handleFollow = (companyName) => {
     setFollowingCompanies(prev => {
@@ -52,7 +58,26 @@ const Feed = () => {
     } else {
       setSelectedCompany(company);
       setSelectedSection(section);
+      // Clear category selection when selecting from sidebar
+      setSelectedCategory(null);
     }
+  };
+
+  const handleLike = (postId) => {
+    const isCurrentlyLiked = likedPosts.includes(postId);
+    
+    // Update likes count
+    setPostLikes(prevLikes => ({
+      ...prevLikes,
+      [postId]: (prevLikes[postId] || posts.find(p => p.id === postId).likes) + (isCurrentlyLiked ? -1 : 1)
+    }));
+    
+    // Update liked posts array
+    setLikedPosts(prev => 
+      isCurrentlyLiked 
+        ? prev.filter(id => id !== postId)
+        : [...prev, postId]
+    );
   };
 
   return (
@@ -60,12 +85,20 @@ const Feed = () => {
       <div className="feed-main">
         <div className="feed-header">
           <h1>Startup Feed</h1>
+          {selectedCompany && (
+            <h2 className="selected-company">Posts from {selectedCompany}</h2>
+          )}
           <div className="categories-section">
             {categories.map(industry => (
               <button 
                 key={industry}
                 className={`category-button ${selectedCategory === industry ? 'active' : ''}`}
-                onClick={() => setSelectedCategory(industry === selectedCategory ? null : industry)}
+                onClick={() => {
+                  setSelectedCategory(selectedCategory === industry ? null : industry);
+                  // Clear sidebar selection when category is clicked
+                  setSelectedCompany(null);
+                  setSelectedSection(null);
+                }}
               >
                 {industry}
               </button>
@@ -74,7 +107,7 @@ const Feed = () => {
         </div>
 
         <div className="instagram-feed">
-          {posts.map(post => (
+          {filteredPosts.map(post => (
             <div key={post.id} className="instagram-post">
               <div className="post-header">
                 <div className="company-info">
@@ -113,10 +146,21 @@ const Feed = () => {
               </div>
 
               <div className="post-actions">
-                <div className="action-buttons">
-                  <button className="action-button">
-                    <i className="far fa-heart"></i>
+                <div className="likes-section">
+                  <button 
+                    className={`like-button ${likedPosts.includes(post.id) ? 'liked' : ''}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleLike(post.id);
+                    }}
+                  >
+                    <FontAwesomeIcon icon={likedPosts.includes(post.id) ? fasHeart : farHeart} />
                   </button>
+                  <span className="likes-count">
+                    {(postLikes[post.id] || post.likes).toLocaleString()} likes
+                  </span>
+                </div>
+                <div className="action-buttons">
                   <button className="action-button">
                     <i className="far fa-comment"></i>
                   </button>
@@ -124,20 +168,10 @@ const Feed = () => {
                     <i className="far fa-bookmark"></i>
                   </button>
                 </div>
-                <div className="likes-count">
-                  {post.likes.toLocaleString()} likes
-                </div>
               </div>
 
               <div className="post-content">
-                <span className="company-name">{post.companyName}</span>
                 {post.content}
-              </div>
-
-              <div className="post-comments">
-                <span className="view-comments">
-                  View all {post.comments} comments
-                </span>
               </div>
 
               <div className="post-timestamp">
@@ -152,23 +186,24 @@ const Feed = () => {
         <div className="sidebar-section">
           <h2>Your Investments</h2>
           <div className="company-list">
-            {startupData.startups.map(company => (
+            {startupData.startups.slice(0, 5).map(startup => (
               <div 
-                key={company.id} 
+                key={startup.id} 
                 className={`company-item ${
-                  selectedCompany === company.companyName && selectedSection === 'investments' 
+                  selectedCompany === startup.name && selectedSection === 'investments' 
                     ? 'selected' 
                     : ''
                 }`}
-                onClick={() => handleCompanySelect(company.companyName, 'investments')}
+                onClick={() => handleCompanySelect(startup.name, 'investments')}
               >
                 <img 
-                  src={companyImage} 
-                  alt={company.companyName} 
+                  src={startup.logo || companyImage} 
+                  alt={startup.name} 
+                  onError={(e) => e.target.src = companyImage}
                 />
                 <div className="company-item-info">
-                  <div className="company-item-name">{company.companyName}</div>
-                  <div className="company-item-industry">{company.industry}</div>
+                  <div className="company-item-name">{startup.name}</div>
+                  <div className="company-item-industry">{startup.industry}</div>
                 </div>
               </div>
             ))}
@@ -179,24 +214,25 @@ const Feed = () => {
           <h2>Following</h2>
           <div className="company-list">
             {startupData.startups
-              .filter(company => followingCompanies.includes(company.companyName))
-              .map(company => (
+              .filter(startup => followingCompanies.includes(startup.name))
+              .map(startup => (
                 <div 
-                  key={company.id} 
+                  key={startup.id} 
                   className={`company-item ${
-                    selectedCompany === company.companyName && selectedSection === 'following' 
+                    selectedCompany === startup.name && selectedSection === 'following' 
                       ? 'selected' 
                       : ''
                   }`}
-                  onClick={() => handleCompanySelect(company.companyName, 'following')}
+                  onClick={() => handleCompanySelect(startup.name, 'following')}
                 >
                   <img 
-                    src={companyImage} 
-                    alt={company.companyName} 
+                    src={startup.logo || companyImage} 
+                    alt={startup.name} 
+                    onError={(e) => e.target.src = companyImage}
                   />
                   <div className="company-item-info">
-                    <div className="company-item-name">{company.companyName}</div>
-                    <div className="company-item-industry">{company.industry}</div>
+                    <div className="company-item-name">{startup.name}</div>
+                    <div className="company-item-industry">{startup.industry}</div>
                   </div>
                 </div>
               ))}

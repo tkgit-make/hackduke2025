@@ -1,295 +1,343 @@
 .feed-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  min-height: 100vh;
-  display: flex;
-  gap: 32px;
-}
-
-.feed-main {
-  flex: 1;
-  max-width: 600px;
-  overflow-y: auto;
-}
-
-.feed-sidebar {
-  width: 300px;
-  position: fixed;
-  right: calc((100% - 1000px) / 2 + 20px);
-  top: 80px;
-  height: 100vh;
-  background: white;
-  border: none;
-  border-left: 1px solid #dbdbdb;
-  border-right: 1px solid #dbdbdb;
-  border-radius: 0;
-  padding: 20px;
-  overflow-y: auto;
-  scrollbar-width: none;  /* Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.feed-sidebar::-webkit-scrollbar {
-  display: none;
-}
-
-.categories-section {
-  margin: 10px 0 15px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.category-button {
-  padding: 8px 16px;
-  border-radius: 20px;
-  background-color: #f8f8f8;
-  border: 1px solid #dbdbdb;
-  color: #262626;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.category-button:hover {
-  background-color: #00D1B2;
-  opacity: 0.8;
-  color: white;
-}
-
-.category-button.active {
-  background-color: #00D1B2;
-  color: white;
-  border-color: #00D1B2;
-}
-
-.sidebar-section {
-  margin-bottom: 24px;
-}
-
-.sidebar-section h2 {
-  font-size: 16px;
-  color: #262626;
-  margin-bottom: 16px;
-  font-weight: 600;
-}
-
-.company-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.company-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.2s;
-  border: 2px solid transparent;
-}
-
-.company-item:hover {
-  background-color: #f8f8f8;
-}
-
-.company-item.selected {
-  background-color: #f8f8f8;
-  border-color: #00D1B2;
-}
-
-.company-item img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.company-item-info {
-  flex: 1;
-}
-
-.company-item-name {
-  font-weight: 600;
-  font-size: 14px;
-  color: #262626;
-}
-
-.company-item-industry {
-  font-size: 12px;
-  color: #8e8e8e;
-}
-
-.feed-header {
-  text-align: center;
-  margin-bottom: 20px;
-  padding-top: 20px;
-}
-
-.feed-header h1 {
-  font-size: 1.8rem;
-  color: #262626;
-}
-
-.instagram-feed {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.instagram-post {
-  color: black;
-  background: white;
-  border: 1px solid #dbdbdb;
-  border-radius: 3px;
-}
-
-.post-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px;
-}
-
-.company-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.company-logo {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
-  background-color: #f0f0f0;
-}
-
-.company-details h3 {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 600;
-  color: #262626;
-}
-
-.industry {
-  font-size: 12px;
-  color: #8e8e8e;
-}
-
-.post-image-container {
-  width: 100%;
-  background-color: #efefef;
-}
-
-.post-image {
-  width: 100%;
-  height: auto;
-  min-height: 300px;
-  object-fit: cover;
-  background-color: #f0f0f0;
-}
-
-.post-actions {
-  padding: 8px 16px;
-}
-
-.action-buttons {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 8px;
-}
-
-.action-button {
-  background: none;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  font-size: 24px;
-  color: #262626;
-}
-
-.action-button:hover {
-  color: #8e8e8e;
-}
-
-.likes-count {
-  font-weight: 600;
-  font-size: 14px;
-  color: #262626;
-  margin-bottom: 8px;
-}
-
-.post-content {
-  padding: 0 16px;
-  margin-bottom: 8px;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.company-name {
-  font-weight: 600;
-  margin-right: 6px;
-}
-
-.post-comments {
-  padding: 0 16px;
-  margin-bottom: 8px;
-}
-
-.view-comments {
-  color: #8e8e8e;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.post-timestamp {
-  padding: 0 16px 16px;
-  color: #8e8e8e;
-  font-size: 10px;
-  text-transform: uppercase;
-}
-
-.follow-button {
-  padding: 8px 16px;
-  border-radius: 4px;
-  background-color: #00D1B2;
-  color: white;
-  border: none;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.follow-button:hover {
-  opacity: 0.8;
-}
-
-.follow-button.following {
-  background-color: white;
-  color: #262626;
-  border: 1px solid #dbdbdb;
-  font-weight: 600;
-}
-
-.follow-button.following:hover {
-  background-color: #f8f8f8;
-  opacity: 1;
-}
-
-@media (max-width: 600px) {
-  .feed-container {
-    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    gap: 32px;
+  }
+  
+  .feed-main {
+    flex: 1;
+    max-width: 600px;
+    overflow-y: auto;
+  }
+  
+  .feed-sidebar {
+    width: 300px;
+    position: fixed;
+    right: calc((100% - 1000px) / 2 + 20px);
+    top: 120px;
+    height: calc(100vh - 120px);
+    background: white;
+    border: none;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    border-radius: 0;
+    padding: 20px;
+    overflow-y: auto;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .feed-sidebar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .categories-section {
+    margin: 10px 0 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .category-button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #dbdbdb;
+    color: #262626;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .category-button:hover {
+    background-color: #00D1B2;
+    opacity: 0.8;
+    color: white;
+  }
+  
+  .category-button.active {
+    background-color: #00D1B2;
+    color: white;
+    border-color: #00D1B2;
+  }
+  
+  .sidebar-section {
+    margin-bottom: 24px;
+    padding-top: 10px;
+  }
+  
+  .sidebar-section:first-child {
+    padding-top: 0;
+  }
+  
+  .sidebar-section h2 {
+    font-size: 16px;
+    color: #262626;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  
+  .company-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .company-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+  }
+  
+  .company-item:hover {
+    background-color: #f8f8f8;
+  }
+  
+  .company-item.selected {
+    background-color: #f8f8f8;
+    border-color: #00D1B2;
+  }
+  
+  .company-item img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .company-item-info {
+    flex: 1;
+  }
+  
+  .company-item-name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #262626;
+  }
+  
+  .company-item-industry {
+    font-size: 12px;
+    color: #8e8e8e;
+  }
+  
+  .feed-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+  
+  .feed-header h1 {
+    font-size: 1.8rem;
+    color: #262626;
+  }
+  
+  .instagram-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
   
   .instagram-post {
-    border-left: none;
-    border-right: none;
+    color: black;
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
   }
-}
+  
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+  }
+  
+  .company-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .company-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #f0f0f0;
+  }
+  
+  .company-details h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #262626;
+  }
+  
+  .industry {
+    font-size: 12px;
+    color: #8e8e8e;
+  }
+  
+  .post-image-container {
+    width: 100%;
+    background-color: #efefef;
+  }
+  
+  .post-image {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    object-fit: cover;
+    background-color: #f0f0f0;
+  }
+  
+  .post-actions {
+    padding: 4px 16px 2px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 4px;
+  }
+  
+  .action-button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #262626;
+  }
+  
+  .action-button:hover {
+    color: #8e8e8e;
+  }
+  
+  .likes-count {
+    font-weight: 600;
+    font-size: 14px;
+    color: #262626;
+    margin-bottom: 8px;
+  }
+  
+  .post-content {
+    padding: 0 16px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .company-name {
+    display: none;
+  }
+  
+  .post-comments {
+    padding: 0 16px;
+    margin-bottom: 8px;
+  }
+  
+  .view-comments {
+    color: #8e8e8e;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .post-timestamp {
+    padding: 0 16px 8px;
+    color: #8e8e8e;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  
+  .follow-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #00D1B2;
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  
+  .follow-button:hover {
+    opacity: 0.8;
+  }
+  
+  .follow-button.following {
+    background-color: white;
+    color: #262626;
+    border: 1px solid #dbdbdb;
+    font-weight: 600;
+  }
+  
+  .follow-button.following:hover {
+    background-color: #f8f8f8;
+    opacity: 1;
+  }
+  
+  @media (max-width: 600px) {
+    .feed-container {
+      padding: 0;
+    }
+    
+    .instagram-post {
+      border-left: none;
+      border-right: none;
+    }
+  }
+  
+  .selected-company {
+    font-size: 1.2rem;
+    color: #00D1B2;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .likes-section {
+    margin: 0 0 4px;
+  }
+  
+  .like-button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #262626;
+    transition: transform 0.2s;
+    outline: none;
+  }
+  
+  .like-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .like-button.liked {
+    color: #00D1B2;
+  }
+  
+  .like-button.liked i {
+    animation: likeAnimation 0.3s ease-in-out;
+  }
+  
+  @keyframes likeAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
+  .like-button:focus {
+    outline: none;
+  }

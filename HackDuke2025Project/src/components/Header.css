@@ -25,25 +25,20 @@
     font-size: 24px;
     font-weight: bold;
     color: #00e0b6;
-    padding-left: 80px;
+    padding-left: 100px;
 }
   
 .search-bar-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+    position: relative;
+    width: 450px;
 }
   
 .search-bar {
     width: 100%;
-    max-width: 400px;
-    padding: 8px 16px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    background-color: #f9f9f9;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     font-size: 14px;
-    color: #333;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
   
 .action-buttons {
@@ -123,4 +118,98 @@ body {
   height: 32px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 450px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 0 0 8px 8px;  /* Only round bottom corners */
+  margin-top: 0;  /* Remove the gap */
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.search-results::-webkit-scrollbar {
+  display: none;
+}
+
+/* Update search bar to match results when focused */
+.search-bar:focus {
+  border-radius: 8px 8px 0 0;  /* Only round top corners when focused */
+  border-bottom-color: transparent;  /* Hide bottom border when results are shown */
+  outline: none;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-result-item:hover {
+  background-color: #f8f8f8;
+}
+
+.search-result-category {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #666;
+}
+
+.search-result-category i {
+  color: #00D1B2;
+  font-size: 14px;
+}
+
+/* Add styles for empty state */
+.search-results-empty {
+  padding: 16px;
+  text-align: center;
+  color: #666;
+}
+
+.suggestion-prefix {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.category-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-result-info {
+  flex: 1;
+}
+
+.search-result-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+.search-result-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.search-result-industry {
+  font-size: 12px;
+  color: #666;
 }

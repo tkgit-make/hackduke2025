@@ -2,93 +2,410 @@
   "startups": [
     {
       "id": 1,
-      "companyName": "EcoTech Solutions",
-      "logo": "../assets/images/company-placeholder.png",
+      "name": "EcoCharge",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "Revolutionary wireless charging technology for electric vehicles",
       "industry": "Clean Energy",
-      "fundingStage": "Series A",
-      "valuation": "$15M",
+      "fundingGoal": 2000000,
+      "fundingRaised": 850000,
+      "equity": 8,
+      "location": "San Francisco, CA",
+      "stage": "Seed",
       "posts": [
         {
           "id": "p1",
-          "image": "../assets/images/post-placeholder.png",
-          "content": "Our new solar panel technology achieving 40% more efficiency than traditional panels! 🌞 #CleanTech #Innovation",
-          "timestamp": "2h ago",
-          "likes": 234,
-          "comments": 45
+          "content": "Excited to announce our new fast-charging technology breakthrough! 🚗⚡",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "2 HOURS AGO",
+          "likes": 856
+        },
+        {
+          "id": "p2",
+          "content": "Join us at the Clean Energy Expo next week! We'll be showcasing our latest innovations.",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "1 DAY AGO",
+          "likes": 654
         }
       ]
     },
     {
       "id": 2,
-      "companyName": "HealthAI Innovations",
-      "logo": "https://via.placeholder.com/150",
+      "name": "HealthAI",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "AI-powered early disease detection platform",
       "industry": "Healthcare",
-      "fundingStage": "Series B",
-      "valuation": "$50M",
+      "fundingGoal": 1500000,
+      "fundingRaised": 600000,
+      "equity": 10,
+      "location": "Boston, MA",
+      "stage": "Series A",
       "posts": [
         {
-          "id": "p2",
-          "image": "https://via.placeholder.com/600/400",
-          "content": "Breaking: Our AI diagnostic tool just received FDA approval! 🎉 #HealthTech #AI",
-          "timestamp": "5h ago",
-          "likes": 567,
-          "comments": 89
+          "id": "p3",
+          "content": "Breaking: Our AI system has achieved 95% accuracy in early cancer detection trials! 🎉🔬",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "3 HOURS AGO",
+          "likes": 1243
+        },
+        {
+          "id": "p4",
+          "content": "Meet our team of researchers at the Healthcare Innovation Summit 2024! 👩‍⚕️👨‍⚕️",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "1 DAY AGO",
+          "likes": 567
+        },
+        {
+          "id": "p5",
+          "content": "New partnership announcement coming soon... stay tuned! 🤝",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "2 DAYS AGO",
+          "likes": 432
         }
       ]
     },
     {
       "id": 3,
-      "companyName": "FinTech Forward",
-      "logo": "https://via.placeholder.com/150",
-      "industry": "Financial Technology",
-      "fundingStage": "Seed",
-      "valuation": "$5M",
+      "name": "CryptoFlow",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "Simplified crypto payment solutions for businesses",
+      "industry": "Fintech",
+      "fundingGoal": 3000000,
+      "fundingRaised": 1200000,
+      "equity": 12,
+      "location": "Miami, FL",
+      "stage": "Seed",
       "posts": [
         {
-          "id": "p3",
-          "image": "https://via.placeholder.com/600/400",
-          "content": "Revolutionizing payments with our blockchain solution 💫 #FinTech #Blockchain",
-          "timestamp": "1d ago",
-          "likes": 342,
-          "comments": 67
+          "id": "p6",
+          "content": "CryptoFlow now supports instant cross-border payments in 50+ countries! 🌍💸",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "5 HOURS AGO",
+          "likes": 923
+        },
+        {
+          "id": "p7",
+          "content": "Security update: Our platform now features enhanced multi-factor authentication 🔒",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "1 DAY AGO",
+          "likes": 445
         }
       ]
     },
     {
       "id": 4,
-      "companyName": "DroneDelivery Pro",
-      "logo": "https://via.placeholder.com/150",
+      "name": "DroneDeliver",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "Autonomous drone delivery for urban areas",
       "industry": "Logistics",
-      "fundingStage": "Series A",
-      "valuation": "$20M",
+      "fundingGoal": 4000000,
+      "fundingRaised": 2500000,
+      "equity": 15,
+      "location": "Seattle, WA",
+      "stage": "Series A",
       "posts": [
         {
-          "id": "p4",
-          "image": "https://via.placeholder.com/600/400",
-          "content": "Successfully completed 10,000 autonomous deliveries this month! 🚀 #Drones #Future",
-          "timestamp": "2d ago",
-          "likes": 445,
-          "comments": 78
+          "id": "p8",
+          "content": "First successful autonomous delivery network launched in Seattle! 🚁📦",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "1 HOUR AGO",
+          "likes": 1532
+        },
+        {
+          "id": "p9",
+          "content": "Our drones have completed 10,000 successful deliveries this month! Milestone achieved 🎯",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "1 DAY AGO",
+          "likes": 892
         }
       ]
     },
     {
       "id": 5,
-      "companyName": "CyberShield",
-      "logo": "https://via.placeholder.com/150",
-      "industry": "Cybersecurity",
-      "fundingStage": "Series C",
-      "valuation": "$200M",
+      "name": "SmartFarm",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "IoT solutions for precision agriculture",
+      "industry": "AgTech",
+      "fundingGoal": 1000000,
+      "fundingRaised": 400000,
+      "equity": 7,
+      "location": "Austin, TX",
+      "stage": "Pre-seed",
       "posts": [
         {
-          "id": "p5",
-          "image": "https://via.placeholder.com/600/400",
-          "content": "Launching our new quantum-resistant encryption system 🔐 #Security #Innovation",
-          "timestamp": "3d ago",
-          "likes": 892,
-          "comments": 156
+          "id": "p10",
+          "content": "New study shows 40% increase in crop yield using SmartFarm sensors! 🌾📈",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "4 HOURS AGO",
+          "likes": 645
+        },
+        {
+          "id": "p11",
+          "content": "Introducing our new soil moisture prediction algorithm - 95% accuracy in field tests! 💧",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "2 DAYS AGO",
+          "likes": 423
         }
       ]
+    },
+    {
+      "id": 6,
+      "name": "VirtualFit",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "AR-powered virtual fitting room technology",
+      "industry": "E-commerce",
+      "fundingGoal": 2500000,
+      "fundingRaised": 1800000,
+      "equity": 9,
+      "location": "Los Angeles, CA",
+      "stage": "Seed",
+      "posts": [
+        {
+          "id": "p12",
+          "content": "Major partnership announcement: VirtualFit now available in over 100 online stores! 🛍️",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "6 HOURS AGO",
+          "likes": 1123
+        },
+        {
+          "id": "p13",
+          "content": "Our AR technology reduces return rates by 45%! Read the full case study on our blog 📱",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "3 DAYS AGO",
+          "likes": 834
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "SecureChain",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "Blockchain-based supply chain verification",
+      "industry": "Logistics",
+      "fundingGoal": 3500000,
+      "fundingRaised": 2000000,
+      "equity": 11,
+      "location": "Chicago, IL",
+      "stage": "Series A",
+      "posts": [
+        {
+          "id": "p14",
+          "content": "SecureChain now tracks over 1 million products daily across our network! 📦🔗",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "3 HOURS AGO",
+          "likes": 745
+        },
+        {
+          "id": "p15",
+          "content": "New feature alert: Real-time temperature monitoring for cold chain logistics 🌡️",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "2 DAYS AGO",
+          "likes": 562
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "MindfulAI",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "AI-powered mental health coaching platform",
+      "industry": "Healthcare",
+      "fundingGoal": 1800000,
+      "fundingRaised": 900000,
+      "equity": 8,
+      "location": "New York, NY",
+      "stage": "Seed",
+      "posts": [
+        {
+          "id": "p16",
+          "content": "100,000 users milestone reached! Thank you for trusting MindfulAI with your mental wellness journey 🎯💚",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "4 HOURS AGO",
+          "likes": 1876
+        },
+        {
+          "id": "p17",
+          "content": "Introducing personalized meditation recommendations powered by AI 🧘‍♀️",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "1 DAY AGO",
+          "likes": 934
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "GreenBuild",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "Sustainable construction materials marketplace",
+      "industry": "Clean Energy",
+      "fundingGoal": 2200000,
+      "fundingRaised": 1100000,
+      "equity": 10,
+      "location": "Portland, OR",
+      "stage": "Seed",
+      "posts": [
+        {
+          "id": "p18",
+          "content": "Our eco-friendly concrete alternative reduces CO2 emissions by 70%! 🌱🏗️",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "7 HOURS AGO",
+          "likes": 1234
+        },
+        {
+          "id": "p19",
+          "content": "GreenBuild materials now certified by LEED for sustainable construction ✅",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "2 DAYS AGO",
+          "likes": 876
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "DataGuard",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "Zero-trust cybersecurity platform for enterprises",
+      "industry": "Security",
+      "fundingGoal": 5000000,
+      "fundingRaised": 3500000,
+      "equity": 14,
+      "location": "Washington, DC",
+      "stage": "Series A",
+      "posts": [
+        {
+          "id": "p20",
+          "content": "DataGuard prevents 1 million cyber attacks daily! New milestone achieved 🛡️",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "5 HOURS AGO",
+          "likes": 2145
+        },
+        {
+          "id": "p21",
+          "content": "Join our webinar: 'Zero-Trust Security in 2024' - Register now! 💻",
+          "image": "./images/post-placeholder.png",
+          "timestamp": "1 DAY AGO",
+          "likes": 567
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "EduTech",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "Personalized learning platform using AI",
+      "industry": "Education",
+      "fundingGoal": 1200000,
+      "fundingRaised": 500000,
+      "equity": 6,
+      "location": "Denver, CO",
+      "stage": "Pre-seed"
+    },
+    {
+      "id": 12,
+      "name": "RoboChef",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "Automated commercial kitchen solutions",
+      "industry": "Hardware",
+      "fundingGoal": 4500000,
+      "fundingRaised": 2800000,
+      "equity": 13,
+      "location": "San Jose, CA",
+      "stage": "Series A"
+    },
+    {
+      "id": 13,
+      "name": "SoundAI",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "AI-powered audio enhancement technology",
+      "industry": "AI",
+      "fundingGoal": 1600000,
+      "fundingRaised": 800000,
+      "equity": 9,
+      "location": "Nashville, TN",
+      "stage": "Seed"
+    },
+    {
+      "id": 14,
+      "name": "WasteZero",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "Smart waste management solutions",
+      "industry": "Clean Energy",
+      "fundingGoal": 2800000,
+      "fundingRaised": 1500000,
+      "equity": 11,
+      "location": "Minneapolis, MN",
+      "stage": "Seed"
+    },
+    {
+      "id": 15,
+      "name": "PetTech",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "IoT pet health monitoring system",
+      "industry": "Hardware",
+      "fundingGoal": 900000,
+      "fundingRaised": 300000,
+      "equity": 7,
+      "location": "San Diego, CA",
+      "stage": "Pre-seed"
+    },
+    {
+      "id": 16,
+      "name": "CloudSecure",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "Multi-cloud security management platform",
+      "industry": "Security",
+      "fundingGoal": 3200000,
+      "fundingRaised": 1900000,
+      "equity": 12,
+      "location": "Raleigh, NC",
+      "stage": "Series A"
+    },
+    {
+      "id": 17,
+      "name": "SportSync",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "AI sports analytics and training platform",
+      "industry": "Sports",
+      "fundingGoal": 1400000,
+      "fundingRaised": 700000,
+      "equity": 8,
+      "location": "Dallas, TX",
+      "stage": "Seed"
+    },
+    {
+      "id": 18,
+      "name": "UrbanFarm",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "Vertical farming solutions for urban areas",
+      "industry": "AgTech",
+      "fundingGoal": 2600000,
+      "fundingRaised": 1300000,
+      "equity": 10,
+      "location": "Brooklyn, NY",
+      "stage": "Seed"
+    },
+    {
+      "id": 19,
+      "name": "ARLearn",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "Augmented reality educational platform",
+      "industry": "Education",
+      "fundingGoal": 1900000,
+      "fundingRaised": 950000,
+      "equity": 9,
+      "location": "Atlanta, GA",
+      "stage": "Seed"
+    },
+    {
+      "id": 20,
+      "name": "BioPackage",
+      "logo": "./images/post-placeholder.png",
+      "shortDescription": "Biodegradable packaging solutions",
+      "industry": "Clean Energy",
+      "fundingGoal": 2400000,
+      "fundingRaised": 1600000,
+      "equity": 11,
+      "location": "Berkeley, CA",
+      "stage": "Series A"
     }
   ]
 } 

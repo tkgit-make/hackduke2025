@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import './Login.css';
 import defaultUsers from '../data/users.json';
 
@@ -68,11 +69,17 @@ const Login = ({ isOpen, onClose, onSwitch }) => {
           <button type="submit" className="submit-button">Login</button>
         </form>
         <p className="switch-form">
-          Don't have an account? <button onClick={onSwitch}>Sign Up</button>
+          Don&apos;t have an account? <button onClick={onSwitch}>Sign Up</button>
         </p>
       </div>
     </div>
   );
+};
+
+Login.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  onSwitch: PropTypes.func.isRequired
 };
 
 export default Login;
