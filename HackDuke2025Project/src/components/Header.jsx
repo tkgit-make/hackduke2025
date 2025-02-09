@@ -1,4 +1,5 @@
 //import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -19,15 +20,30 @@ const Header = () => {
         </div>
       </div>
       <nav className="bottom-nav">
-        <a href="/discover" className="nav-link active">
+        {/* Discover NavLink */}
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+        >
           Discover
-        </a>
-        <a href="/feed" className="nav-link">
+        </NavLink>
+
+        {/* Feed NavLink */}
+        <NavLink
+          to="/feed"
+          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+        >
           Feed
-        </a>
-        <a href="/portfolio" className="nav-link">
+        </NavLink>
+
+        {/* Portfolio NavLink */}
+        <NavLink
+          to="/portfolio"
+          className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
+        >
           Portfolio
-        </a>
+        </NavLink>
       </nav>
     </header>
   );

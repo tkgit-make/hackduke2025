@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import startups from "./routes/startups.js";
 
+import records from "./routes/userAccount.js";
 
 const PORT = process.env.PORT || 5050;
 const app = express();

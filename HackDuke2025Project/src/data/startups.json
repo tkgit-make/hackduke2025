@@ -1,0 +1,94 @@
+{
+  "startups": [
+    {
+      "id": 1,
+      "companyName": "EcoTech Solutions",
+      "logo": "../assets/images/company-placeholder.png",
+      "industry": "Clean Energy",
+      "fundingStage": "Series A",
+      "valuation": "$15M",
+      "posts": [
+        {
+          "id": "p1",
+          "image": "../assets/images/post-placeholder.png",
+          "content": "Our new solar panel technology achieving 40% more efficiency than traditional panels! 🌞 #CleanTech #Innovation",
+          "timestamp": "2h ago",
+          "likes": 234,
+          "comments": 45
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "companyName": "HealthAI Innovations",
+      "logo": "https://via.placeholder.com/150",
+      "industry": "Healthcare",
+      "fundingStage": "Series B",
+      "valuation": "$50M",
+      "posts": [
+        {
+          "id": "p2",
+          "image": "https://via.placeholder.com/600/400",
+          "content": "Breaking: Our AI diagnostic tool just received FDA approval! 🎉 #HealthTech #AI",
+          "timestamp": "5h ago",
+          "likes": 567,
+          "comments": 89
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "companyName": "FinTech Forward",
+      "logo": "https://via.placeholder.com/150",
+      "industry": "Financial Technology",
+      "fundingStage": "Seed",
+      "valuation": "$5M",
+      "posts": [
+        {
+          "id": "p3",
+          "image": "https://via.placeholder.com/600/400",
+          "content": "Revolutionizing payments with our blockchain solution 💫 #FinTech #Blockchain",
+          "timestamp": "1d ago",
+          "likes": 342,
+          "comments": 67
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "companyName": "DroneDelivery Pro",
+      "logo": "https://via.placeholder.com/150",
+      "industry": "Logistics",
+      "fundingStage": "Series A",
+      "valuation": "$20M",
+      "posts": [
+        {
+          "id": "p4",
+          "image": "https://via.placeholder.com/600/400",
+          "content": "Successfully completed 10,000 autonomous deliveries this month! 🚀 #Drones #Future",
+          "timestamp": "2d ago",
+          "likes": 445,
+          "comments": 78
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "companyName": "CyberShield",
+      "logo": "https://via.placeholder.com/150",
+      "industry": "Cybersecurity",
+      "fundingStage": "Series C",
+      "valuation": "$200M",
+      "posts": [
+        {
+          "id": "p5",
+          "image": "https://via.placeholder.com/600/400",
+          "content": "Launching our new quantum-resistant encryption system 🔐 #Security #Innovation",
+          "timestamp": "3d ago",
+          "likes": 892,
+          "comments": 156
+        }
+      ]
+    }
+  ]
+} 

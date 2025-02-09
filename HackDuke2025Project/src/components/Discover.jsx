@@ -6,7 +6,7 @@ const Discover = () => {
   const cards = Array(12).fill({
     company: "Cubiko",
     price: "$100",
-    raised: "$20K",
+    raised: "$10K",
     goal: "$50K",
     image: "Cubikopic.png", // Replace with actual image path
   });
