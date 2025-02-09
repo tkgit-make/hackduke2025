@@ -1184,13 +1184,13 @@ const Launch = () => {
     <div className="launch-page">
       <div className="launch-container">
         <div 
-          className="progress-bar"
+          className="form-progress"
           data-progress={activeStep}
         >
           {steps.map((step, index) => (
             <div 
               key={step.title}
-              className={`progress-step ${index === activeStep ? 'active' : ''} 
+              className={`form-progress-step ${index === activeStep ? 'active' : ''} 
                 ${index < activeStep ? 'completed' : ''}`}
               onClick={() => setActiveStep(index)}
             >
