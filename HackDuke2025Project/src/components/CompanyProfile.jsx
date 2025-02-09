@@ -82,7 +82,10 @@ const CompanyProfile = () => {
                 <div className="progress-bar-container">
                   <div 
                     className="progress-bar" 
-                    style={{ width: `${progressPercentage}%` }}
+                    style={{ 
+                      width: `${progressPercentage}%`,
+                      backgroundColor: '#00F6D5'
+                    }}
                   />
                 </div>
                 <div className="progress-labels">
