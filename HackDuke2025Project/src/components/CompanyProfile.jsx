@@ -125,6 +125,21 @@ const CompanyProfile = () => {
               </div>
             </div>
           </div>
+
+          <div className="funding-stats">
+            <div className="stat">
+              <h4>Shares Available</h4>
+              <p>{companyData.sharesAvailable} of {companyData.totalShares}</p>
+            </div>
+            <div className="stat">
+              <h4>Price per Share</h4>
+              <p>${companyData.pricePerShare}</p>
+            </div>
+            <div className="stat">
+              <h4>Equity per Share</h4>
+              <p>{companyData.equityPerShare}%</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

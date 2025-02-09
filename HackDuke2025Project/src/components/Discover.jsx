@@ -126,6 +126,7 @@ const Discover = () => {
                 <div className="funding-details">
                   <span>{formatCurrency(startup.totalRaised)} raised</span>
                   <span>{startup.equityPerShare}% equity</span>
+                  <span>{startup.sharesAvailable} of {startup.totalSharesOffered} shares left</span>
                 </div>
                 <div className="funding-goal">
                   Goal: {formatCurrency(startup.targetGoal)}
