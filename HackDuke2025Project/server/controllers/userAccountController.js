@@ -22,9 +22,9 @@ export const getAccount = async (req, res) => {
 }
 
 export const createUserAccount = async (req, res) => {
-    const {userName, password, userInvestments, userCashAvailable} = req.body
+    const {userName, password, email, investorType, investorPreferences, userInvestments, userCashAvailable} = req.body
   try {
-    const useraccount = await uA.create({userName, password, userInvestments, userCashAvailable})
+    const useraccount = await uA.create({userName, password, email, investorType, investorPreferences, userInvestments, userCashAvailable})
     res.status(200).json(useraccount)
   } catch (error) {
     res.status(400).json({error: error.message})    
