@@ -59,6 +59,15 @@ const Signup = ({ isOpen, onClose, onSwitch }) => {
   
       const createdUser = await response.json();
       console.log('Account created:', createdUser);
+      
+      // Store user information in local storage
+      localStorage.setItem('currentUser', JSON.stringify({
+        id: createdUser._id, // Assuming the backend returns the user ID
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        investorType: formData.investorType
+      }));
   
       // Close the modal and reload the page
       onClose();
