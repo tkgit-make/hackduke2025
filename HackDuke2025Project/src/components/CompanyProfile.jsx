@@ -5,12 +5,17 @@ import defaultCompanyImage from '../assets/images/company-placeholder.png';
 import defaultPostImage from '../assets/images/post-placeholder.png';
 import sampleStartupsData from '../data/sample_startups.json';
 import { useState } from 'react';
+import InvestmentDialog from './InvestmentDialog';
 
 const CompanyProfile = () => {
   const navigate = useNavigate();
   const { companyName } = useParams();
   const [imageLoadErrors, setImageLoadErrors] = useState({});
+  const [dialogOpen, setDialogOpen] = useState(false);
   
+  // Fake local wallet balance
+  const walletBalance = 5000; // Example wallet balance
+
   // Find the matching company data from sample data
   const company = sampleStartupsData.startups.find(
     startup => startup.startUpName === companyName
@@ -40,6 +45,10 @@ const CompanyProfile = () => {
       ...prev,
       [imageId]: true
     }));
+  };
+
+  const handleInvestClick = () => {
+    setDialogOpen(true);
   };
 
   return (
@@ -97,7 +106,7 @@ const CompanyProfile = () => {
               <span className="metric-subtitle">{Math.floor(company.minInvestment / company.pricePerShare)} shares</span>
             </div>
           </div>
-          <button className="invest-button" onClick={() => alert('Investment feature coming soon!')}>
+          <button className="invest-button" onClick={handleInvestClick}>
             Invest in {company.startUpName}
           </button>
         </div>
@@ -243,6 +252,15 @@ const CompanyProfile = () => {
           ))}
         </div>
       </section>
+
+      {dialogOpen && (
+        <InvestmentDialog
+          onClose={() => setDialogOpen(false)}
+          sharePrice={company.pricePerShare}
+          equityPerShare={company.equityPerShare}
+          walletBalance={walletBalance}
+        />
+      )}
     </div>
   );
 };

@@ -50,9 +50,17 @@ const userAccountSchema = new Schema({
 
     walletBalance: {
         type: Number,
-        default: 0,
+        default: 1000,
         required: true
-    }   
+    },
+
+    investorType: {
+        type: String,
+    },
+
+    investorPreferences: {
+        type: Object,
+    }
 }, {timestamps: true})
 
 // Method to add funds to the wallet

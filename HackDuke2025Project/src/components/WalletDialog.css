@@ -1,0 +1,70 @@
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Grayed out background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 400px; 
+}
+
+.dialog-content h2 {
+  margin: 0 0 10px;
+}
+
+.dialog-content button {
+  margin-top: 20px;
+}
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the header */
+  margin-bottom: 20px;
+}
+
+.dialog-title {
+  margin-left: 10px; /* Space between the back arrow and title */
+  text-align: center; /* Center the title */
+  flex-grow: 1; /* Allow the title to take available space */
+}
+
+.input-container {
+  margin: 20px 0;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #333;
+} 

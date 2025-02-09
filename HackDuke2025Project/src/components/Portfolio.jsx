@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Portfolio.css';
 import companyImage from '../assets/images/company-placeholder.png';
 import { Line, Pie } from 'react-chartjs-2';
@@ -14,6 +14,8 @@ import {
   Legend,
   ArcElement,
 } from 'chart.js';
+import axios from 'axios'; // Import axios for API calls
+import WalletDialog from './WalletDialog'; // Import the dialog component
 
 // Register ChartJS components
 ChartJS.register(
@@ -29,6 +31,9 @@ ChartJS.register(
 
 const Portfolio = () => {
   const [timeRange, setTimeRange] = useState('1M'); // 1W, 1M, 3M, 1Y, ALL
+  const [walletBalance, setWalletBalance] = useState(0);
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const userId = 'USER_ID_HERE'; // Replace with actual user ID logic
 
   // First destructure the data
   const { portfolioStats, investments, timeSeriesData, industryAllocation } = portfolioData;
@@ -37,6 +42,20 @@ const Portfolio = () => {
   console.log('Portfolio Data:', portfolioData);
   console.log('Time Series Data:', timeSeriesData);
   console.log('Industry Allocation:', industryAllocation);
+
+  // Fetch wallet balance
+  useEffect(() => {
+    const fetchWalletBalance = async () => {
+      try {
+        const response = await axios.get(`/api/useraccounts/${userId}/wallet`);
+        setWalletBalance(response.data.walletBalance);
+      } catch (error) {
+        console.error('Error fetching wallet balance:', error);
+      }
+    };
+
+    fetchWalletBalance();
+  }, [userId]);
 
   // Chart data
   const portfolioGrowthData = {
@@ -91,6 +110,20 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+
+      {/* Wallet Card */}
+      <div className="wallet-card">
+        <div className="wallet-balance">
+          <h3>Wallet Balance</h3>
+          <p>${walletBalance.toLocaleString()}</p>
+        </div>
+        <button className="open-dialog-button" onClick={() => setDialogOpen(true)}>
+          Open Wallet
+        </button>
+      </div>
+
+      {/* Dialog for Wallet */}
+      {dialogOpen && <WalletDialog onClose={() => setDialogOpen(false)} userId={userId} />}
 
       {/* Charts Section */}
       <div className="portfolio-charts">

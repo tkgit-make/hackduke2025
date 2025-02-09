@@ -156,3 +156,32 @@ td {
     grid-template-columns: 1fr;
   }
 }
+
+.wallet-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.wallet-balance {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.open-dialog-button {
+  padding: 10px 20px;
+  background-color: #00e0b6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.open-dialog-button:hover {
+  background-color: #00c9a3;
+}

@@ -74,3 +74,37 @@ export const updateUserAccount = async (req, res) => {
         res.status(500).json({ error: 'Error updating account', details: error.message })
     }
 }
+
+export const getWalletBalance = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const account = await uA.findById(id);
+        if (!account) {
+            return res.status(404).json({ error: 'Account not found' });
+        }
+        res.status(200).json({ walletBalance: account.walletBalance });
+    } catch (error) {
+        res.status(500).json({ error: 'Error retrieving wallet balance', details: error.message });
+    }
+};
+
+export const updateWalletBalance = async (req, res) => {
+    const { id } = req.params;
+    const { amount } = req.body; // Expecting amount to be sent in the request body
+
+    try {
+        const account = await uA.findById(id);
+        if (!account) {
+            return res.status(404).json({ error: 'Account not found' });
+        }
+
+        // Update the wallet balance
+        account.walletBalance += amount; // Add the amount to the existing balance
+        await account.save(); // Save the updated account
+
+        res.status(200).json({ walletBalance: account.walletBalance });
+    } catch (error) {
+        res.status(500).json({ error: 'Error updating wallet balance', details: error.message });
+    }
+};

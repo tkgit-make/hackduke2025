@@ -1,0 +1,90 @@
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Grayed out background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Adjust width as needed */
+}
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start */
+  margin-bottom: 20px;
+}
+
+.dialog-title {
+  margin-left: 10px; /* Space between the back arrow and title */
+}
+
+.payment-methods {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+}
+
+.payment-button {
+  padding: 15px;
+  background-color: #00D1B2; /* Change to your preferred color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Space between buttons */
+  font-size: 16px; /* Increase font size for better readability */
+  transition: background-color 0.2s ease;
+}
+
+.payment-button.active {
+  background-color: #007B7F; /* Darker shade for active button */
+}
+
+.payment-button:hover {
+  background-color: #007B7F; /* Darker shade on hover */
+}
+
+.input-container {
+  margin: 20px 0;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+}
+
+.payment-details {
+  margin: 10px 0;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #333;
+} 
