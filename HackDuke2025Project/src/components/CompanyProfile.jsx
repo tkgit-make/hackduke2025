@@ -60,7 +60,7 @@ const CompanyProfile = () => {
       {/* Header Section */}
       <section className="profile-header">
         <img 
-          src={imageLoadErrors.banner ? defaultCompanyImage : getImagePath(company.image)} 
+          src={company.image} 
           alt={company.startUpName} 
           className="company-banner"
           onError={() => handleImageError('banner')}

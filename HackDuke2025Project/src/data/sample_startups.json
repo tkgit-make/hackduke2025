@@ -3,8 +3,8 @@
     {
       "startupID": 1001,
       "startUpName": "EcoTech Solutions",
-      "shortDescription": "Developing sustainable energy solutions for residential communities through innovative solar and wind technology.",
-      "fullDescription": "Developing sustainable energy solutions for residential communities through innovative solar and wind technology integration. Our patented micro-grid system enables neighborhoods to share and optimize renewable energy usage.",
+      "shortDescription": "Sustainable energy solutions for residential communities using innovative solar and wind technology.",
+      "fullDescription": "EcoTech Solutions is revolutionizing residential energy infrastructure through our innovative solar and wind technology integration. Our patented micro-grid system enables entire neighborhoods to share and optimize renewable energy usage, reducing energy costs by up to 40% while increasing grid resilience. The system combines advanced solar panels, small-scale wind turbines, and AI-powered smart distribution networks to create self-sustaining community power systems. Our unique approach maximizes energy efficiency and creates energy-sharing economies within neighborhoods. The technology includes real-time load balancing, predictive maintenance, and automated optimization algorithms that adjust to weather patterns and usage behaviors. We've developed proprietary storage solutions that extend backup power capacity to 72 hours, three times longer than traditional systems. Our pilot communities have demonstrated 95% energy independence and significant reduction in carbon emissions. The platform includes a user-friendly mobile app that gives residents complete visibility into their energy production, consumption, and sharing patterns, while our advanced analytics help property developers and utilities optimize infrastructure planning. We're currently expanding our solution to include EV charging integration and demand-response capabilities for utility grid support.",
       "homeLocation": "Durham, NC",
       "industry": "CleanTech",
       "stage": "Seed",
@@ -16,8 +16,8 @@
       "totalSharesOffered": 20000,
       "minInvestment": 100,
       "maxInvestment": 10000,
-      "logo": "/assets/images/startups/ecotech/logo.png",
-      "image": "/assets/images/startups/ecotech/banner.png",
+      "logo": "./src/assets/images/logos/ecotech-solutions-logo.png",
+      "image": "./src/assets/images/banners/ecotech-solutions-banner.png",
       "foundedDate": "2022-06-15",
       "campaignDuration": 21,
       "startDate": "2025-01-19T19:00:00",
@@ -82,7 +82,7 @@
           "id": 1001,
           "caption": "Our micro-grid system successfully deployed in Durham's Green Valley community!",
           "likesData": 156,
-          "photos": [{"photoLocation": "/assets/images/startups/ecotech/post1.jpg"}]
+          "photos": [{"photoLocation": "./src/assets/images/posts/ecotech-solutions-post.jpg"}]
         }
       ],
       "tagsData": [
@@ -142,8 +142,8 @@
     {
       "startupID": 1002,
       "startUpName": "HealthAI Labs",
-      "shortDescription": "Revolutionizing early disease detection through AI-powered medical imaging analysis.",
-      "fullDescription": "HealthAI Labs is pioneering the future of medical diagnostics using advanced artificial intelligence. Our platform analyzes medical images to detect diseases at early stages with unprecedented accuracy.",
+      "shortDescription": "AI-powered medical imaging analysis for early disease detection.",
+      "fullDescription": "HealthAI Labs is transforming medical diagnostics through advanced artificial intelligence and machine learning technologies. Our platform analyzes medical images across multiple modalities - including X-rays, MRIs, and CT scans - to detect diseases at early stages with unprecedented accuracy. The system employs a novel deep learning architecture that can identify subtle patterns and anomalies often missed by human observers, achieving a 93% early detection rate across various conditions. Our technology has been validated through extensive clinical trials and is currently deployed in 28 major hospitals nationwide. The platform integrates seamlessly with existing hospital PACS systems and includes a sophisticated prioritization algorithm that helps radiologists focus on the most critical cases first. We've developed specialized modules for oncology, cardiology, and neurology, with each module trained on vast datasets of verified medical images. The system provides detailed analysis reports with visual overlays highlighting areas of concern, and includes a collaborative platform for radiologists to share insights securely. Our AI models continuously learn from new data, with built-in safeguards to maintain accuracy and eliminate bias. The platform also includes advanced workflow optimization tools that have reduced average diagnosis time by 60% while maintaining the highest standards of accuracy.",
       "homeLocation": "Boston, MA",
       "industry": "HealthTech",
       "stage": "Series A",
@@ -155,8 +155,8 @@
       "totalSharesOffered": 20000,
       "minInvestment": 250,
       "maxInvestment": 25000,
-      "logo": "/assets/images/startups/healthai/logo.png",
-      "image": "/assets/images/startups/healthai/banner.png",
+      "logo": "./src/assets/images/logos/healthai-labs-logo.png",
+      "image": "./src/assets/images/banners/healthai-labs-banner.png",
       "foundedDate": "2021-03-22",
       "campaignDuration": 18,
       "startDate": "2025-01-23T19:00:00",
@@ -233,7 +233,7 @@
           "id": 1002,
           "caption": "Proud to announce our partnership with Massachusetts General Hospital!",
           "likesData": 324,
-          "photos": [{"photoLocation": "/assets/images/startups/healthai/post1.jpg"}]
+          "photos": [{"photoLocation": "./src/assets/images/posts/healthai-labs-post.jpg"}]
         }
       ],
       "tagsData": [
@@ -266,8 +266,8 @@
     {
       "startupID": 1003,
       "startUpName": "EduPlay",
-      "shortDescription": "Making early childhood education engaging and accessible through interactive AR experiences.",
-      "fullDescription": "EduPlay is transforming early childhood education with augmented reality technology. Our platform creates immersive learning experiences that make education fun and accessible for children aged 3-8.",
+      "shortDescription": "Interactive AR experiences making early childhood education engaging and accessible.",
+      "fullDescription": "EduPlay is revolutionizing early childhood education through cutting-edge augmented reality technology. Our platform creates immersive, interactive learning experiences that make education engaging and accessible for children aged 3-8. Using advanced computer vision and spatial computing, we transform ordinary spaces into dynamic learning environments where children can interact with 3D educational content. Our proprietary AR engine adapts to each child's learning style and pace, providing personalized educational paths that have shown to improve learning outcomes by 45% compared to traditional methods. The platform includes over 200 interactive modules covering essential early learning concepts from basic numeracy to advanced problem-solving skills. We've developed specialized tracking algorithms that ensure safe, age-appropriate interactions and provide detailed progress reports to parents and educators. Our content is developed in collaboration with child development experts and aligns with early childhood education standards. The platform includes real-time analytics that help educators identify areas where children may need additional support. We've also implemented innovative multiplayer features that enable collaborative learning experiences, fostering social skills alongside academic development.",
       "homeLocation": "Austin, TX",
       "industry": "EdTech",
       "stage": "Pre-Seed",
@@ -279,8 +279,8 @@
       "totalSharesOffered": 10000,
       "minInvestment": 50,
       "maxInvestment": 5000,
-      "logo": "/assets/images/startups/eduplay/logo.png",
-      "image": "/assets/images/startups/eduplay/banner.png",
+      "logo": "./src/assets/images/logos/eduplay-logo.png",
+      "image": "./src/assets/images/banners/eduplay-banner.png",
       "foundedDate": "2023-09-01",
       "campaignDuration": 15,
       "startDate": "2025-01-26T19:00:00",
@@ -366,7 +366,7 @@
           "id": 1003,
           "caption": "Beta testing our new AR alphabet learning module with amazing results!",
           "likesData": 89,
-          "photos": [{"photoLocation": "/assets/images/startups/eduplay/post1.jpg"}]
+          "photos": [{"photoLocation": "./src/assets/images/posts/eduplay-post.jpg"}]
         }
       ],
       "tagsData": [
@@ -378,8 +378,8 @@
     {
       "startupID": 1004,
       "startUpName": "SecureChain",
-      "shortDescription": "Building next-generation blockchain security solutions for enterprise applications.",
-      "fullDescription": "SecureChain provides enterprise-grade blockchain security solutions that protect digital assets and smart contracts. Our platform offers real-time threat detection, automated auditing, and advanced encryption protocols.",
+      "shortDescription": "Next-gen blockchain security solutions for enterprise applications.",
+      "fullDescription": "SecureChain is pioneering enterprise-grade blockchain security solutions that protect digital assets and smart contracts with unprecedented reliability. Our platform combines advanced threat detection, automated smart contract auditing, and state-of-the-art encryption protocols to create a comprehensive security ecosystem for blockchain applications. The system employs proprietary AI algorithms that continuously monitor blockchain transactions and smart contract interactions, detecting potential threats in real-time with 99.99% accuracy. Our automated auditing system has already identified over 1,000 critical vulnerabilities in deployed smart contracts, preventing potential losses exceeding $500 million. The platform includes advanced features such as automated response protocols, which can freeze compromised assets within 50 milliseconds of threat detection, and sophisticated forensics tools that provide detailed attack vector analysis. We've developed innovative solutions for cross-chain security monitoring and implemented quantum-resistant encryption protocols to future-proof blockchain assets. Our security suite integrates seamlessly with major blockchain platforms and provides comprehensive API support for custom implementations. The platform also includes advanced governance tools that enable precise control over smart contract modifications and asset management.",
       "homeLocation": "San Francisco, CA",
       "industry": "FinTech",
       "stage": "Angel",
@@ -391,8 +391,8 @@
       "totalSharesOffered": 10000,
       "minInvestment": 150,
       "maxInvestment": 15000,
-      "logo": "/assets/images/startups/securechain/logo.png",
-      "image": "/assets/images/startups/securechain/banner.png",
+      "logo": "./src/assets/images/logos/securechain-logo.png",
+      "image": "./src/assets/images/banners/securechain-banner.png",
       "foundedDate": "2022-07-10",
       "campaignDuration": 21,
       "startDate": "2025-01-20T19:00:00",
@@ -478,7 +478,7 @@
           "id": 1004,
           "caption": "Launching our enterprise security suite next month!",
           "likesData": 245,
-          "photos": [{"photoLocation": "/assets/images/startups/securechain/post1.jpg"}]
+          "photos": [{"photoLocation": "./src/assets/images/posts/securechain-post.jpg"}]
         }
       ],
       "tagsData": [
@@ -490,8 +490,8 @@
     {
       "startupID": 1005,
       "startUpName": "RoboAssist",
-      "shortDescription": "Developing collaborative robots for elderly care and assistance in medical facilities.",
-      "fullDescription": "RoboAssist creates advanced robotic solutions to support elderly care facilities and hospitals. Our robots assist with routine tasks, monitor patient safety, and provide companionship, allowing healthcare workers to focus on specialized care while improving patient outcomes.",
+      "shortDescription": "Collaborative robots for elderly care and medical facility assistance.",
+      "fullDescription": "RoboAssist is transforming elderly care and hospital operations through advanced robotics and AI technology. Our autonomous robots combine sophisticated mobility systems with advanced sensing capabilities to provide comprehensive support in healthcare environments. The robots utilize cutting-edge computer vision and natural language processing to interact naturally with patients and staff, achieving a 95% satisfaction rate in user interactions. Our proprietary navigation system enables safe and efficient movement through complex healthcare environments, with collision avoidance accuracy exceeding 99.99%. The robots can perform over 50 different routine tasks, from medication delivery to patient monitoring, reducing staff workload by an average of 35%. We've developed specialized sensors that can monitor vital signs without physical contact, providing continuous health tracking while maintaining patient comfort. The system includes advanced fall detection and emergency response protocols, reducing incident response times by 60%. Our AI-driven companion mode provides personalized interaction based on each patient's preferences and needs, significantly reducing feelings of isolation in long-term care facilities. The platform includes comprehensive integration with existing healthcare systems and provides detailed analytics on patient interactions and care delivery efficiency.",
       "homeLocation": "Seattle, WA",
       "industry": "Robotics",
       "stage": "Seed",
@@ -501,8 +501,8 @@
       "equityPerShare": 0.003,
       "sharesAvailable": 10300,
       "totalSharesOffered": 17150,
-      "logo": "/assets/images/startups/roboassist/logo.png",
-      "image": "/assets/images/startups/roboassist/banner.png",
+      "logo": "./src/assets/images/logos/roboassist-logo.png",
+      "image": "./src/assets/images/banners/roboassist-banner.png",
       "foundedDate": "2022-04-18",
       "minInvestment": 2000,
       "maxInvestment": 20000,
@@ -590,7 +590,7 @@
           "id": 1005,
           "caption": "First successful pilot program completed at Seattle Senior Care Center!",
           "likesData": 178,
-          "photos": [{"photoLocation": "/assets/images/startups/roboassist/post1.jpg"}]
+          "photos": [{"photoLocation": "./src/assets/images/posts/roboassist-post.jpg"}]
         }
       ],
       "tagsData": [
@@ -602,8 +602,8 @@
     {
       "startupID": 1006,
       "startUpName": "AgroSmart",
-      "shortDescription": "Empowering farmers with AI-driven precision agriculture solutions.",
-      "fullDescription": "AgroSmart combines AI and IoT technology to revolutionize farming practices. Our system provides real-time soil analysis, crop health monitoring, and automated irrigation control, helping farmers optimize resource usage and increase crop yields while reducing environmental impact.",
+      "shortDescription": "AI-driven precision agriculture solutions for modern farming.",
+      "fullDescription": "AgroSmart revolutionizes farming with advanced IoT sensors and AI-powered analytics. Our system provides real-time soil health monitoring, automated irrigation control, and predictive crop yield analysis. We help farmers optimize resource usage, reduce costs, and increase crop yields through data-driven decision making. Our IoT sensors collect critical data on soil moisture, temperature, and nutrient levels, transmitting this information to our cloud-based analytics platform. The AI algorithms analyze the data to provide actionable insights, enabling farmers to make informed decisions about irrigation, fertilization, and pest control. Our platform has been shown to increase crop yields by an average of 20% while reducing water usage by 30%. We also offer a mobile app that allows farmers to monitor their fields remotely and receive alerts for critical conditions. Our technology is designed to be user-friendly, ensuring that farmers of all tech levels can benefit from our solutions. We've partnered with agricultural cooperatives to provide training and support, ensuring successful implementation and maximizing the benefits of our technology. Our goal is to empower farmers with the tools they need to thrive in an increasingly competitive market.",
       "homeLocation": "Davis, CA",
       "industry": "AI/ML",
       "stage": "Pre-Seed",
@@ -613,8 +613,8 @@
       "equityPerShare": 0.008,
       "sharesAvailable": 7300,
       "totalSharesOffered": 10000,
-      "logo": "/assets/images/startups/agrosmart/logo.png",
-      "image": "/assets/images/startups/agrosmart/banner.png",
+      "logo": "./src/assets/images/logos/agrosense-logo.png",
+      "image": "./src/assets/images/banners/agrosense-banner.png",
       "foundedDate": "2023-05-05",
       "minInvestment": 75,
       "maxInvestment": 7500,
@@ -670,11 +670,11 @@
           "fundingRequired": 200000
         }
       ],
-      "website": "https://agrosmart.tech",
+      "website": "https://agrosense.ag",
       "socialMedia": {
-        "linkedin": "https://linkedin.com/company/agrosmart",
-        "twitter": "https://twitter.com/agrosmart",
-        "facebook": "https://facebook.com/agrosmart"
+        "linkedin": "https://linkedin.com/company/agrosense",
+        "twitter": "https://twitter.com/agrosense",
+        "facebook": "https://facebook.com/agrosense"
       },
       "companyRegistration": "CA-2023-0505-LLC",
       "taxId": "87-6789012",
@@ -695,14 +695,14 @@
         "databases": ["InfluxDB", "PostgreSQL"],
         "security": ["Device authentication", "TLS 1.3"]
       },
-      "pitchDeck": "/documents/pitch-decks/agrosmart-pitch.pdf",
-      "financialProjections": "/documents/financials/agrosmart-projections.xlsx",
+      "pitchDeck": "/documents/pitch-decks/agrosense-pitch.pdf",
+      "financialProjections": "/documents/financials/agrosense-projections.xlsx",
       "postsData": [
         {
           "id": 1006,
           "caption": "New AI model showing 40% improvement in water usage efficiency!",
           "likesData": 134,
-          "photos": [{"photoLocation": "/assets/images/startups/agrosmart/post1.jpg"}]
+          "photos": [{"photoLocation": "./src/assets/images/posts/agrosense-post.jpg"}]
         }
       ],
       "tagsData": [
@@ -714,8 +714,8 @@
     {
       "startupID": 1007,
       "startUpName": "CyberLearn",
-      "shortDescription": "Providing personalized cybersecurity training through adaptive learning algorithms.",
-      "fullDescription": "CyberLearn revolutionizes cybersecurity education with personalized, AI-driven training programs. Our platform adapts to each user's learning pace and style, ensuring effective skill development for IT professionals and organizations looking to strengthen their security practices.",
+      "shortDescription": "Personalized cybersecurity training using adaptive learning algorithms.",
+      "fullDescription": "CyberLearn revolutionizes cybersecurity education with personalized, AI-driven training programs. Our platform adapts to each user's learning pace and style, ensuring effective skill development for IT professionals and organizations looking to strengthen their security practices. The system employs advanced machine learning algorithms to assess user performance and tailor training modules accordingly, providing a customized learning experience that has proven to increase retention rates by 40%. Our curriculum covers a wide range of topics, from basic cybersecurity principles to advanced threat detection and incident response strategies. We've partnered with industry leaders to ensure our content is up-to-date and relevant, and our platform includes interactive simulations that allow users to practice their skills in real-world scenarios. The system also features a robust analytics dashboard that provides organizations with insights into employee progress and skill gaps, enabling targeted training interventions. Our goal is to create a more secure digital landscape by equipping individuals and organizations with the knowledge and skills necessary to combat cyber threats effectively.",
       "homeLocation": "Atlanta, GA",
       "industry": "EdTech",
       "stage": "Angel",
@@ -725,8 +725,8 @@
       "equityPerShare": 0.006,
       "sharesAvailable": 7500,
       "totalSharesOffered": 12500,
-      "logo": "/assets/images/startups/cyberlearn/logo.png",
-      "image": "/assets/images/startups/cyberlearn/banner.png",
+      "logo": "./src/assets/images/logos/cyberlearn-logo.png",
+      "image": "./src/assets/images/banners/cyberlearn-banner.png",
       "foundedDate": "2021-12-03",
       "minInvestment": 100,
       "maxInvestment": 10000,
@@ -814,7 +814,7 @@
           "id": 1007,
           "caption": "500th corporate client onboarded this week!",
           "likesData": 267,
-          "photos": [{"photoLocation": "/assets/images/startups/cyberlearn/post1.jpg"}]
+          "photos": [{"photoLocation": "./src/assets/images/posts/cyberlearn-post.jpg"}]
         }
       ],
       "tagsData": [
@@ -826,8 +826,8 @@
     {
       "startupID": 1008,
       "startUpName": "BioVitals",
-      "shortDescription": "Creating non-invasive biomarker monitoring devices for chronic disease management.",
-      "fullDescription": "BioVitals develops innovative wearable devices that continuously monitor key biomarkers for chronic disease management. Our technology enables early detection of health complications and provides real-time alerts to both patients and healthcare providers.",
+      "shortDescription": "Non-invasive biomarker monitoring devices for chronic disease management.",
+      "fullDescription": "BioVitals develops innovative wearable devices that continuously monitor key biomarkers for chronic disease management. Our technology enables early detection of health complications and provides real-time alerts to both patients and healthcare providers. The devices utilize advanced biosensors to track vital signs such as heart rate, blood pressure, and glucose levels, transmitting this data to our secure cloud platform for analysis. Our AI algorithms analyze the data to identify trends and anomalies, alerting users and their healthcare teams to potential issues before they escalate. We've partnered with leading healthcare providers to ensure our devices meet the highest standards of accuracy and reliability. Our platform includes a user-friendly mobile app that allows patients to view their health data, receive personalized health tips, and communicate with their healthcare providers. Our goal is to empower patients to take control of their health and improve their quality of life through proactive monitoring and timely interventions.",
       "homeLocation": "Minneapolis, MN",
       "industry": "HealthTech",
       "stage": "Series A",
@@ -837,8 +837,8 @@
       "equityPerShare": 0.0025,
       "sharesAvailable": 11000,
       "totalSharesOffered": 20000,
-      "logo": "/assets/images/startups/biovitals/logo.png",
-      "image": "/assets/images/startups/biovitals/banner.png",
+      "logo": "./assets/images/logos/biovitals-logo.png",
+      "image": "./assets/images/banners/biovitals-banner.png",
       "foundedDate": "2022-01-15",
       "minInvestment": 250,
       "maxInvestment": 25000,
@@ -926,7 +926,7 @@
           "id": 1008,
           "caption": "FDA approval received for our diabetes monitoring device!",
           "likesData": 423,
-          "photos": [{"photoLocation": "/assets/images/startups/biovitals/post1.jpg"}]
+          "photos": [{"photoLocation": "./assets/images/posts/biovitals-post.jpg"}]
         }
       ],
       "tagsData": [
@@ -938,8 +938,8 @@
     {
       "startupID": 1009,
       "startUpName": "LocalChain",
-      "shortDescription": "Connecting local farmers with restaurants through blockchain-enabled supply chain.",
-      "fullDescription": "LocalChain uses blockchain technology to create transparent, efficient supply chains between local farmers and restaurants. Our platform ensures fair pricing, reduces food waste, and provides complete traceability from farm to table.",
+      "shortDescription": "Blockchain-enabled supply chain connecting local farmers with restaurants.",
+      "fullDescription": "LocalChain uses blockchain technology to create transparent, efficient supply chains between local farmers and restaurants. Our platform ensures fair pricing, reduces food waste, and provides complete traceability from farm to table. By connecting farmers directly with restaurants, we eliminate middlemen and ensure that farmers receive a fair price for their produce. Our blockchain system records every transaction, providing an immutable ledger that enhances trust and accountability in the food supply chain. The platform includes a user-friendly interface that allows restaurants to place orders directly with farmers, view available produce, and track deliveries in real-time. We've developed partnerships with local agricultural cooperatives to onboard farmers and provide them with the necessary tools to participate in our platform. Our goal is to create a sustainable food ecosystem that benefits both producers and consumers while reducing the environmental impact of food distribution.",
       "homeLocation": "Portland, OR",
       "industry": "FinTech",
       "stage": "Seed",
@@ -949,8 +949,8 @@
       "equityPerShare": 0.007,
       "sharesAvailable": 8300,
       "totalSharesOffered": 13300,
-      "logo": "/assets/images/startups/localchain/logo.png",
-      "image": "/assets/images/startups/localchain/banner.png",
+      "logo": "./src/assets/images/logos/localchain-logo.png",
+      "image": "./src/assets/images/banners/localchain-banner.png",
       "foundedDate": "2022-09-10",
       "minInvestment": 120,
       "maxInvestment": 12000,
@@ -1038,7 +1038,7 @@
           "id": 1009,
           "caption": "Just onboarded our 100th restaurant partner in Portland!",
           "likesData": 198,
-          "photos": [{"photoLocation": "/assets/images/startups/localchain/post1.jpg"}]
+          "photos": [{"photoLocation": "./src/assets/images/posts/localchain-post.jpg"}]
         }
       ],
       "tagsData": [
@@ -1050,8 +1050,8 @@
     {
       "startupID": 1010,
       "startUpName": "DroneMap",
-      "shortDescription": "Automating construction site surveying with AI-powered drone technology.",
-      "fullDescription": "DroneMap revolutionizes construction site management through automated drone surveying and AI analysis. Our solution provides accurate 3D mapping, progress tracking, and safety monitoring, helping construction companies improve efficiency and reduce costs.",
+      "shortDescription": "AI-powered drone technology for automated construction site surveying.",
+      "fullDescription": "DroneMap revolutionizes construction site management through automated drone surveying and AI analysis. Our solution provides accurate 3D mapping, progress tracking, and safety monitoring, helping construction companies improve efficiency and reduce costs. Our drones are equipped with high-resolution cameras and LiDAR sensors that capture detailed site data, which is processed using advanced AI algorithms to create precise 3D models. These models enable construction managers to visualize project progress, identify potential issues, and make informed decisions. Our platform includes real-time analytics that provide insights into site conditions, helping teams optimize resource allocation and improve safety protocols. We've partnered with leading construction firms to pilot our technology on major projects, demonstrating significant time and cost savings. Our goal is to transform the construction industry by providing innovative solutions that enhance productivity and safety on job sites.",
       "homeLocation": "Denver, CO",
       "industry": "AI/ML",
       "stage": "Pre-Seed",
@@ -1061,8 +1061,8 @@
       "equityPerShare": 0.009,
       "sharesAvailable": 10800,
       "totalSharesOffered": 13300,
-      "logo": "/assets/images/startups/dronemap/logo.png",
-      "image": "/assets/images/startups/dronemap/banner.png",
+      "logo": "./src/assets/images/logos/dronemap-logo.png",
+      "image": "./src/assets/images/banners/dronemap-banner.png",
       "foundedDate": "2023-02-14",
       "minInvestment": 80,
       "maxInvestment": 8000,
@@ -1150,7 +1150,7 @@
           "id": 1010,
           "caption": "Our drones just completed mapping of Denver's largest construction project!",
           "likesData": 156,
-          "photos": [{"photoLocation": "/assets/images/startups/dronemap/post1.jpg"}]
+          "photos": [{"photoLocation": "./src/assets/images/posts/dronemap-post.jpg"}]
         }
       ],
       "tagsData": [
@@ -1162,8 +1162,8 @@
     {
       "startupID": 1011,
       "startUpName": "AgroSense",
-      "shortDescription": "Smart IoT sensors and AI analytics for precision agriculture and crop optimization.",
-      "fullDescription": "AgroSense revolutionizes farming with advanced IoT sensors and AI-powered analytics. Our system provides real-time soil health monitoring, automated irrigation control, and predictive crop yield analysis. We help farmers optimize resource usage, reduce costs, and increase crop yields through data-driven decision making.",
+      "shortDescription": "IoT sensors and AI analytics for precision agriculture optimization.",
+      "fullDescription": "AgroSense revolutionizes farming with advanced IoT sensors and AI-powered analytics. Our system provides real-time soil health monitoring, automated irrigation control, and predictive crop yield analysis. We help farmers optimize resource usage, reduce costs, and increase crop yields through data-driven decision making. Our IoT sensors collect critical data on soil moisture, temperature, and nutrient levels, transmitting this information to our cloud-based analytics platform. The AI algorithms analyze the data to provide actionable insights, enabling farmers to make informed decisions about irrigation, fertilization, and pest control. Our platform has been shown to increase crop yields by an average of 20% while reducing water usage by 30%. We also offer a mobile app that allows farmers to monitor their fields remotely and receive alerts for critical conditions. Our technology is designed to be user-friendly, ensuring that farmers of all tech levels can benefit from our solutions. We've partnered with agricultural cooperatives to provide training and support, ensuring successful implementation and maximizing the benefits of our technology. Our goal is to empower farmers with the tools they need to thrive in an increasingly competitive market.",
       "homeLocation": "Davis, CA",
       "industry": "AI/ML",
       "stage": "Seed",
@@ -1173,8 +1173,8 @@
       "equityPerShare": 0.006,
       "sharesAvailable": 10000,
       "totalSharesOffered": 15000,
-      "logo": "/assets/images/startups/agrosense/logo.png",
-      "image": "/assets/images/startups/agrosense/banner.png",
+      "logo": "./src/assets/images/logos/agrosense-logo.png",
+      "image": "./src/assets/images/banners/agrosense-banner.png",
       "foundedDate": "2022-11-30",
       "minInvestment": 150,
       "maxInvestment": 15000,
@@ -1262,7 +1262,7 @@
           "id": 1011,
           "caption": "Celebrating 50,000 acres under AgroSense management!",
           "likesData": 289,
-          "photos": [{"photoLocation": "/assets/images/startups/agrosense/post1.jpg"}]
+          "photos": [{"photoLocation": "./src/assets/images/posts/agrosense-post.jpg"}]
         }
       ],
       "tagsData": [

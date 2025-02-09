@@ -100,7 +100,7 @@ const Discover = () => {
           >
             <div className="image-container">
               <img 
-                src={startup.logo || postPlaceholder} 
+                src={startup.image || postPlaceholder} 
                 alt={startup.startUpName} 
                 className="startup-logo"
                 onError={(e) => {
