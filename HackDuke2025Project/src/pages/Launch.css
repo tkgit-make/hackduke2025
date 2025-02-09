@@ -20,9 +20,30 @@
   position: relative;
   padding: 0 40px;
   width: 100%;
-  background: white;
+  background: transparent;
+  --progress-percentage: 0;
 }
 
+/* Override Bootstrap progress bar styles */
+.progress,
+.progress-bar,
+.progress > .progress-bar,
+.progress-bar > .progress {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* Make sure our styles take precedence */
+.launch-container .progress-bar {
+  background: transparent !important;
+}
+
+.progress-bar-container {
+  background-color: transparent;
+}
+
+/* First, create a base line */
 .progress-bar::before {
   content: '';
   position: absolute;
@@ -30,8 +51,21 @@
   left: 60px;
   right: 60px;
   height: 2px;
-  background: #eee;
+  background: #eee;  /* Light gray for incomplete */
   z-index: 0;
+}
+
+/* Add colored line for completed steps */
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  height: 2px;
+  background: #00D1B2;  /* Teal color for completed */
+  z-index: 1;
+  transition: width 0.3s ease;
+  width: calc((100% - 120px) * var(--progress-percentage, 0));
 }
 
 .progress-step {
@@ -109,6 +143,12 @@
 .progress-step:hover .step-number {
   transform: scale(1.1);
   border-color: #00D1B2;
+}
+
+.progress-step .step-number {
+  background: white;
+  z-index: 2;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -283,4 +323,13 @@ input[type="file"]::file-selector-button:hover {
 .form-group.half {
   flex: 1;
   min-width: 0;
-} 
+}
+
+.progress-bar[data-progress="0"] { --progress-percentage: 0; }
+.progress-bar[data-progress="1"] { --progress-percentage: 0.142857; }
+.progress-bar[data-progress="2"] { --progress-percentage: 0.285714; }
+.progress-bar[data-progress="3"] { --progress-percentage: 0.428571; }
+.progress-bar[data-progress="4"] { --progress-percentage: 0.571429; }
+.progress-bar[data-progress="5"] { --progress-percentage: 0.714286; }
+.progress-bar[data-progress="6"] { --progress-percentage: 0.857143; }
+.progress-bar[data-progress="7"] { --progress-percentage: 1; } 

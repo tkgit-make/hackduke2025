@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Launch.css';
 
@@ -1183,7 +1183,10 @@ const Launch = () => {
   return (
     <div className="launch-page">
       <div className="launch-container">
-        <div className="progress-bar">
+        <div 
+          className="progress-bar"
+          data-progress={activeStep}
+        >
           {steps.map((step, index) => (
             <div 
               key={step.title}
