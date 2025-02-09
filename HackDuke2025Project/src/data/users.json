@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@example.com",
+      "password": "hashedPassword123",
+      "investorType": "individual",
+      "investmentPreferences": ["Clean Energy", "AI"],
+      "dateJoined": "2024-01-15"
+    }
+  ]
+} 

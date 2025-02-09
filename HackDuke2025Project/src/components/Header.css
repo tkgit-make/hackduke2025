@@ -105,3 +105,22 @@
 body {
     padding-top: 100px;  /* Adjusted to match total header height */
 }
+
+.user-name {
+  color: #666;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}

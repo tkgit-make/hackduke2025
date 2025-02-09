@@ -20,8 +20,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   margin: 0;
+  padding-top: 100px;  /* Keep this for header spacing */
   display: flex;
   flex-direction: column; /* Stack children vertically */
   align-items: stretch; /* Children should span full width */
@@ -29,6 +34,8 @@ body {
   min-height: 100vh;
   background-color: #f5f5f5;
   color: rgba(255, 255, 255, 0.87);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {

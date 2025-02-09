@@ -1,0 +1,77 @@
+{
+  "portfolioStats": {
+    "totalInvested": 250000,
+    "totalValue": 325000,
+    "totalReturn": 30,
+    "numberOfCompanies": 5,
+    "monthlyGrowth": 5.2
+  },
+  "investments": [
+    {
+      "id": 1,
+      "name": "EcoTech Solutions",
+      "invested": 50000,
+      "currentValue": 75000,
+      "return": 50,
+      "industry": "Clean Energy",
+      "shares": 5000,
+      "dateInvested": "2023-06-15",
+      "monthlyData": [50000, 47000, 53000, 49000, 58000, 75000]
+    },
+    {
+      "id": 2,
+      "name": "HealthAI Innovations",
+      "invested": 75000,
+      "currentValue": 90000,
+      "return": 20,
+      "industry": "Healthcare",
+      "shares": 7500,
+      "dateInvested": "2023-05-20",
+      "monthlyData": [75000, 71000, 80000, 76000, 85000, 90000]
+    },
+    {
+      "id": 3,
+      "name": "FinTech Forward",
+      "invested": 45000,
+      "currentValue": 65000,
+      "return": 44.4,
+      "industry": "Fintech",
+      "shares": 4500,
+      "dateInvested": "2023-07-01",
+      "monthlyData": [45000, 42000, 48000, 45000, 52000, 65000]
+    },
+    {
+      "id": 4,
+      "name": "AI Dynamics",
+      "invested": 40000,
+      "currentValue": 48000,
+      "return": 20,
+      "industry": "AI",
+      "shares": 4000,
+      "dateInvested": "2023-08-15",
+      "monthlyData": [40000, 38000, 43000, 41000, 45000, 48000]
+    },
+    {
+      "id": 5,
+      "name": "DroneDelivery Pro",
+      "invested": 40000,
+      "currentValue": 47000,
+      "return": 17.5,
+      "industry": "Logistics",
+      "shares": 4000,
+      "dateInvested": "2023-07-30",
+      "monthlyData": [40000, 37000, 44000, 41000, 47000, 47000]
+    }
+  ],
+  "timeSeriesData": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "portfolioValue": [250000, 238000, 268000, 255000, 290000, 325000]
+  },
+  "industryAllocation": {
+    "Clean Energy": 30,
+    "Healthcare": 25,
+    "Fintech": 20,
+    "AI": 15,
+    "Logistics": 10
+  }
+} 
