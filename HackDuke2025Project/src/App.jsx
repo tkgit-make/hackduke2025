@@ -8,15 +8,14 @@ import Feed from "./components/Feed.jsx";
 const App = () => {
   return (
     <Router>
-      <div className="app-container">
-        <Header />
-        <div className="content-container">
-          <Routes>
-            <Route path="/" element={<Discover />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/feed" element={<Feed />} />
-          </Routes>
-        </div>
+      <Header />
+      <div className="p-4">
+        <Routes>
+          {/* Default route */}
+          <Route path="/" element={<Discover />} />
+          <Route path="/feed" element={<Feed />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+        </Routes>
       </div>
     </Router>
   );

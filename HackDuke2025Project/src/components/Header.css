@@ -9,30 +9,30 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-  }
+}
   
-  /* Top Section: Logo, Search, and Buttons */
-  .top-section {
+/* Top Section: Logo, Search, and Buttons */
+.top-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-  }
+}
   
-  .logo {
+.logo {
     font-size: 24px;
     font-weight: bold;
     color: #00e0b6;
     padding-left: 80px;
-  }
+}
   
-  .search-bar-container {
+.search-bar-container {
     flex: 1;
     display: flex;
     justify-content: center;
-  }
+}
   
-  .search-bar {
+.search-bar {
     width: 100%;
     max-width: 400px;
     padding: 8px 16px;
@@ -42,23 +42,23 @@
     font-size: 14px;
     color: #333;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  }
+}
   
-  .action-buttons {
+.action-buttons {
     display: flex;
     gap: 10px;
-  }
+}
   
-  .login-button {
+.login-button {
     background: none;
     border: none;
     font-size: 14px;
     color: #999;
     cursor: pointer;
-  }
+}
   
-  .launch-button {
-    color:#000000;
+.launch-button {
+    color: #000000;
     border: 1px solid black;
     border-radius: 20px;
     padding: 8px 16px;
@@ -66,35 +66,35 @@
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-  }
+}
   
-  .launch-button:hover {
+.launch-button:hover {
     background-color: #f2f2f2;
-  }
+}
   
-  /* Bottom Navigation: Discover, Feed, Portfolio */
-  .bottom-nav {
+/* Bottom Navigation: Discover, Feed, Portfolio */
+.bottom-nav {
     display: flex;
     justify-content: center;
     gap: 30px;
     padding: 10px 0;
-  }
+}
   
-  .nav-link {
+.nav-link {
     font-size: 16px;
     font-weight: 500;
     color: #666;
     text-decoration: none;
     padding: 5px 0;
-  }
+    transition: color 0.2s, border-bottom 0.2s;
+}
   
-  .nav-link.active {
+.nav-link.active {
     color: black;
     font-weight: bold;
-    border-bottom: 2px solid black;
-  }
+    border-bottom: 2px solid black; /* Underline for the active page */
+}
   
-  .nav-link:hover {
+.nav-link:hover {
     color: #333;
-  }
-  
+}
