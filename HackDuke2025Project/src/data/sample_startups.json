@@ -12,6 +12,8 @@
       "totalRaised": 750000,
       "pricePerShare": 100,
       "equityPerShare": 0.005,
+      "sharesAvailable": 15000,
+      "totalSharesOffered": 20000,
       "logo": "/images/logos/ecotech-logo.png",
       "image": "/images/banners/ecotech-banner.png",
       "postsData": [
@@ -40,6 +42,8 @@
       "totalRaised": 2100000,
       "pricePerShare": 250,
       "equityPerShare": 0.002,
+      "sharesAvailable": 11600,
+      "totalSharesOffered": 20000,
       "logo": "/images/logos/healthai-logo.png",
       "image": "/images/banners/healthai-banner.png",
       "postsData": [
@@ -68,6 +72,8 @@
       "totalRaised": 125000,
       "pricePerShare": 50,
       "equityPerShare": 0.01,
+      "sharesAvailable": 7500,
+      "totalSharesOffered": 10000,
       "logo": "/images/logos/eduplay-logo.png",
       "image": "/images/banners/eduplay-banner.png",
       "postsData": [
@@ -96,6 +102,8 @@
       "totalRaised": 800000,
       "pricePerShare": 150,
       "equityPerShare": 0.004,
+      "sharesAvailable": 4700,
+      "totalSharesOffered": 10000,
       "logo": "/images/logos/securechain-logo.png",
       "image": "/images/banners/securechain-banner.png",
       "postsData": [
@@ -124,6 +132,8 @@
       "totalRaised": 1200000,
       "pricePerShare": 175,
       "equityPerShare": 0.003,
+      "sharesAvailable": 10300,
+      "totalSharesOffered": 17150,
       "logo": "/images/logos/roboassist-logo.png",
       "image": "/images/banners/roboassist-banner.png",
       "postsData": [
@@ -152,6 +162,8 @@
       "totalRaised": 200000,
       "pricePerShare": 75,
       "equityPerShare": 0.008,
+      "sharesAvailable": 7300,
+      "totalSharesOffered": 10000,
       "logo": "/images/logos/agrosmart-logo.png",
       "image": "/images/banners/agrosmart-banner.png",
       "postsData": [
@@ -180,6 +192,8 @@
       "totalRaised": 400000,
       "pricePerShare": 80,
       "equityPerShare": 0.006,
+      "sharesAvailable": 7500,
+      "totalSharesOffered": 12500,
       "logo": "/images/logos/cyberlearn-logo.png",
       "image": "/images/banners/cyberlearn-banner.png",
       "postsData": [
@@ -208,6 +222,8 @@
       "totalRaised": 1800000,
       "pricePerShare": 200,
       "equityPerShare": 0.0025,
+      "sharesAvailable": 11000,
+      "totalSharesOffered": 20000,
       "logo": "/images/logos/biovitals-logo.png",
       "image": "/images/banners/biovitals-banner.png",
       "postsData": [
@@ -236,6 +252,8 @@
       "totalRaised": 450000,
       "pricePerShare": 90,
       "equityPerShare": 0.007,
+      "sharesAvailable": 8300,
+      "totalSharesOffered": 13300,
       "logo": "/images/logos/localchain-logo.png",
       "image": "/images/banners/localchain-banner.png",
       "postsData": [
@@ -264,6 +282,8 @@
       "totalRaised": 150000,
       "pricePerShare": 60,
       "equityPerShare": 0.009,
+      "sharesAvailable": 10800,
+      "totalSharesOffered": 13300,
       "logo": "/images/logos/dronemap-logo.png",
       "image": "/images/banners/dronemap-banner.png",
       "postsData": [
@@ -292,6 +312,8 @@
       "totalRaised": 600000,
       "pricePerShare": 120,
       "equityPerShare": 0.006,
+      "sharesAvailable": 10000,
+      "totalSharesOffered": 15000,
       "logo": "/images/logos/agrosense-logo.png",
       "image": "/images/banners/agrosense-banner.png",
       "postsData": [
