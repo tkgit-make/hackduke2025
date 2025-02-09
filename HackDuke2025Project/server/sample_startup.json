@@ -1,0 +1,60 @@
+{
+  "startupID": 1001,
+  "startUpName": "EcoTech Solutions",
+  "description": "Developing sustainable energy solutions for residential communities through innovative solar and wind technology integration. Our patented micro-grid system enables neighborhoods to share and optimize renewable energy usage.",
+  "targetGoal": 2000000,
+  "totalRaised": 750000,
+  "pricePerShare": 100,
+  "equityPerShare": 0.005,
+  "image": "https://example.com/ecotech-logo.png",
+  "postsData": [
+    {
+      "id": 1001,
+      "caption": "Exciting milestone: Our micro-grid system successfully deployed in Durham's Green Valley community! 50 homes now sharing renewable energy efficiently.",
+      "likesData": 156,
+      "photos": [
+        {
+          "photoLocation": "https://example.com/microgrid-installation.jpg"
+        },
+        {
+          "photoLocation": "https://example.com/community-celebration.jpg"
+        }
+      ]
+    },
+    {
+      "id": 1002,
+      "caption": "Just closed our seed funding round! Grateful for our investors who believe in sustainable community energy. Next step: expanding to 5 more neighborhoods.",
+      "likesData": 243,
+      "photos": [
+        {
+          "photoLocation": "https://example.com/funding-announcement.jpg"
+        }
+      ]
+    },
+    {
+      "id": 1003,
+      "caption": "Meet our engineering team! These brilliant minds are working on next-gen solar integration technology.",
+      "likesData": 89,
+      "photos": [
+        {
+          "photoLocation": "https://example.com/team-photo.jpg"
+        },
+        {
+          "photoLocation": "https://example.com/lab-work.jpg"
+        },
+        {
+          "photoLocation": "https://example.com/prototype.jpg"
+        }
+      ]
+    }
+  ],
+  "tagsData": [
+    { "body": "CleanEnergy" },
+    { "body": "Sustainability" },
+    { "body": "RenewableEnergy" },
+    { "body": "SolarPower" },
+    { "body": "GreenTech" },
+    { "body": "CleanTech" },
+    { "body": "Innovation" }
+  ]
+} 
