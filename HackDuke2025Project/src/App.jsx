@@ -9,6 +9,7 @@ import Launch from './pages/Launch';
 import { CategoryProvider } from './context/CategoryContext';
 import { useState, useEffect } from 'react';
 import LoadingScreen from './components/LoadingScreen';
+import { ErrorBoundary } from 'react-error-boundary';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,18 +29,31 @@ const App = () => {
         {isLoading && <LoadingScreen />}
         <Header />
         <div className="p-4">
-          <Routes>
-            {/* Default route */}
-            <Route path="/" element={<Discover />} />
-            <Route path="/feed" element={<Feed />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/company/:companyName" element={<CompanyProfile />} />
-            <Route path="/launch" element={<Launch />} />
-          </Routes>
+          <main className="min-h-screen">
+            <ErrorBoundary FallbackComponent={ErrorFallback}>
+              <Routes>
+                {/* Default route */}
+                <Route path="/" element={<Discover />} />
+                <Route path="/feed" element={<Feed />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/company/:companyName" element={<CompanyProfile />} />
+                <Route path="/launch" element={<Launch />} />
+              </Routes>
+            </ErrorBoundary>
+          </main>
         </div>
       </Router>
     </CategoryProvider>
   );
 };
+
+function ErrorFallback({ error }) {
+  return (
+    <div role="alert" className="error-alert">
+      <p>Something went wrong:</p>
+      <pre>{error.message}</pre>
+    </div>
+  );
+}
 
 export default App;

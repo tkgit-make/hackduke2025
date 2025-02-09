@@ -1,12 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client'; // Note the change here
-import './index.css'; 
-import App from './App'; 
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
 
-// Create the root using ReactDOM.createRoot
-const root = ReactDOM.createRoot(document.getElementById('root')); // Make sure the 'root' id matches your HTML file
-
-// Render the app inside the root
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />

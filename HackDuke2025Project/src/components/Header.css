@@ -86,6 +86,7 @@
     margin: 0;
     height: 40px; /* Match header's bottom section height */
     align-items: flex-end; /* Push links to bottom */
+    border-bottom: 3px solid #dbdbdb;
 }
   
 .nav-link {

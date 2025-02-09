@@ -1,27 +1,33 @@
-import { useState } from 'react';
-import startupData from '../data/startups.json';
+import { useState, useEffect } from 'react';
 import './Feed.css';
 import companyImage from '../assets/images/company-placeholder.png';
 import postImage from '../assets/images/post-placeholder.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeart, faComment } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 
 const Feed = () => {
-  // Create posts from startup data
-  const [posts] = useState(startupData.startups.flatMap(startup => 
-    (startup.posts || []).map(post => ({
-      id: post.id,
-      companyName: startup.name,
-      logo: startup.logo,
-      industry: startup.industry,
-      image: post.image,
-      content: post.content,
-      likes: post.likes,
-      comments: post.comments,
-      timestamp: post.timestamp
-    }))
-  ));
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response = await fetch('http://localhost:5001/api/startups');
+      const startups = await response.json();
+      
+      const allPosts = startups.flatMap(startup => 
+        (startup.posts || []).map(post => ({
+          ...post,
+          companyName: startup.name,
+          logo: startup.logo,
+          industry: startup.industry
+        }))
+      );
+      
+      setPosts(allPosts);
+    };
+    
+    fetchPosts();
+  }, []);
 
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedCompany, setSelectedCompany] = useState(null);
@@ -30,7 +36,7 @@ const Feed = () => {
   const [likedPosts, setLikedPosts] = useState([]);
   const [postLikes, setPostLikes] = useState({});
 
-  const categories = Array.from(new Set(startupData.startups.map(s => s.industry)));
+  const categories = Array.from(new Set(posts.map(s => s.industry)));
 
   const filteredPosts = posts.filter(post => {
     if (selectedCompany) {
@@ -154,7 +160,7 @@ const Feed = () => {
                       handleLike(post.id);
                     }}
                   >
-                    <FontAwesomeIcon icon={likedPosts.includes(post.id) ? fasHeart : farHeart} />
+                    <FontAwesomeIcon icon={likedPosts.includes(post.id) ? fasHeart : faHeart} />
                   </button>
                   <span className="likes-count">
                     {(postLikes[post.id] || post.likes).toLocaleString()} likes
@@ -162,7 +168,7 @@ const Feed = () => {
                 </div>
                 <div className="action-buttons">
                   <button className="action-button">
-                    <i className="far fa-comment"></i>
+                    <FontAwesomeIcon icon={faComment} />
                   </button>
                   <button className="action-button">
                     <i className="far fa-bookmark"></i>
@@ -186,7 +192,7 @@ const Feed = () => {
         <div className="sidebar-section">
           <h2>Your Investments</h2>
           <div className="company-list">
-            {startupData.startups.slice(0, 5).map(startup => (
+            {posts.slice(0, 5).map(startup => (
               <div 
                 key={startup.id} 
                 className={`company-item ${
@@ -213,7 +219,7 @@ const Feed = () => {
         <div className="sidebar-section">
           <h2>Following</h2>
           <div className="company-list">
-            {startupData.startups
+            {posts
               .filter(startup => followingCompanies.includes(startup.name))
               .map(startup => (
                 <div 

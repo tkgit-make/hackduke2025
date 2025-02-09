@@ -23,4 +23,4 @@ try {
 
 let db = client.db("employees");
 
-export default db;
+module.exports = db;

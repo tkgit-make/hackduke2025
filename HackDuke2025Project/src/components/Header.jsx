@@ -10,6 +10,8 @@ import { useCategory } from '../context/CategoryContext';
 import yoloLogoRight from '../assets/images/yolo_fund_logo_right.svg';
 import yoloLogoBlink from '../assets/images/yolo_fund_logo_blink.svg';
 import yoloLogoLeft from '../assets/images/yolo_fund_logo_left.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faTag } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -226,7 +228,7 @@ const Header = () => {
                     </>
                   ) : (
                     <div className="search-result-category">
-                      <i className="fas fa-tag"></i>
+                      <FontAwesomeIcon icon={faTag} />
                       <div className="category-info">
                         {!searchQuery && <div className="suggestion-prefix">{suggestion.prefix}</div>}
                         <span>{suggestion.text}</span>

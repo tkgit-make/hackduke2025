@@ -1,5 +1,5 @@
-import mongoose from 'mongoose'
-import postSchema from '../models/post.js'
+const mongoose = require('mongoose')
+const postSchema = require('./post')
 
 const Schema = mongoose.Schema
 
@@ -51,5 +51,5 @@ const startUpSchema = new Schema({
 
 const startUp = mongoose.model('startup', startUpSchema); 
 
-export default startUp; 
+module.exports = startUp; 
 

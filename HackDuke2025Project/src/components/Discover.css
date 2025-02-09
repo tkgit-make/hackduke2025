@@ -235,18 +235,21 @@
 }
 
 .funding-progress {
-  height: 6px;
-  background: #eee;
-  border-radius: 3px;
-  margin-bottom: 10px;
+  width: 100%;
+  height: 8px;
+  background-color: #f3f3f3;
+  border-radius: 4px;
   overflow: hidden;
+  position: relative;
+  margin: 15px 0;
 }
 
-.funding-progress .progress-bar {
+.progress-bar {
   height: 100%;
-  background: #00D1B2;
-  border-radius: 3px;
-  transition: width 0.3s ease;
+  background-color: #00D1B2;
+  border-radius: 4px;
+  width: 0;
+  transition: width 1s ease-out;
 }
 
 .funding-details {

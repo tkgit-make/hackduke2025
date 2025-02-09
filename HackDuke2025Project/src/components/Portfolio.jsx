@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Portfolio.css';
 import companyImage from '../assets/images/company-placeholder.png';
 import { Line, Pie } from 'react-chartjs-2';
@@ -29,6 +29,17 @@ ChartJS.register(
 
 const Portfolio = () => {
   const [timeRange, setTimeRange] = useState('1M'); // 1W, 1M, 3M, 1Y, ALL
+  const [portfolioData, setPortfolioData] = useState(null);
+
+  useEffect(() => {
+    const fetchPortfolio = async () => {
+      const response = await fetch('http://localhost:5001/api/portfolio');
+      const data = await response.json();
+      setPortfolioData(data);
+    };
+    
+    fetchPortfolio();
+  }, []);
 
   // First destructure the data
   const { portfolioStats, investments, timeSeriesData, industryAllocation } = portfolioData;
