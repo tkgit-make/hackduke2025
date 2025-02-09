@@ -18,14 +18,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 15px 20px;  /* Reduced from 30px to 15px */
 }
   
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #00e0b6;
-    padding-left: 100px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;  /* Show pointer on hover */
+}
+  
+.logo-image {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    margin: -20px 0;
+    transition: none; /* Remove transition to prevent fade effect */
 }
   
 .search-bar-container {
@@ -74,31 +82,39 @@
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding: 10px 0;
+    padding: 0;
+    margin: 0;
+    height: 40px; /* Match header's bottom section height */
+    align-items: flex-end; /* Push links to bottom */
 }
   
 .nav-link {
-    font-size: 16px;
+    position: relative;
+    padding: 0 0 12px 0;
+    margin: 0 10px;
+    color: #666; /* Grey by default */
     font-weight: 500;
-    color: #666;
     text-decoration: none;
-    padding: 5px 0;
-    transition: color 0.2s, border-bottom 0.2s;
 }
   
 .nav-link.active {
-    color: black;
-    font-weight: bold;
-    border-bottom: 2px solid black; /* Underline for the active page */
+    color: #00e0b6; /* Turquoise when active */
+    border-bottom: 3px solid #00e0b6; /* Turquoise underline */
+    margin-bottom: -3px;
+}
+  
+/* Remove existing border-bottom transition */
+.nav-link.active {
+    transition: none;
 }
   
 .nav-link:hover {
-    color: #333;
+    color: #00e0b6; /* Black on hover */
 }
 
-/* Update the body padding to match header height */
+/* Update body padding for more compact header */
 body {
-    padding-top: 100px;  /* Adjusted to match total header height */
+    padding-top: 130px;  /* Reduced from 160px */
 }
 
 .user-name {
@@ -129,7 +145,7 @@ body {
   background: white;
   border: 1px solid #ddd;
   border-radius: 0 0 8px 8px;  /* Only round bottom corners */
-  margin-top: 0;  /* Remove the gap */
+  margin-top: -1px;  /* Tighter connection to search bar */
   max-height: 400px;
   overflow-y: auto;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -153,7 +169,7 @@ body {
 .search-result-item {
   display: flex;
   align-items: center;
-  padding: 12px 16px;
+  padding: 8px 16px;  /* Reduced from 12px to 8px vertical padding */
   cursor: pointer;
   transition: background-color 0.2s;
 }

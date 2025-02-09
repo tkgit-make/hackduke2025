@@ -1,5 +1,5 @@
 //import React from "react";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { NavLink, useNavigate } from "react-router-dom";
 import Login from './Login';
 import Signup from './Signup';
@@ -7,6 +7,9 @@ import "./Header.css";
 import startupsData from '../data/startups.json';
 import companyImage from '../assets/images/company-placeholder.png';
 import { useCategory } from '../context/CategoryContext';
+import yoloLogoRight from '../assets/images/yolo_fund_logo_right.svg';
+import yoloLogoBlink from '../assets/images/yolo_fund_logo_blink.svg';
+import yoloLogoLeft from '../assets/images/yolo_fund_logo_left.svg';
 
 const Header = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -17,6 +20,10 @@ const Header = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [showResults, setShowResults] = useState(false);
   const { setSelectedCategory } = useCategory();
+  const [logoState, setLogoState] = useState('right');
+  const intervalRef = useRef(null);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const user = localStorage.getItem('currentUser');
@@ -131,10 +138,55 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const handleLogoHover = () => {
+    if (intervalRef.current) {
+      clearTimeout(intervalRef.current);
+      intervalRef.current = null;
+    }
+
+    const sequence = ['right', 'blink', 'left', 'blink'];
+    let currentIndex = 0;
+
+    const animate = () => {
+      if (currentIndex >= sequence.length) currentIndex = 0; // Reset to loop
+      
+      setLogoState(sequence[currentIndex]);
+      
+      const delay = sequence[currentIndex] === 'blink' ? 150 : 500;
+      currentIndex++;
+      
+      intervalRef.current = setTimeout(animate, delay);
+    };
+
+    animate();
+  };
+
+  const handleLogoLeave = () => {
+    if (intervalRef.current) {
+      clearTimeout(intervalRef.current);
+      intervalRef.current = null;
+    }
+    setLogoState('right');
+  };
+
   return (
     <header className="header-container">
       <div className="top-section">
-        <div className="logo">YOLO_Fund</div>
+        <div 
+          className="logo" 
+          onMouseEnter={handleLogoHover}
+          onMouseLeave={handleLogoLeave}
+        >
+          <img 
+            src={
+              logoState === 'right' ? yoloLogoRight :
+              logoState === 'blink' ? yoloLogoBlink :
+              yoloLogoLeft
+            } 
+            alt="YOLO Fund" 
+            className="logo-image"
+          />
+        </div>
         <div className="search-bar-container">
           <input
             type="text"
@@ -144,7 +196,7 @@ const Header = () => {
             onChange={handleSearch}
             onFocus={() => {
               setShowResults(true);
-              setSearchResults(getSearchSuggestions(''));  // Show initial suggestions
+              setSearchResults(getSearchSuggestions(''));
             }}
           />
           {showResults && (
