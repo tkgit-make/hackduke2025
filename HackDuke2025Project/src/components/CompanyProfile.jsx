@@ -98,7 +98,7 @@ const CompanyProfile = () => {
             <div className="investment-metric">
               <h3>Price/Share</h3>
               <p>${company.pricePerShare}</p>
-              <span className="metric-subtitle">{(company.equityPerShare * 100).toFixed(3)}% equity</span>
+              <span className="metric-subtitle">{company.equityPerShare}% equity</span>
             </div>
             <div className="investment-metric">
               <h3>Min Investment</h3>
@@ -154,7 +154,7 @@ const CompanyProfile = () => {
           </div>
           <div className="metric-item">
             <h3>Equity per Share</h3>
-            <p>{(company.equityPerShare * 100).toFixed(3)}%</p>
+            <p>{company.equityPerShare}%</p>
           </div>
         </div>
       </section>
